@@ -32,9 +32,7 @@ with open(c3) as file_object:
 
 def testone(tup, idx):
     id, kana, kanji, roma, chinese, wordtype, lesson = tup
-    # 去除roma中的多余符号
-    newroma = re.sub(r'[\'-]', '', roma)
-    
+    newroma = roma
     
     while True:
         clear = lambda: os.system('clear')

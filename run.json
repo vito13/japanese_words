@@ -1,4 +1,5 @@
 {
-    "_comment1": "结果随机： ORDER BY RANDOM()",
-    "sql": "SELECT * FROM jpwords where wordtype = '动1'"
+    "_结果随机": "ORDER BY RANDOM()",
+    "_限定结果数量": "LIMIT 1",
+    "sql": "SELECT * FROM jpwords where lesson = 19"
 }
