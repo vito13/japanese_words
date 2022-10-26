@@ -1,0 +1,4 @@
+{
+    "_comment1": "结果随机： ORDER BY RANDOM()",
+    "sql": "SELECT * FROM jpwords where wordtype = '动1'"
+}

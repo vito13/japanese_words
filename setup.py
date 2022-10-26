@@ -151,7 +151,7 @@ if __name__ == '__main__':
         os.unlink(dbfile)
     createdb()
 
-    with open('book.json', 'r',encoding='utf-8') as f:
+    with open('setup.json', 'r',encoding='utf-8') as f:
         books = json.load(f)
         for key, value in books.items(): 
             processfile(value['file'])

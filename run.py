@@ -7,7 +7,7 @@ import re
 import sys
 import sqlite3
 import random
-
+import json
 
 dbfile = 'jp.db'
 wordtable = 'jpwords'
@@ -41,7 +41,7 @@ def testone(tup, idx):
         clear()
         newchn = re.sub(r'[），（ ]', ' ', chinese)
         newchn = "{} {}".format(newchn, idx)
-        msg = "{} {} {} {} {} {} {}".format(contents0, kana, contents1, newchn, contents2, newroma, contents3)
+        msg = "{} {} {} {} {} {}    {} {}".format(contents0, kana, contents1, newchn, contents2, newroma, kanji, contents3)
         # print(msg)
        
         response = input(msg)
@@ -52,23 +52,20 @@ def testone(tup, idx):
         if response == newroma:
             break
 
-def test(data, count):
-    items = random.sample(data, count)
+def run(data):
+    count = len(data)
     testindex = 0
-    for tup in items:
+    for tup in data:
         testindex += 1
         testone(tup, '{} / {}'.format(testindex, count))
 
-def getwords(lesson):
+def getwords(sql):
     # 连接数据库
     conn = sqlite3.connect(dbfile)
     # 创建游标
     cs = conn.cursor()
     # 查询数据
-    sql = "SELECT * FROM {} where lesson = '{}'".format(wordtable, lesson)
-    # print(sql)
     cs.execute(sql)
-
     words = cs.fetchall()
     # 关闭 Cursor
     cs.close()
@@ -76,10 +73,10 @@ def getwords(lesson):
     conn.close()
     return words
 
-
+def getparam():
+    with open('run.json', 'r',encoding='utf-8') as f:
+        params = json.load(f)
+        return (params['sql'])
+    
 if __name__ == '__main__':
-    lesson = sys.argv[1]
-    count = int(sys.argv[2])
-    data = getwords(lesson)
-    count = min(count, len(data))
-    test(data, count)
+    run(getwords(getparam()))
