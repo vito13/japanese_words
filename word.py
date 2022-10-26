@@ -11,7 +11,6 @@ import random
 
 dbfile = 'jp.db'
 wordtable = 'jpwords'
-testcount = 3
 
 c0 = "confuse0.txt"
 c1 = "confuse1.txt"
@@ -31,15 +30,18 @@ with open(c2) as file_object:
 with open(c3) as file_object:
     contents3 = file_object.read()
 
-def testone(tup, testindex):
+def testone(tup, idx):
     id, kana, kanji, roma, chinese, wordtype, lesson = tup
+    # 去除roma中的多余符号
+    newroma = re.sub(r'[\'-]', '', roma)
+    
     
     while True:
         clear = lambda: os.system('clear')
         clear()
         newchn = re.sub(r'[），（ ]', ' ', chinese)
-        newchn = "{} {} / {}".format(newchn, testindex, testcount)
-        msg = "{} {} {} {} {} {} {}".format(contents0, kana, contents1, newchn, contents2, roma, contents3)
+        newchn = "{} {}".format(newchn, idx)
+        msg = "{} {} {} {} {} {} {}".format(contents0, kana, contents1, newchn, contents2, newroma, contents3)
         # print(msg)
        
         response = input(msg)
@@ -47,7 +49,7 @@ def testone(tup, testindex):
             sys.exit()
         if response == '`':
             break
-        if response == roma:
+        if response == newroma:
             break
 
 def test(data, count):
@@ -55,7 +57,7 @@ def test(data, count):
     testindex = 0
     for tup in items:
         testindex += 1
-        testone(tup, testindex)
+        testone(tup, '{} / {}'.format(testindex, count))
 
 def getwords(lesson):
     # 连接数据库
@@ -63,7 +65,9 @@ def getwords(lesson):
     # 创建游标
     cs = conn.cursor()
     # 查询数据
-    cs.execute("SELECT * FROM {} where lesson = '{}'".format(wordtable, lesson))
+    sql = "SELECT * FROM {} where lesson = '{}'".format(wordtable, lesson)
+    # print(sql)
+    cs.execute(sql)
 
     words = cs.fetchall()
     # 关闭 Cursor
@@ -75,6 +79,7 @@ def getwords(lesson):
 
 if __name__ == '__main__':
     lesson = sys.argv[1]
+    count = int(sys.argv[2])
     data = getwords(lesson)
-    if len(data):
-        test(data, min(testcount, len(data)))
+    count = min(count, len(data))
+    test(data, count)
