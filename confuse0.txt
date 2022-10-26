@@ -1,14 +1,14 @@
-[2022-10-25 11:33:04.62799] [93200] [debug] -------修改pdf链接: "[一致性读](./一致性读.md)" ===>>> "[一致性读](#一致性读)", /home/huawei/hwwork/postdb_doc/mdbooks/pl/../bbb//概念手册.md
-[2022-10-25 11:33:04.62806] [93200] [debug] -------修改pdf链接: "[集群恢复和补空洞机制](./集群恢复和补空洞机制.md)" ===>>> "[集群恢复和补空洞机制](#集群恢复和补空洞机制)", /home/huawei/hwwork/postdb_doc/mdbooks/pl/../bbb//概念手册.md
-[2022-10-25 11:33:04.62814] [93200] [debug] -------修改pdf链接: "[replica日志接收和回放](./从计算节点日志接收和回放.md)" ===>>> "[replica日志接收和回放](#从计算节点日志接收和回放)", /home/huawei/hwwork/postdb_doc/mdbooks/pl/../bbb//概念手册.md
-[2022-10-25 11:33:04.62821] [93200] [debug] -------修改pdf链接: "[主从切换](./主从切换.md)" ===>>> "[主从切换](#主从切换)", /home/huawei/hwwork/postdb_doc/mdbooks/pl/../bbb//概念手册.md
-[2022-10-25 11:33:04.62830] [93200] [debug] -------修改pdf链接: "[网络连接和监听](./网络连接和监听.md)" ===>>> "[网络连接和监听](#网络连接和监听)", /home/huawei/hwwork/postdb_doc/mdbooks/pl/../bbb//概念手册.md
-[2022-10-25 11:33:04.62836] [93200] [debug] -------修改pdf链接: "[节点管理](./节点管理.md)" ===>>> "[节点管理](#节点管理)", /home/huawei/hwwork/postdb_doc/mdbooks/pl/../bbb//概念手册.md
-[2022-10-25 11:33:04.62842] [93200] [debug] -------修改pdf链接: "[网络预取IO和异步IO](./网络预取IO和异步IO.md)" ===>>> "[网络预取IO和异步IO](#网络预取IO和异步IO)", /home/huawei/hwwork/postdb_doc/mdbooks/pl/../bbb//概念手册.md
-[2022-10-25 11:33:04.62848] [93200] [debug] -------修改pdf链接: "[缓存管理和优化](./缓存管理和优化.md)" ===>>> "[缓存管理和优化](#缓存管理和优化)", /home/huawei/hwwork/postdb_doc/mdbooks/pl/../bbb//概念手册.md
-[2022-10-25 11:33:04.64081] [93197] [debug] -------去除imageALT: "![存储计算分离](/home/huawei/hwwork/postdb_doc/mdbooks/概念手册/./././images/存储计算分离.png)" ===>>> "![](/home/huawei/hwwork/postdb_doc/mdbooks/概念手册/./././images/存储计算分离.png)", /home/huawei/hwwork/postdb_doc/mdbooks/pl/../bbb//概念手册.md
-[2022-10-25 11:33:04.64093] [93197] [debug] -------去除imageALT: "![存储节点](/home/huawei/hwwork/postdb_doc/mdbooks/概念手册/./././images/存储节点.png)" ===>>> "![](/home/huawei/hwwork/postdb_doc/mdbooks/概念手册/./././images/存储节点.png)", /home/huawei/hwwork/postdb_doc/mdbooks/pl/../bbb//概念手册.md
-[2022-10-25 11:33:04.64099] [93197] [debug] -------去除imageALT: "![协程](/home/huawei/hwwork/postdb_doc/mdbooks/概念手册/./././images/协程.png)" ===>>> "![](/home/huawei/hwwork/postdb_doc/mdbooks/概念手册/./././images/协程.png)", /home/huawei/hwwork/postdb_doc/mdbooks/pl/../bbb//概念手册.md
-[2022-10-25 11:33:04.64104] [93197] [debug] -------去除imageALT: "![计算节点](/home/huawei/hwwork/postdb_doc/mdbooks/概念手册/./././images/计算节点.png)" ===>>> "![](/home/huawei/hwwork/postdb_doc/mdbooks/概念手册/./././images/计算节点.png)", /home/huawei/hwwork/postdb_doc/mdbooks/pl/../bbb//概念手册.md
-[2022-10-25 11:33:04.88287] [93203] [debug] /home/huawei/hwwork/postdb_doc/mdbooks/pl/../bbb//概念手册.md
--------加入段落空格: "本文描述了postdb数据库架构和概念模型以及主要
+[2022-10-25 11:33:04.62799] [93200] [debug] -------修改pdf链接: "[一致性读](./一致性读.md)" ===>>> "[一致性读](#一致性读)", /home/huawei/hwwork/PostgreSQL_doc/mdbooks/pl/../bbb//概念手册.md
+[2022-10-25 11:33:04.62806] [93200] [debug] -------修改pdf链接: "[集群恢复和补空洞机制](./集群恢复和补空洞机制.md)" ===>>> "[集群恢复和补空洞机制](#集群恢复和补空洞机制)", /home/huawei/hwwork/PostgreSQL_doc/mdbooks/pl/../bbb//概念手册.md
+[2022-10-25 11:33:04.62814] [93200] [debug] -------修改pdf链接: "[replica日志接收和回放](./从计算节点日志接收和回放.md)" ===>>> "[replica日志接收和回放](#从计算节点日志接收和回放)", /home/huawei/hwwork/PostgreSQL_doc/mdbooks/pl/../bbb//概念手册.md
+[2022-10-25 11:33:04.62821] [93200] [debug] -------修改pdf链接: "[主从切换](./主从切换.md)" ===>>> "[主从切换](#主从切换)", /home/huawei/hwwork/PostgreSQL_doc/mdbooks/pl/../bbb//概念手册.md
+[2022-10-25 11:33:04.62830] [93200] [debug] -------修改pdf链接: "[网络连接和监听](./网络连接和监听.md)" ===>>> "[网络连接和监听](#网络连接和监听)", /home/huawei/hwwork/PostgreSQL_doc/mdbooks/pl/../bbb//概念手册.md
+[2022-10-25 11:33:04.62836] [93200] [debug] -------修改pdf链接: "[节点管理](./节点管理.md)" ===>>> "[节点管理](#节点管理)", /home/huawei/hwwork/PostgreSQL_doc/mdbooks/pl/../bbb//概念手册.md
+[2022-10-25 11:33:04.62842] [93200] [debug] -------修改pdf链接: "[网络预取IO和异步IO](./网络预取IO和异步IO.md)" ===>>> "[网络预取IO和异步IO](#网络预取IO和异步IO)", /home/huawei/hwwork/PostgreSQL_doc/mdbooks/pl/../bbb//概念手册.md
+[2022-10-25 11:33:04.62848] [93200] [debug] -------修改pdf链接: "[缓存管理和优化](./缓存管理和优化.md)" ===>>> "[缓存管理和优化](#缓存管理和优化)", /home/huawei/hwwork/PostgreSQL_doc/mdbooks/pl/../bbb//概念手册.md
+[2022-10-25 11:33:04.64081] [93197] [debug] -------去除imageALT: "![存储计算分离](/home/huawei/hwwork/PostgreSQL_doc/mdbooks/概念手册/./././images/存储计算分离.png)" ===>>> "![](/home/huawei/hwwork/PostgreSQL_doc/mdbooks/概念手册/./././images/存储计算分离.png)", /home/huawei/hwwork/PostgreSQL_doc/mdbooks/pl/../bbb//概念手册.md
+[2022-10-25 11:33:04.64093] [93197] [debug] -------去除imageALT: "![存储节点](/home/huawei/hwwork/PostgreSQL_doc/mdbooks/概念手册/./././images/存储节点.png)" ===>>> "![](/home/huawei/hwwork/PostgreSQL_doc/mdbooks/概念手册/./././images/存储节点.png)", /home/huawei/hwwork/PostgreSQL_doc/mdbooks/pl/../bbb//概念手册.md
+[2022-10-25 11:33:04.64099] [93197] [debug] -------去除imageALT: "![协程](/home/huawei/hwwork/PostgreSQL_doc/mdbooks/概念手册/./././images/协程.png)" ===>>> "![](/home/huawei/hwwork/PostgreSQL_doc/mdbooks/概念手册/./././images/协程.png)", /home/huawei/hwwork/PostgreSQL_doc/mdbooks/pl/../bbb//概念手册.md
+[2022-10-25 11:33:04.64104] [93197] [debug] -------去除imageALT: "![计算节点](/home/huawei/hwwork/PostgreSQL_doc/mdbooks/概念手册/./././images/计算节点.png)" ===>>> "![](/home/huawei/hwwork/PostgreSQL_doc/mdbooks/概念手册/./././images/计算节点.png)", /home/huawei/hwwork/PostgreSQL_doc/mdbooks/pl/../bbb//概念手册.md
+[2022-10-25 11:33:04.88287] [93203] [debug] /home/huawei/hwwork/PostgreSQL_doc/mdbooks/pl/../bbb//概念手册.md
+-------加入段落空格: "本文描述了PostgreSQL数据库架构和概念模型以及主要
