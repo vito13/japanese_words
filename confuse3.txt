@@ -1,0 +1,6 @@
+](/home/huawei/hwwork/postdb_doc/mdbooks/概念手册/./././im
+-------加入段落空格: "计算节点(`compute node`)是用于接收来自于应用的请" ===>>> "&emsp;&emsp;计算节点(`compute node`)是用于接收来自于"
+-------加入段落空格: "数据库执行器中的计算过程始终在`compute node`执�" ===>>> "&emsp;&emsp;数据库执行器中的计算过程始终在`comput"
+-------加入段落空格: "`compute node`本身是无状态的服务，不存储数据文�" ===>>> "&emsp;&emsp;`compute node`本身是无状态的服务，不存�"
+-------加入段落空格: "`compute node`按角色又分为主计算节点(`primary`)和从" ===>>> "&emsp;&emsp;`compute node`按角色又分为主计算节点(`pri"
+-------加入段落空格: "`compute node`按角色又分为主计算节点(`primary`)和从" ===>>>  
