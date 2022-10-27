@@ -8,9 +8,16 @@ import sys
 import sqlite3
 import random
 import json
+from enum import Enum, auto, unique
 
 dbfile = 'jp.db'
 wordtable = 'jpwords'
+
+class WORDRESULTTYPE(Enum):
+    CORRECT_NEXT = auto()    # 正确next
+    GIVEUP_NEXT = auto()   # 放弃next
+    GIVEUP_PREV = auto()   # 放弃prev
+    UNKNOWN = auto()
 
 c0 = "confuse0.txt"
 c1 = "confuse1.txt"
@@ -30,32 +37,53 @@ with open(c2) as file_object:
 with open(c3) as file_object:
     contents3 = file_object.read()
 
-def testone(tup, idx):
+def testone(tup, stridx):
     id, kana, kanji, roma, chinese, wordtype, lesson = tup
+
     newroma = roma
-    
+    newchn = re.sub(r'[），（ ]', ' ', chinese)
+    newchn = "{} {}".format(newchn, stridx)
+    msg = "{} {} {} {} {} {}    {} {}".format(contents0, kana, contents1, newchn, contents2, newroma, kanji, contents3)
+    # print(msg)    
+    clear = lambda: os.system('clear')
+    clear()
+
+    result = WORDRESULTTYPE.UNKNOWN
     while True:
-        clear = lambda: os.system('clear')
-        clear()
-        newchn = re.sub(r'[），（ ]', ' ', chinese)
-        newchn = "{} {}".format(newchn, idx)
-        msg = "{} {} {} {} {} {}    {} {}".format(contents0, kana, contents1, newchn, contents2, newroma, kanji, contents3)
-        # print(msg)
-       
         response = input(msg)
         if response == 'q':
             sys.exit()
-        if response == '`':
+        elif response == '1':
+            result = WORDRESULTTYPE.GIVEUP_PREV
             break
-        if response == newroma:
+        elif response == '`':
+            result = WORDRESULTTYPE.GIVEUP_NEXT
             break
+        elif response == newroma:
+            result = WORDRESULTTYPE.CORRECT_NEXT
+            break
+        else:
+            pass
+            
+    return result
 
 def run(data):
     count = len(data)
     testindex = 0
-    for tup in data:
-        testindex += 1
-        testone(tup, '{} / {}'.format(testindex, count))
+    while testindex < count: 
+        stridx = '-{}-{}-'.format(testindex + 1, count)
+        ret = testone(data[testindex], stridx)
+        if WORDRESULTTYPE.GIVEUP_NEXT == ret:
+            testindex += 1
+        elif WORDRESULTTYPE.CORRECT_NEXT == ret:
+            testindex += 1
+        elif WORDRESULTTYPE.GIVEUP_PREV == ret:
+            testindex -= 1
+        else:
+            pass
+        
+        if testindex < 0:
+            testindex = 0
 
 def getwords(sql):
     # 连接数据库
