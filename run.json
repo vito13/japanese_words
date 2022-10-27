@@ -1,5 +1,8 @@
 {
+    "_使用jp": "SELECT * FROM jpwords where lesson = 19",
+    "_使用newword": "SELECT wordid, kana, kanji, roma, chinese, wordtype, lesson FROM jpwords, newwords where newwords.wordid = jpwords.id",
     "_结果随机": "ORDER BY RANDOM()",
     "_限定结果数量": "LIMIT 1",
-    "sql": "SELECT * FROM jpwords where lesson = 19"
+    "sql_": "SELECT * FROM jpwords where lesson = 19",
+    "sql": "SELECT wordid, kana, kanji, roma, chinese, wordtype, lesson FROM jpwords, newwords where newwords.wordid = jpwords.id"
 }

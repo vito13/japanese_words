@@ -12,6 +12,7 @@ import json
 from collections import namedtuple
 from enum import Enum, auto, unique
 import queue
+from hyperparameters import global_var
 
 class LINETYPE(Enum):
     WORD = auto()       # 词
@@ -21,9 +22,10 @@ class LINETYPE(Enum):
     USELESS = auto()    # 横线
     UNKNOWN = auto()
 
-dbfile = 'jp.db'
-wordtable = 'jpwords'
-logfname = 'jpwords.log'
+dbfile = global_var.get_value('dbfile')
+wordtable = global_var.get_value('wordtable')
+newwordtable = global_var.get_value('newwordtable')
+setuplog = global_var.get_value('setuplog')
 
 def createdb():
     # 连接数据库
@@ -44,6 +46,17 @@ def createdb():
     '''.format(wordtable)
     logging.debug(sql)
     cs.execute(sql)
+    
+    sql = '''
+    CREATE TABLE if not exists {0} (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        wordid INTEGER,
+        wordgroup INTEGER
+        );
+    '''.format(newwordtable)
+    logging.debug(sql)
+    cs.execute(sql)
+    
     # 关闭 Cursor
     cs.close()
     # 提交当前事务
@@ -143,9 +156,9 @@ def processfile(src):
     batchinserts(sqls)
 
 if __name__ == '__main__':
-    if os.path.exists(logfname):
-        os.unlink(logfname)
-    logging.basicConfig(filename = logfname, level = logging.DEBUG, format = '%(asctime)s - %(levelname)s - %(message)s')
+    if os.path.exists(setuplog):
+        os.unlink(setuplog)
+    logging.basicConfig(filename = setuplog, level = logging.DEBUG, format = '%(asctime)s - %(levelname)s - %(message)s')
     
     if os.path.exists(dbfile):
         os.unlink(dbfile)
