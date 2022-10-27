@@ -35,7 +35,7 @@ def createdb():
     # 创建表
     sql = '''
     CREATE TABLE if not exists {0} (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
         kana TEXT NOT NULL,
         kanji TEXT,
         roma TEXT NOT NULL,

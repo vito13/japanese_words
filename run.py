@@ -2,7 +2,7 @@
 
 
 
-import os
+import os, getopt
 import re
 import sys
 import sqlite3
@@ -56,13 +56,22 @@ with open(c3) as file_object:
 
 
 def addnewwords(idarr):
+    group = "test"
     conn = sqlite3.connect(dbfile)
     cs = conn.cursor()
     for wordid in idarr:
-        val = "{}, \"{}\"".format(wordid, 'test')
-        sql = "INSERT INTO {} (wordid, wordgroup) VALUES ({})".format(newwordtable, val)
+        sql = "select * from {} where wordid = {} and wordgroup = \"{}\"".format(newwordtable, wordid, group)
         logging.debug(sql)
         cs.execute(sql)
+        words = cs.fetchall()
+        if len(words):
+            logging.debug("new word already exists")
+            continue
+        else:
+            val = "{}, \"{}\"".format(wordid, group)
+            sql = "INSERT INTO {} (wordid, wordgroup) VALUES ({})".format(newwordtable, val)
+            logging.debug(sql)
+            cs.execute(sql)
     cs.close()
     conn.commit()
     conn.close()
@@ -155,19 +164,48 @@ def getwords(sql):
     conn.close()
     return words
 
-def getparam():
+def getparam(key):
     global runmode
     with open('run.json', 'r',encoding='utf-8') as f:
         params = json.load(f)
-        sql = params['sql']
-        r1 = re.findall(r"newwords\.wordid\s*=\s*jpwords\.id", sql)     
-        if r1:
-            runmode = RUNMODETYPE.RMT_NEW
+        sql = ''
+        if key in params:
+            sql = params[key]
+            r1 = re.findall(r"newwords\.wordid\s*=\s*jpwords\.id", sql)
+            if r1:
+                runmode = RUNMODETYPE.RMT_NEW
+        else:
+            assert 0, 'Invalid parameter'
+        
         logging.debug(runmode)
-        return (sql)
+        return sql
+
+def main(argv):
+    sqlkey = ""
+    try:
+        opts, args = getopt.getopt(argv,"hw:",["sql="])
+    except getopt.GetoptError:
+        print ('run.py -w <sql>')
+        sys.exit(2)
+    for opt, arg in opts:
+        if opt == '-h':
+            print ('run.py -w <key>')
+            sys.exit()
+        elif opt in ("-w", "--key in run.json"):
+            sqlkey = arg
     
+    if not sqlkey:
+        sqlkey = 'all'
+    logging.debug(sqlkey)
+    v = getparam(sqlkey)
+    if v:
+        run(getwords(v))
+    else:
+        assert 0, 'Invalid parameter'
+
+
 if __name__ == '__main__':
     if os.path.exists(runlog):
         os.unlink(runlog)
-    logging.basicConfig(filename = runlog, level = logging.DEBUG, format = '%(asctime)s - %(levelname)s - %(message)s')   
-    run(getwords(getparam()))
+    logging.basicConfig(filename = runlog, level = logging.DEBUG, format = '%(asctime)s - %(levelname)s - %(message)s')
+    main(sys.argv[1:])
