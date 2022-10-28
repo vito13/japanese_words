@@ -1,5 +1,43 @@
 # japanese_words
 
+此项目仅用于本人背单词与练习键盘输入使用
+
+
+## 操作指南
+
+### 初始化数据
+
+```
+$ python3 setup.py
+```
+
+此方法仅运行一次即可，作用是初始化数据库
+
+### 启动程序
+
+```
+$ python3 run.py -k 20
+
+参数"20"的作用可以参考run.json中的配置
+```
+
+启动后如果想去除杂乱的字符可以运行下面的替换后再次启动即可
+
+```
+$ perl -i.bak -pe 's/contents0, kana, contents1, newchn, contents2, newroma, kanji, contents3/"", "", "", newchn, "", "", "", ""/g' run.py
+```
+
+### 其余操作
+
+启动后可有下列操作
+
+|按键|说明|
+|-|-|
+|q|exit|
+|1|prev|
+|`|next|
+
+
 ## 功能列表
 
 - 【ok】1 运行中可以手动调整next与prev进行重复练习

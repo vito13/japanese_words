@@ -2,7 +2,7 @@
     "random": "SELECT * FROM jpwords ORDER BY RANDOM() LIMIT 10",
     "19": "SELECT * FROM jpwords where lesson = 19",
     "20": "SELECT * FROM jpwords where lesson = 20",
-    "21": "SELECT * FROM jpwords where lesson = 21",
+    "22": "SELECT * FROM jpwords where lesson = 22",
     "new": "SELECT * FROM jpwords where increase > decrease",
     
     "show_correct": "SELECT * FROM jpwords where correct > 0 order by correct desc limit 10",

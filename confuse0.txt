@@ -1,14 +1,14 @@
-[2022-10-25 11:33:04.62799] [93200] [debug] -------修改pdf链接: "[一致性读](./一致性读.md)" ===>>> "[一致性读](#一致性读)", /home/huawei/hwwork/PostgreSQL_doc/mdbooks/pl/../bbb//概念手册.md
-[2022-10-25 11:33:04.62806] [93200] [debug] -------修改pdf链接: "[集群恢复和补空洞机制](./集群恢复和补空洞机制.md)" ===>>> "[集群恢复和补空洞机制](#集群恢复和补空洞机制)", /home/huawei/hwwork/PostgreSQL_doc/mdbooks/pl/../bbb//概念手册.md
-[2022-10-25 11:33:04.62814] [93200] [debug] -------修改pdf链接: "[replica日志接收和回放](./从计算节点日志接收和回放.md)" ===>>> "[replica日志接收和回放](#从计算节点日志接收和回放)", /home/huawei/hwwork/PostgreSQL_doc/mdbooks/pl/../bbb//概念手册.md
-[2022-10-25 11:33:04.62821] [93200] [debug] -------修改pdf链接: "[主从切换](./主从切换.md)" ===>>> "[主从切换](#主从切换)", /home/huawei/hwwork/PostgreSQL_doc/mdbooks/pl/../bbb//概念手册.md
-[2022-10-25 11:33:04.62830] [93200] [debug] -------修改pdf链接: "[网络连接和监听](./网络连接和监听.md)" ===>>> "[网络连接和监听](#网络连接和监听)", /home/huawei/hwwork/PostgreSQL_doc/mdbooks/pl/../bbb//概念手册.md
-[2022-10-25 11:33:04.62836] [93200] [debug] -------修改pdf链接: "[节点管理](./节点管理.md)" ===>>> "[节点管理](#节点管理)", /home/huawei/hwwork/PostgreSQL_doc/mdbooks/pl/../bbb//概念手册.md
-[2022-10-25 11:33:04.62842] [93200] [debug] -------修改pdf链接: "[网络预取IO和异步IO](./网络预取IO和异步IO.md)" ===>>> "[网络预取IO和异步IO](#网络预取IO和异步IO)", /home/huawei/hwwork/PostgreSQL_doc/mdbooks/pl/../bbb//概念手册.md
-[2022-10-25 11:33:04.62848] [93200] [debug] -------修改pdf链接: "[缓存管理和优化](./缓存管理和优化.md)" ===>>> "[缓存管理和优化](#缓存管理和优化)", /home/huawei/hwwork/PostgreSQL_doc/mdbooks/pl/../bbb//概念手册.md
-[2022-10-25 11:33:04.64081] [93197] [debug] -------去除imageALT: "![存储计算分离](/home/huawei/hwwork/PostgreSQL_doc/mdbooks/概念手册/./././images/存储计算分离.png)" ===>>> "![](/home/huawei/hwwork/PostgreSQL_doc/mdbooks/概念手册/./././images/存储计算分离.png)", /home/huawei/hwwork/PostgreSQL_doc/mdbooks/pl/../bbb//概念手册.md
-[2022-10-25 11:33:04.64093] [93197] [debug] -------去除imageALT: "![存储节点](/home/huawei/hwwork/PostgreSQL_doc/mdbooks/概念手册/./././images/存储节点.png)" ===>>> "![](/home/huawei/hwwork/PostgreSQL_doc/mdbooks/概念手册/./././images/存储节点.png)", /home/huawei/hwwork/PostgreSQL_doc/mdbooks/pl/../bbb//概念手册.md
-[2022-10-25 11:33:04.64099] [93197] [debug] -------去除imageALT: "![协程](/home/huawei/hwwork/PostgreSQL_doc/mdbooks/概念手册/./././images/协程.png)" ===>>> "![](/home/huawei/hwwork/PostgreSQL_doc/mdbooks/概念手册/./././images/协程.png)", /home/huawei/hwwork/PostgreSQL_doc/mdbooks/pl/../bbb//概念手册.md
-[2022-10-25 11:33:04.64104] [93197] [debug] -------去除imageALT: "![计算节点](/home/huawei/hwwork/PostgreSQL_doc/mdbooks/概念手册/./././images/计算节点.png)" ===>>> "![](/home/huawei/hwwork/PostgreSQL_doc/mdbooks/概念手册/./././images/计算节点.png)", /home/huawei/hwwork/PostgreSQL_doc/mdbooks/pl/../bbb//概念手册.md
-[2022-10-25 11:33:04.88287] [93203] [debug] /home/huawei/hwwork/PostgreSQL_doc/mdbooks/pl/../bbb//概念手册.md
--------加入段落空格: "PostgreSQL数据库架构和概念模型以及主要
+[2022-10-25 11:33:04.62799] [93200] [debug] -------修改sql链接: "[一协程读](./一致性读.md)" ===>>> "[一致性读](#一致性读)", /home/suql/work/suql_doc/ddmkk/cpp/../bbb//执行普通.md
+[2022-10-25 11:33:04.62806] [93200] [debug] -------修改sql链接: "[sql协程和补sql机制](./sql恢复和补sql机制.md)" ===>>> "[sql恢复和补sql机制](#sql恢复和补sql机制)", /home/suql/work/suql_doc/ddmkk/cpp/../bbb//执行普通.md
+[2022-10-25 11:33:04.62814] [93200] [debug] -------修改sql链接: "[recppicasql接协程回放](./从sql节点sql接收和回放.md)" ===>>> "[recppicasql接收和回放](#从sql节点sql接收和回放)", /home/suql/work/suql_doc/ddmkk/cpp/../bbb//执行普通.md
+[2022-10-25 11:33:04.62821] [93200] [debug] -------修改sql链接: "[主从协程](./主从切换.md)" ===>>> "[主从切换](#主从切换)", /home/suql/work/suql_doc/ddmkk/cpp/../bbb//执行普通.md
+[2022-10-25 11:33:04.62830] [93200] [debug] -------修改sql链接: "[网络协程和监听](./网络sql和监听.md)" ===>>> "[网络sql和监听](#网络sql和监听)", /home/suql/work/suql_doc/ddmkk/cpp/../bbb//执行普通.md
+[2022-10-25 11:33:04.62836] [93200] [debug] -------修改sql链接: "[节协程理](./节点管理.md)" ===>>> "[节点管理](#节点管理)", /home/suql/work/suql_doc/ddmkk/cpp/../bbb//执行普通.md
+[2022-10-25 11:33:04.62842] [93200] [debug] -------修改sql链接: "[网络协程行普通和协程行普通](./网络预取行普通和异步行普通.md)" ===>>> "[网络预取行普通和异步行普通](#网络预取行普通和异步行普通)", /home/suql/work/suql_doc/ddmkk/cpp/../bbb//执行普通.md
+[2022-10-25 11:33:04.62848] [93200] [debug] -------修改sql链接: "[sql管理协程化](./sql管理和优化.md)" ===>>> "[sql管理和优化](#sql管理和优化)", /home/suql/work/suql_doc/ddmkk/cpp/../bbb//执行普通.md
+[2022-10-25 11:33:04.64081] [93197] [debug] -------去除sqlALT: "![存协程算分离](/home/suql/work/suql_doc/ddmkk/执行普通/./././sqls/存储sql分离.png)" ===>>> "![](/home/suql/work/suql_doc/ddmkk/执行普通/./././sqls/存储sql分离.png)", /home/suql/work/suql_doc/ddmkk/cpp/../bbb//执行普通.md
+[2022-10-25 11:33:04.64093] [93197] [debug] -------去除sqlALT: "![存储协程](/home/suql/work/suql_doc/ddmkk/执行普通/./././sqls执行普通.png)" ===>>> "![](/home/suql/work/suql_doc/ddmkk/执行普通/./././sqls执行普通.png)", /home/suql/work/suql_doc/ddmkk/cpp/../bbb//执行普通.md
+[2022-10-25 11:33:04.64099] [93197] [debug] -------去除sqlALT: "![协程](/home/suql/work/suql_doc/ddmkk/执行普通/./././sqls/协程.png)" ===>>> "![](/home/suql/work/suql_doc/ddmkk/执行普通/./././sqls/协程.png)", /home/suql/work/suql_doc/ddmkk/cpp/../bbb//执行普通.md
+[2022-10-25 11:33:04.64104] [93197] [debug] -------去除sqlALT: "![计协程点](/home/suql/work/suql_doc/ddmkk/执行普通/./././sqls/sql节点.png)" ===>>> "![](/home/suql/work/suql_doc/ddmkk/执行普通/./././sqls/sql节点.png)", /home/suql/work/suql_doc/ddmkk/cpp/../bbb//执行普通.md
+[2022-10-25 11:33:04.88287] [93203] [debug] /home/suql/work/suql_doc/ddmkk/cpp/../bbb//执协程通.md
+-------加入段落空格: "suql数据库架构和协程模型以及主要

@@ -26,6 +26,7 @@ class WORDRESULTTYPE(Enum):
     
     UNKNOWN = auto()
 
+
 c0 = "confuse0.txt"
 c1 = "confuse1.txt"
 c2 = "confuse2.txt"
@@ -44,7 +45,19 @@ with open(c2) as file_object:
 with open(c3) as file_object:
     contents3 = file_object.read()
 
+def buildbody(tup, stridx):
+    wordid, kana, kanji, roma, chinese, wordtype, lesson, increase, decrease, correct, wrong = tup
+    newroma = roma
+    newchn = re.sub(r'[），（ ]', ' ', chinese)
+    newchn = "{} {}".format(newchn, stridx)
 
+    # tidy：
+    # body = "{} {} {} {} {} {}    {} {}".format("","","",newchn,"","","","")
+    # confuse：
+    # body = "{} {} {} {} {} {}    {} {}".format(contents0,kana,contents1,newchn,contents2,newroma,kanji,contents3)
+    
+    body = "{} {} {} {} {} {}    {} {}".format(contents0,kana,contents1,newchn,contents2,newroma,kanji,contents3)
+    return (wordid, roma, body)
 
 def doincrease(wid):
     conn = sqlite3.connect(dbfile)
@@ -88,18 +101,13 @@ def docorrect(wid):
     conn.close()
 
 def testone(tup, stridx):
-    wordid, kana, kanji, roma, chinese, wordtype, lesson, increase, decrease, correct, wrong = tup
-
-    newroma = roma
-    newchn = re.sub(r'[），（ ]', ' ', chinese)
-    newchn = "{} {}".format(newchn, stridx)
-    msg = "{} {} {} {} {} {}    {} {}".format(contents0, kana, contents1, newchn, contents2, newroma, kanji, contents3)
     clear = lambda: os.system('clear')
     clear()
-
     result = WORDRESULTTYPE.UNKNOWN
+    wordid, roma, body = buildbody(tup, stridx)
+    
     while True:
-        response = input(msg)
+        response = input(body)
         if response == 'q':
             sys.exit()
         elif response == '1':
@@ -108,7 +116,7 @@ def testone(tup, stridx):
         elif response == '`':
             result = WORDRESULTTYPE.GIVEUP_NEXT
             break
-        elif response == newroma:
+        elif response == roma:
             result = WORDRESULTTYPE.CORRECT_NEXT
             docorrect(wordid)
             break
@@ -178,23 +186,27 @@ def getparam(key):
             sql = params[key]
         else:
             assert 0, 'Invalid parameter'
-        
         return sql
 
 def main(argv):
     sqlkey = ""
     try:
-        opts, args = getopt.getopt(argv,"hw:",["sql="])
+        opts, args = getopt.getopt(argv,'-h-k:-v',['help', 'key=', 'version'])
     except getopt.GetoptError:
-        print ('run.py -w <sql>')
+        print ('python3 run.py')
         sys.exit(2)
     for opt, arg in opts:
-        if opt == '-h':
-            print ('run.py -w <key>')
+        if opt in ('-h','--help'):
+            print("[*] Help info")
             sys.exit()
-        elif opt in ("-w", "--key in run.json"):
+        elif opt in ('-v','--version'):
+            print("[*] Version is 0.01 ")
+            sys.exit()
+        elif opt in ("-k", "--key"):
             sqlkey = arg
-    
+        else:
+            assert 0, 'Invalid parameter'
+
     if not sqlkey:
         sqlkey = 'random'
     logging.debug(sqlkey)
