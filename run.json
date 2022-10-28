@@ -4,5 +4,8 @@
     "20": "SELECT * FROM jpwords where lesson = 20",
     "21": "SELECT * FROM jpwords where lesson = 21",
     "new": "SELECT * FROM jpwords where increase > decrease",
+    
+    "show_correct": "SELECT * FROM jpwords where correct > 0 order by correct desc limit 10",
+    "show_wrong": "SELECT * FROM jpwords where wrong > 0 order by wrong desc limit 10",
     "clearnew": ""
 }

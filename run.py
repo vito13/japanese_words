@@ -148,6 +148,16 @@ def run(data):
         if testindex < 0:
             testindex = 0
 
+def show(data, key):
+    for tup in data:
+        wordid, kana, kanji, roma, chinese, wordtype, lesson, increase, decrease, correct, wrong = tup
+        if 'correct' == key:
+            print("{}\tL{} {}".format(correct, lesson, chinese))
+        elif 'wrong' == key:
+            print("{}\tL{} {}".format(wrong, lesson, chinese))
+        else:
+            pass
+            
 def getwords(sql):
     conn = sqlite3.connect(dbfile)
     cs = conn.cursor()
@@ -190,7 +200,12 @@ def main(argv):
     logging.debug(sqlkey)
     v = getparam(sqlkey)
     if v:
-        run(getwords(v))
+        date = getwords(v)
+        vals = re.findall(r'show_(\w+)', sqlkey)
+        if len(vals) == 1:
+            show(date, vals[0])
+        else:
+            run(date)
     else:
         assert 0, 'Invalid parameter'
 
