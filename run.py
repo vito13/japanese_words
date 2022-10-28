@@ -67,10 +67,20 @@ def dodecrease(wid):
     conn.commit()
     conn.close()
 
-def dorepeat(wid):
+def dowrong(wid):
     conn = sqlite3.connect(dbfile)
     cs = conn.cursor()
-    sql = "update {} set repeat = repeat + 1 where id = \"{}\"".format(wordtable, wid)
+    sql = "update {} set wrong = wrong + 1 where id = \"{}\"".format(wordtable, wid)
+    logging.debug(sql)
+    cs.execute(sql)
+    cs.close()
+    conn.commit()
+    conn.close()
+    
+def docorrect(wid):
+    conn = sqlite3.connect(dbfile)
+    cs = conn.cursor()
+    sql = "update {} set correct = correct + 1 where id = \"{}\"".format(wordtable, wid)
     logging.debug(sql)
     cs.execute(sql)
     cs.close()
@@ -78,7 +88,7 @@ def dorepeat(wid):
     conn.close()
 
 def testone(tup, stridx):
-    wordid, kana, kanji, roma, chinese, wordtype, lesson, increase, decrease, repeat = tup
+    wordid, kana, kanji, roma, chinese, wordtype, lesson, increase, decrease, correct, wrong = tup
 
     newroma = roma
     newchn = re.sub(r'[），（ ]', ' ', chinese)
@@ -100,6 +110,7 @@ def testone(tup, stridx):
             break
         elif response == newroma:
             result = WORDRESULTTYPE.CORRECT_NEXT
+            docorrect(wordid)
             break
         elif response == '9':
             result = WORDRESULTTYPE.INCREASE_NEXT
@@ -110,7 +121,7 @@ def testone(tup, stridx):
             dodecrease(wordid)
             break
         else:
-            dorepeat(wordid)
+            dowrong(wordid)
             pass
 
     return result

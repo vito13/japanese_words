@@ -43,7 +43,8 @@ def createdb():
         lesson INTEGER,
         increase INTEGER NOT NULL,
         decrease INTEGER NOT NULL,
-        repeat INTEGER NOT NULL
+        correct INTEGER NOT NULL,
+        wrong INTEGER NOT NULL
         );
     '''.format(wordtable)
     logging.debug(sql)
@@ -117,25 +118,25 @@ def processfile(src):
         contents = file_object.read()
     curlesson = -1
     sqls = []
-    sqltemplate = "INSERT INTO {} (kana, kanji, roma, chinese, wordtype, lesson, increase, decrease, repeat) VALUES ({})"
+    sqltemplate = "INSERT INTO {} (kana, kanji, roma, chinese, wordtype, lesson, increase, decrease, correct, wrong) VALUES ({})"
     for line in contents.splitlines():
         linetype, kana, kanji, roma, chinese, wordtype, lesson = processline(line)
         if linetype == LINETYPE.LESSON:
             curlesson = lesson
             pass
         elif linetype == LINETYPE.WORD:
-            val = "\"{}\", \"{}\", \"{}\", \"{}\", \"{}\", {}, 0, 0, 0".format(kana, kanji, roma, chinese, wordtype, curlesson)
+            val = "\"{}\", \"{}\", \"{}\", \"{}\", \"{}\", {}, 0, 0, 0, 0".format(kana, kanji, roma, chinese, wordtype, curlesson)
             sql = sqltemplate.format(wordtable, val)
             sqls.append(sql)
             pass
         elif linetype == LINETYPE.SENTENCE:
-            val = "\"{}\", \"{}\", \"{}\", \"{}\", \"{}\", {}, 0, 0, 0".format(kana, kanji, roma, chinese, LINETYPE.SENTENCE, curlesson)
+            val = "\"{}\", \"{}\", \"{}\", \"{}\", \"{}\", {}, 0, 0, 0, 0".format(kana, kanji, roma, chinese, LINETYPE.SENTENCE, curlesson)
             sql = sqltemplate.format(wordtable, val)
             sqls.append(sql)
             pass
         elif linetype == LINETYPE.WORDS:
             for k, r in zip(kana, roma):
-                val = "\"{}\", \"{}\", \"{}\", \"{}\", \"{}\", {}, 0, 0, 0".format(k, '', r, '', LINETYPE.WORDS, curlesson)
+                val = "\"{}\", \"{}\", \"{}\", \"{}\", \"{}\", {}, 0, 0, 0, 0".format(k, '', r, '', LINETYPE.WORDS, curlesson)
                 sql = sqltemplate.format(wordtable, val)
                 sqls.append(sql)
             pass
