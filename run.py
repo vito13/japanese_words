@@ -14,24 +14,15 @@ from hyperparameters import global_var
 
 dbfile = global_var.get_value('dbfile')
 wordtable = global_var.get_value('wordtable')
-newwordtable = global_var.get_value('newwordtable')
 runlog = global_var.get_value('runlog')
-
-
-class RUNMODETYPE(Enum):
-    RMT_JP = auto()
-    RMT_NEW = auto()
-    UNKNOWN = auto()
-    
-runmode = RUNMODETYPE.RMT_JP
 
 class WORDRESULTTYPE(Enum):
     CORRECT_NEXT = auto()       # 正确next
     GIVEUP_NEXT = auto()        # 放弃next
     GIVEUP_PREV = auto()        # 放弃prev
     
-    ADDNEW_NEXT = auto()        # 加入后next
-    REMOVE_NEXT = auto()        # 去除后next
+    INCREASE_NEXT = auto()        # 加入后next
+    DECREASE_NEXT = auto()        # 去除后next
     
     UNKNOWN = auto()
 
@@ -55,43 +46,39 @@ with open(c3) as file_object:
 
 
 
-def addnewwords(idarr):
-    group = "test"
+def doincrease(wid):
     conn = sqlite3.connect(dbfile)
     cs = conn.cursor()
-    for wordid in idarr:
-        sql = "select * from {} where wordid = {} and wordgroup = \"{}\"".format(newwordtable, wordid, group)
-        logging.debug(sql)
-        cs.execute(sql)
-        words = cs.fetchall()
-        if len(words):
-            logging.debug("new word already exists")
-            continue
-        else:
-            val = "{}, \"{}\"".format(wordid, group)
-            sql = "INSERT INTO {} (wordid, wordgroup) VALUES ({})".format(newwordtable, val)
-            logging.debug(sql)
-            cs.execute(sql)
+    sql = "update {} set increase = increase + 1 where id = \"{}\"".format(wordtable, wid)
+    logging.debug(sql)
+    cs.execute(sql)
     cs.close()
     conn.commit()
     conn.close()
 
 
-def removenewwords(idarr):
+def dodecrease(wid):
     conn = sqlite3.connect(dbfile)
     cs = conn.cursor()
-    for wordid in idarr:
-        val = wordid
-        sql = "DELETE FROM {} WHERE wordid = \"{}\"".format(newwordtable, val)
-        logging.debug(sql)
-        cs.execute(sql)
+    sql = "update {} set decrease = decrease + 1 where id = \"{}\" and decrease + 1 <= increase".format(wordtable, wid)
+    logging.debug(sql)
+    cs.execute(sql)
     cs.close()
     conn.commit()
     conn.close()
 
+def dorepeat(wid):
+    conn = sqlite3.connect(dbfile)
+    cs = conn.cursor()
+    sql = "update {} set repeat = repeat + 1 where id = \"{}\"".format(wordtable, wid)
+    logging.debug(sql)
+    cs.execute(sql)
+    cs.close()
+    conn.commit()
+    conn.close()
 
 def testone(tup, stridx):
-    wordid, kana, kanji, roma, chinese, wordtype, lesson = tup
+    wordid, kana, kanji, roma, chinese, wordtype, lesson, increase, decrease, repeat = tup
 
     newroma = roma
     newchn = re.sub(r'[），（ ]', ' ', chinese)
@@ -115,18 +102,17 @@ def testone(tup, stridx):
             result = WORDRESULTTYPE.CORRECT_NEXT
             break
         elif response == '9':
-            if runmode == RUNMODETYPE.RMT_JP:
-                result = WORDRESULTTYPE.ADDNEW_NEXT
-                addnewwords([wordid])
-            elif runmode == RUNMODETYPE.RMT_NEW:
-                result = WORDRESULTTYPE.REMOVE_NEXT
-                removenewwords([wordid])
-            else:
-                assert 0, 'error mode'
+            result = WORDRESULTTYPE.INCREASE_NEXT
+            doincrease(wordid)
+            break
+        elif response == '0':
+            result = WORDRESULTTYPE.DECREASE_NEXT
+            dodecrease(wordid)
             break
         else:
+            dorepeat(wordid)
             pass
-            
+
     return result
 
 def run(data):
@@ -141,9 +127,9 @@ def run(data):
             testindex += 1
         elif WORDRESULTTYPE.GIVEUP_PREV == ret:
             testindex -= 1
-        elif WORDRESULTTYPE.ADDNEW_NEXT == ret:
+        elif WORDRESULTTYPE.INCREASE_NEXT == ret:
             testindex += 1
-        elif WORDRESULTTYPE.REMOVE_NEXT == ret:
+        elif WORDRESULTTYPE.DECREASE_NEXT == ret:
             testindex += 1
         else:
             pass
@@ -159,25 +145,19 @@ def getwords(sql):
     words = cs.fetchall()
     for word in words:
         logging.debug(word)
-    
     cs.close()
     conn.close()
     return words
 
 def getparam(key):
-    global runmode
     with open('run.json', 'r',encoding='utf-8') as f:
         params = json.load(f)
         sql = ''
         if key in params:
             sql = params[key]
-            r1 = re.findall(r"newwords\.wordid\s*=\s*jpwords\.id", sql)
-            if r1:
-                runmode = RUNMODETYPE.RMT_NEW
         else:
             assert 0, 'Invalid parameter'
         
-        logging.debug(runmode)
         return sql
 
 def main(argv):
@@ -195,7 +175,7 @@ def main(argv):
             sqlkey = arg
     
     if not sqlkey:
-        sqlkey = 'all'
+        sqlkey = 'random'
     logging.debug(sqlkey)
     v = getparam(sqlkey)
     if v:

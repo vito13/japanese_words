@@ -24,7 +24,6 @@ class LINETYPE(Enum):
 
 dbfile = global_var.get_value('dbfile')
 wordtable = global_var.get_value('wordtable')
-newwordtable = global_var.get_value('newwordtable')
 setuplog = global_var.get_value('setuplog')
 
 def createdb():
@@ -41,19 +40,12 @@ def createdb():
         roma TEXT NOT NULL,
         chinese TEXT NOT NULL,
         wordtype TEXT,
-        lesson INTEGER
+        lesson INTEGER,
+        increase INTEGER NOT NULL,
+        decrease INTEGER NOT NULL,
+        repeat INTEGER NOT NULL
         );
     '''.format(wordtable)
-    logging.debug(sql)
-    cs.execute(sql)
-    
-    sql = '''
-    CREATE TABLE if not exists {0} (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        wordid INTEGER,
-        wordgroup INTEGER
-        );
-    '''.format(newwordtable)
     logging.debug(sql)
     cs.execute(sql)
     
@@ -119,33 +111,32 @@ def processline(line):
         romas.append(roma)
     return (LINETYPE.WORDS, kanas, '', romas, '', '', -1)
             
-    # return (LINETYPE.UNKNOWN, '', '', '', '', '', -1)
-
 
 def processfile(src):
     with open(src) as file_object:
         contents = file_object.read()
     curlesson = -1
     sqls = []
+    sqltemplate = "INSERT INTO {} (kana, kanji, roma, chinese, wordtype, lesson, increase, decrease, repeat) VALUES ({})"
     for line in contents.splitlines():
         linetype, kana, kanji, roma, chinese, wordtype, lesson = processline(line)
         if linetype == LINETYPE.LESSON:
             curlesson = lesson
             pass
         elif linetype == LINETYPE.WORD:
-            val = "\"{}\", \"{}\", \"{}\", \"{}\", \"{}\", {}".format(kana, kanji, roma, chinese, wordtype, curlesson)
-            sql = "INSERT INTO {} (kana, kanji, roma, chinese, wordtype, lesson) VALUES ({})".format(wordtable, val)
+            val = "\"{}\", \"{}\", \"{}\", \"{}\", \"{}\", {}, 0, 0, 0".format(kana, kanji, roma, chinese, wordtype, curlesson)
+            sql = sqltemplate.format(wordtable, val)
             sqls.append(sql)
             pass
         elif linetype == LINETYPE.SENTENCE:
-            val = "\"{}\", \"{}\", \"{}\", \"{}\", \"{}\", {}".format(kana, kanji, roma, chinese, LINETYPE.SENTENCE, curlesson)
-            sql = "INSERT INTO {} (kana, kanji, roma, chinese, wordtype, lesson) VALUES ({})".format(wordtable, val)
+            val = "\"{}\", \"{}\", \"{}\", \"{}\", \"{}\", {}, 0, 0, 0".format(kana, kanji, roma, chinese, LINETYPE.SENTENCE, curlesson)
+            sql = sqltemplate.format(wordtable, val)
             sqls.append(sql)
             pass
         elif linetype == LINETYPE.WORDS:
             for k, r in zip(kana, roma):
-                val = "\"{}\", \"{}\", \"{}\", \"{}\", \"{}\", {}".format(k, '', r, '', LINETYPE.WORDS, curlesson)
-                sql = "INSERT INTO {} (kana, kanji, roma, chinese, wordtype, lesson) VALUES ({})".format(wordtable, val)
+                val = "\"{}\", \"{}\", \"{}\", \"{}\", \"{}\", {}, 0, 0, 0".format(k, '', r, '', LINETYPE.WORDS, curlesson)
+                sql = sqltemplate.format(wordtable, val)
                 sqls.append(sql)
             pass
         elif linetype == LINETYPE.USELESS:
