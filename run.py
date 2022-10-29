@@ -45,20 +45,6 @@ with open(c2) as file_object:
 with open(c3) as file_object:
     contents3 = file_object.read()
 
-def buildbody(tup, stridx):
-    wordid, kana, kanji, roma, chinese, wordtype, lesson, increase, decrease, correct, wrong = tup
-    newroma = roma
-    newchn = re.sub(r'[），（ ]', ' ', chinese)
-    newchn = "{}, {}".format(stridx, newchn)
-
-    # tidy：
-    # body = "{} {} {} {} {} {}    {} {}".format("","","",newchn,"","","","")
-    # confuse：
-    # body = "{} {} {} {} {} {}    {} {}".format(contents0,kana,contents1,newchn,contents2,newroma,kanji,contents3)
-    
-    body = "{} {} {} {} {} {}    {} {}".format(kana, ',', kanji, ',', newroma, ',', newchn, ',')
-    return (wordid, body, roma, kana, kanji)
-
 def doincrease(wid):
     conn = sqlite3.connect(dbfile)
     cs = conn.cursor()
@@ -99,6 +85,20 @@ def docorrect(wid):
     cs.close()
     conn.commit()
     conn.close()
+
+def buildbody(tup, stridx):
+    wordid, kana, kanji, roma, chinese, wordtype, lesson, increase, decrease, correct, wrong = tup
+    newroma = roma
+    newchn = re.sub(r'[），（ ]', ' ', chinese)
+    newchn = "{}, {}".format(stridx, newchn)
+
+    # tidy：
+    # body = "{} {} {} {} {} {}    {} {}".format("","","",newchn,"","","","")
+    # confuse：
+    # body = "{} {} {} {} {} {}    {} {}".format(contents0,kana,contents1,newchn,contents2,newroma,kanji,contents3)
+    
+    body = "{} {} {} {} {} {}    {} {}".format(kana, ',', kanji, ',', newroma, ',', newchn, ',')
+    return (wordid, body, roma, kana, kanji)
 
 def testone(tup, stridx):
     clear = lambda: os.system('clear')
@@ -156,7 +156,7 @@ def run(data):
         if testindex < 0:
             testindex = 0
 
-def show(data, key):
+def show(data):
     for tup in data:
         print(tup)
             
@@ -183,7 +183,7 @@ def getparam(key):
         return sql
 
 def main(argv):
-    sqlkey = ""
+    key = ""
     try:
         opts, args = getopt.getopt(argv,'-h-k:-v',['help', 'key=', 'version'])
     except getopt.GetoptError:
@@ -197,21 +197,24 @@ def main(argv):
             print("[*] Version is 0.01 ")
             sys.exit()
         elif opt in ("-k", "--key"):
-            sqlkey = arg
+            key = arg
         else:
             assert 0, 'Invalid parameter'
 
-    if not sqlkey:
-        sqlkey = 'random'
-    logging.debug(sqlkey)
+    logging.debug("key: {}".format(key))
+    sqlkey = key
+    showing = False
+    vals = re.findall(r'show(\w+)', key)
+    if len(vals) == 1:
+        sqlkey = vals[0]
+        showing = True
     v = getparam(sqlkey)
     if v:
-        date = getwords(v)
-        vals = re.findall(r'show_(\w+)', sqlkey)
-        if len(vals) == 1:
-            show(date, vals[0])
+        data = getwords(v)
+        if showing:
+            show(data)
         else:
-            run(date)
+            run(data)
     else:
         assert 0, 'Invalid parameter'
 
