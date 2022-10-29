@@ -1,11 +1,15 @@
 {
     "random": "SELECT * FROM jpwords ORDER BY RANDOM() LIMIT 10",
     "19": "SELECT * FROM jpwords where lesson = 19",
-    "20": "SELECT * FROM jpwords where lesson = 20",
-    "22": "SELECT * FROM jpwords where lesson = 22",
-    "new": "SELECT * FROM jpwords where increase > decrease",
+    "23": "SELECT * FROM jpwords where lesson = 23 ORDER BY RANDOM()",
     
-    "show_correct": "SELECT * FROM jpwords where correct > 0 order by correct desc limit 10",
-    "show_wrong": "SELECT * FROM jpwords where wrong > 0 order by wrong desc limit 10",
+    "fuxi": "SELECT * FROM jpwords WHERE id IN (SELECT id FROM jpwords where lesson = 23 limit 20 offset 0) ORDER BY RANDOM()",
+    "fuxiwrong": "SELECT * FROM jpwords WHERE id IN(select id from jpwords where lesson = 23 and wrong > 0 order by wrong desc limit 100) ORDER BY RANDOM()",
+    "xuexi": "SELECT * FROM jpwords where lesson = 24 limit 5 offset 0",
+    "new": "SELECT * FROM jpwords where increase > decrease and lesson = 23",
+    
+
+    "show_wrong":"select chinese, wrong from jpwords where lesson = 23 and wrong > 0 order by wrong desc limit 100",
+    "show_correct":"select chinese, correct from jpwords where lesson = 23 and correct > 0 order by correct desc limit 100",
     "clearnew": ""
 }

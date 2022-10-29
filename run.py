@@ -49,15 +49,15 @@ def buildbody(tup, stridx):
     wordid, kana, kanji, roma, chinese, wordtype, lesson, increase, decrease, correct, wrong = tup
     newroma = roma
     newchn = re.sub(r'[），（ ]', ' ', chinese)
-    newchn = "{} {}".format(newchn, stridx)
+    newchn = "{}, {}".format(stridx, newchn)
 
     # tidy：
     # body = "{} {} {} {} {} {}    {} {}".format("","","",newchn,"","","","")
     # confuse：
     # body = "{} {} {} {} {} {}    {} {}".format(contents0,kana,contents1,newchn,contents2,newroma,kanji,contents3)
     
-    body = "{} {} {} {} {} {}    {} {}".format(contents0,kana,contents1,newchn,contents2,newroma,kanji,contents3)
-    return (wordid, roma, body)
+    body = "{} {} {} {} {} {}    {} {}".format(kana, ',', kanji, ',', newroma, ',', newchn, ',')
+    return (wordid, body, roma, kana, kanji)
 
 def doincrease(wid):
     conn = sqlite3.connect(dbfile)
@@ -104,27 +104,27 @@ def testone(tup, stridx):
     clear = lambda: os.system('clear')
     clear()
     result = WORDRESULTTYPE.UNKNOWN
-    wordid, roma, body = buildbody(tup, stridx)
+    wordid, body, *ret = buildbody(tup, stridx)
     
     while True:
         response = input(body)
-        if response == 'q':
+        if response in ['q', 'Q', 'ｑ', 'ℚ']:
             sys.exit()
-        elif response == '1':
+        elif response in ['1', '１']:
             result = WORDRESULTTYPE.GIVEUP_PREV
             break
-        elif response == '`':
+        elif response in ['`', '‘']:
             result = WORDRESULTTYPE.GIVEUP_NEXT
             break
-        elif response == roma:
+        elif response in [*ret]:
             result = WORDRESULTTYPE.CORRECT_NEXT
             docorrect(wordid)
             break
-        elif response == '9':
+        elif response in ['9', '９']:
             result = WORDRESULTTYPE.INCREASE_NEXT
             doincrease(wordid)
             break
-        elif response == '0':
+        elif response in ['0', '０']:
             result = WORDRESULTTYPE.DECREASE_NEXT
             dodecrease(wordid)
             break
@@ -158,13 +158,7 @@ def run(data):
 
 def show(data, key):
     for tup in data:
-        wordid, kana, kanji, roma, chinese, wordtype, lesson, increase, decrease, correct, wrong = tup
-        if 'correct' == key:
-            print("{}\tL{} {}".format(correct, lesson, chinese))
-        elif 'wrong' == key:
-            print("{}\tL{} {}".format(wrong, lesson, chinese))
-        else:
-            pass
+        print(tup)
             
 def getwords(sql):
     conn = sqlite3.connect(dbfile)
