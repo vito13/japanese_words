@@ -36,13 +36,13 @@ contents1 = ""
 contents2 = ""
 contents3 = ""
 
-with open(c0) as file_object:
+with open(c0, encoding = 'utf-8') as file_object:
     contents0 = file_object.read()
-with open(c1) as file_object:
+with open(c1, encoding = 'utf-8') as file_object:
     contents1 = file_object.read()
-with open(c2) as file_object:
+with open(c2, encoding = 'utf-8') as file_object:
     contents2 = file_object.read()
-with open(c3) as file_object:
+with open(c3, encoding = 'utf-8') as file_object:
     contents3 = file_object.read()
 
 def doincrease(wid):
@@ -93,11 +93,11 @@ def buildbody(tup, stridx):
     newchn = "{}, {}".format(stridx, newchn)
 
     # tidy：
-    # body = "{} {} {} {} {} {}    {} {}".format("","","",newchn,"","","","")
+    # body = "{} {} {} {} {} {}    {} {}".format(kana, ',', kanji, ',', newroma, ',', newchn, ',')
     # confuse：
-    # body = "{} {} {} {} {} {}    {} {}".format(contents0,kana,contents1,newchn,contents2,newroma,kanji,contents3)
+    body = "{} {} {} {} {} {}    {} {}".format(contents0,kana,contents1,newchn,contents2,newroma,kanji,contents3)
     
-    body = "{} {} {} {} {} {}    {} {}".format(kana, ',', kanji, ',', newroma, ',', newchn, ',')
+    # body = "{} {} {} {} {} {}    {} {}".format(kana, ',', kanji, ',', newroma, ',', newchn, ',')
     return (wordid, body, roma, kana, kanji)
 
 def testone(tup, stridx):
