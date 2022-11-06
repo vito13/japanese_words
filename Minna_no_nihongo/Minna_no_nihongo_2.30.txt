@@ -1,0 +1,60 @@
+﻿# Minna no Nihongo II, Lesson 030
+# ISBN 4-88319-103-6
+# Version 1.0 
+# Paul Denisowski (pdenisowski@nc.rr.com)
+はります [はります] /put up, post, paste/
+掛けます [かけます] /hang/
+飾ります [かざります] /decorate, display/
+並べます [ならべます] /arrange, line up/
+植えます [うえます] /plant/
+戻します [もどします] /return, put ~ back/
+まとめます [まとめます] /put ~ together, put ~ in shape, sum up/
+片付けます [かたづけます] /put things in order, tidy up/
+しまいます [しまいます] /put things in their proper place/
+決めます [きめます] /decide/
+知らせます [しらせます] /to inform/
+相談します [そうだんします] /consult, discuss/
+予習します [よしゅうします] /prepare one's lesson/
+復習します [ふくしゅうします] /review one's lesson/
+そのままにします [そのままにします] /leave thing as they are/
+お子さん [おこさん] /(someone else's) child/
+授業 [じゅぎょう] /class/
+講義 [こうぎ] /lecture/
+ミーティング [ミーティング] /meeting/
+予定 [よてい] /a plan, a scheduled/
+お知らせ [おしらせ] /a notice/
+案内書 [あんないしょ] /guidebook/
+カレンダー [カレンダー] /calendar/
+ポスター [ポスター] /poster/
+ごみ箱 [ごみばこ] /trash can, dustbin/
+人形 [にんぎょう] /doll/
+花瓶 [かびん] /vase/
+鏡 [かがみ] /mirror/
+引き出し [ひきだし] /drawer/
+玄関 [げんかん] /front door, porch, entrance hall/
+廊下 [ろうか] /corridor, hallway/
+壁 [かべ] /wall/
+池 [いけ] /pond/
+交番 [こうばん] /police box /
+元の所 [もとのところ] /original place/
+周り [まわり] /round, around/
+真ん中 [まんなか] /center/
+隅 [すみ] /corner/
+まだ [まだ] /not yet/
+～ほど [～ほど] /about ~/
+予定表 [よていひょう] /schedule/
+ご苦労さま [ごくろうさま] /Thank you for your hard work/
+希望 [きぼう] /hope, request/
+何かご希望がありますか [なにかごきぼうがありますか] /Do you have any requests?/
+ミューシカル [ミューシカル] /musical/
+これはいいですね [これはいいですね] /That's a good idea, that sounds nice/
+ブロードウエイ [ブロードウエイ] /Broadway/
+丸い [まるい] /round/
+月 [つき] /moon/
+ある～ [ある～] /one ~, a certain ~/
+地球 [ちきゅう] /earth/
+うれしい [うれしい] /happy, glad/
+嫌 [いや] /hateful, disagreeable/
+すると [すると] /and then/
+目が覚めます [めがさめます] /wake up/
+#end

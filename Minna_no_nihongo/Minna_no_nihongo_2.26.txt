@@ -1,0 +1,59 @@
+﻿# Minna no Nihongo II, Lesson 026
+# ISBN 4-88319-103-6
+# Version 1.0 
+# Paul Denisowski (pdenisowski@nc.rr.com)
+見ます [みます] /check/
+診ます [みます] /check/
+探します [さがします] /look for, search/
+遅れます [おくれます] /be late/
+電車に遅れます [でんしゃにおくれます] /be late for a train/
+間に合います [まにあいます] /be on time/
+電車に間に合う [でんしゃにまにあいます] /be on time for a train/
+やります [やります] /do/
+参加します [さんかします] /attend/
+パーティーに参加します [パーティーにさんかします] /attend a party/
+申し込みます [もうしこみます] /apply for, enter for/
+都合がいい [つごうがいい] /convenient (regarding time)/
+都合が悪い [つごうがわるい] /inconvenient (regarding time)/
+気分がいい [きぶんがいい] /feel well/
+気分が悪い [きぶんがわるい] /feel ill/
+新聞社 [しんぶんしゃ] /newspaper publishing company, newspaper office/
+柔道 [じゅうどう] /judo/
+運動会 [うんどうかい] /athletic meeting/
+場所 [ばしょ] /place/
+ボランティア [ボランティア] /volunteer/
+～弁 [～べん] /dialect/
+今度 [こんど] /next time, another time/
+ずいぶん [ずいぶん] /pretty, very/
+直接 [ちょくせつ] /directly/
+いつでも [いつでも] /any time/
+どこでも [どこでも] /any place/
+だれでも [だれでも] /anybody/
+何でも [なんでも] /anything/
+こんな～ [こんな～]  /~ like this/
+そんな～ [そんな～] /~ like that (near the listener)/
+あんな～ [あんな～] /~ like that (far from both the speaker and the listener)/
+こどもの日 [こどものに] /Children's Day/
+片づきます [かたづぎます] /put in order/
+ごみ [ごみ] /garbage, trash, dust/
+ごみを出します [ごみをだします] /put out the trash/
+燃えます [もえます] /burn/
+燃えるごみ [もえるごみ] /burnable trash/
+燃えないごみ [もえないごみ] /non-burnable trash/
+月水金 [げっすいきん] /Monday, Wednesday and Friday/
+置き場 [おきば] /place where something is put/
+横 [よこ] /side/
+瓶 [びん] /bottle/
+缶 [かん] /can/
+お湯 [おゆ] /hot water/
+ガス [ガス] /gas/
+～会社 [～かいしゃ] /~ company/
+連絡します [れんらくします] /contact/
+困ったなあ [こまったなあ] /What shall I do?/
+電子メール [でんしメール] /electronic mail/
+宇宙 [うちゅう] /space/
+怖い [こわい] /be afraid of/
+宇宙船 [うちゅうせん] /spaceship/
+別の [べつの] /another/
+宇宙飛行士 [うちゅうひこうし] /astronaut/
+#end

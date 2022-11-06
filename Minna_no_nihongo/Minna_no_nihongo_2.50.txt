@@ -1,0 +1,53 @@
+﻿# Minna no Nihongo II, Lesson 050
+# ISBN 4-88319-103-6
+# Version 1.0  
+# Paul Denisowski (pdenisowski@nc.rr.com)
+参ります [まいります] /go, come (humble)/
+おります [おります] /be (humble)/
+いただきます [いただきます] /eat, drink, receive (humble)/
+申します [もうします] /say (humble)/
+いたします [いたします] /do (humble)/
+拝見します [はいけんします] /see (humble)/
+存じます [ぞんじます] /know (humble)/
+伺います [うかがいます] /ask, hear, visit (humble)/
+お目にかかります [おめにかかります] /meet (humble)/
+ございます [ございます] /be (polite)/
+～でございます [～でございます] /be (polite)/
+私 [わたくし] /I (humble)/
+ガイド [ガイド] /guide/
+お宅 [おたく] /(someone else's house)/
+郊外 [こうがい] /suburbs/
+アルバム [アルバム] /album/
+さ来週 [さらいしゅう] /the week after next/
+さ来月 [さらいげつ] /the month after next/
+さ来年 [さらいねん] /the year after next/
+半年 [はんとし] /half a year/
+最初に [さいしょに] /first of all/
+最後に [さいごに] /lastly/
+ただ今 [ただいま] /now/
+江戸東京博物館 [えどとうきょうはくぶつかん] /Edo-Tokyo museum/
+緊張します [けんちょうします] /become tense, be strained/
+放送します [ほうそうします] /broadcast/
+撮ります [とります] /record/
+ビデオに撮ります [ビデオにとります] /record on video/
+賞金 [しょうきん] /prize money/
+自然 [しぜん] /nature/
+きりん [きりん] /giraffe/
+象 [ぞう] /elephant/
+ころ [ころ] /times, days/
+かないます [かないます] /be realized/
+夢がかないます [ゆめがかないます] /a dream comes true/
+ひとことよろしいでしょうか [ひとことよろしいでしょうか] /May I say one word?/
+協力します [きょうりょくします] /cooperate/
+心から [こころから] /from my heart/
+感謝します [かんしゃします] /be grateful, be thankful/
+お礼 [おれい] /gratitude, thanks/
+拝啓 [はいけい] /Dear ~/
+美しい [うつくしい] /beautiful/
+お元気でいらっしゃいますか [おげんきでいらっしゃいますか] /How are you doing? (respectful)/
+迷惑をかけます [めいわくをかけます] /trouble, annoy, inconveniece/
+生かします [いかします] /make good use of/
+お城 [おしろ] /castle/
+敬具 [けいぐ] /Sincerely yours/
+ミュンヘン [ミュンヘン] /Munich (in Germany)/
+#end

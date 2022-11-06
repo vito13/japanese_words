@@ -1,0 +1,62 @@
+﻿# Minna no Nihongo II, Lesson 033
+# ISBN 4-88319-103-6
+# Version 1.0 
+# Paul Denisowski (pdenisowski@nc.rr.com)
+逃げます [にげます] /run away/
+騒ぎます [さわぎます] /make a noise/
+あきらめます [あきらめます] /give up/
+投げます [なげます] /throw/
+守ります [まもります] /keep, follow, obey/
+上げます [あげます] /raise, lift up/
+下げます [さげます] /lower, pull down/
+伝えます [つたえます] /convey (a message)/
+注意します [ちゅういします] /be careful/
+車に注意します [くるまにちゅういします] /be careful of cars/
+外します [はずします] /be away/
+席を外します [せきをはずします] /be away from one's desk/
+だめ [だめ] /not good, not permitted, impossible/
+席 [せき] /seat/
+ファイト [ファイト] /fight/
+マーク [マーク] /mark/
+ボール [ボール] /ball/
+洗濯機 [せんたくき] /washing mashine/
+～機 [～き] /~ machine/
+規則 [きそく] /regulation, rule/
+使用禁止 [しようきんし] /Do not use/
+立入禁止 [たちいりきんし] /Keep Out/
+入口 [いりぐち] /entrance/
+出口 [でぐち] /exit/
+非常口 [ひじょうぐち] /emergency exit/
+無料 [むりょう] /free of charge/
+本日休業 [ほんじつきゅうぎょう] /closed today/
+営業中 [えいぎょうちゅう] /open for business/
+使用中 [しようちゅう] /in use/
+～中 [～ちゅう] /~ing/
+どういう [どういう] /what kind of ~/
+もう [もう] /(not) any longer (used with negatives)/
+あと～ [あと～] /~ left/
+駐車違反 [ちゅうしゃいはん] /parking violation/
+そりゃあ [そりゃあ] /well/
+～以内 [～いない] /within ~/
+警察 [けいさつ] /police station/
+罰金 [ばっきん] /fine/
+電報 [でんぽう] /telegram/
+人々 [ひとびと] /people/
+急用 [きゅうよう] /urgent business/
+打ちます [うちます] /send/
+電報を打ちます [でんぽうをうちます] /send a telegram/
+電報代 [でんぽうだい] /telegram charge/
+できるだけ [できるだけ] /as much as possible/
+短く [みじかく] /shortly, briefly/
+また [また] /and/
+例えば [たとえば] /for example/
+危篤 [キトク] /in a critical condition/
+重い病気 [おもいびょうき] /serious illness/
+明日 [あす] /tomorrow/
+留守 [るす] /absence/
+留守番 [るすばん] /looking after the house during the owner's absence/
+お祝い [おいわい] /celebration/
+亡くなります [なくなります] /pass away, die/
+悲しみ [かなしみ] /sorrow, sadness/
+利用します [りようします] /use/
+#end

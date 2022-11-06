@@ -1,0 +1,58 @@
+﻿# Minna no Nihongo I, Lesson 012
+# ISBN  4-88319-102-8 
+# Version 1.0  
+# Paul Denisowski (pdenisowski@nc.rr.com)
+簡単 [かんたん] /easy, simple/
+近い [ちかい] /near/
+遠い [とおい] /far/
+速い [はやい] /fast, early/
+早い [はやい] /fast, early/
+遅い [おそい] /slow, late/
+多い [おおい] /many, much/
+人が多い [ひとがおおい] /many people/
+少ない [すくない] /few, a little/
+人が少ない [ひとがすくない] /few people/
+暖かい [あたたかい] /warm/
+温かい [あたたかい] /warm/
+涼しい [すずしい] /cool/
+甘い [あまい] /sweet/
+辛い [からい] /hot (taste), spicy/
+重い [おもい] /heavy/
+軽い [かるい] /light (of weight)/
+コーヒーがいい  [コーヒーがいい] /prefer coffee/
+季節 [きせつ] /season/
+春 [はる] /spring/
+夏 [なつ] /summer/
+秋 [あき] /autumn, fall/
+冬 [ふゆ] /winter/
+天気 [てんき] /weather/
+雨 [あめ] /rain, rainy/
+雪 [ゆき] /snow, snowy/
+曇り [くもり] /cloudy/
+ホテル [ホテル] /hotel/
+空港 [くうこう] /airport/
+海 [うみ] /sea, ocean/
+世界 [せかい] /world/
+パーティー [パーティー] /party/
+祭り [まつり] /festival/
+試験 [しけん] /examination/
+すき焼き [すきやき] /sukiyaki (beef and vegetables hot pot)/
+刺身 [さしみ] /sashimi (sliced raw fish)/
+すし [すし] /sushi (vinagered rice topped with raw fish)/
+てんぷら [てんぷら] /tempura (seafood and vegetables deep fried in batter)/
+生け花 [いけばな] /flower arrangement/
+生け花をします [いけばなをします] /practice flower arrangement/
+紅葉 [もみじ] /maple, red leaves of autumn/
+どちら [どちら] /which one (between two things)/
+どちらも [どちらも] /both/
+ずっと [ずっと] /by far/
+初めて [はじめて] /for the first time/
+ただいま [ただいま] /I'm home/
+おかえりなさい [おかえりなさい] /Welcome home/
+すごいですね [すごいですね] /That's amazing/
+でも [でも] /but/
+疲れました [つかれました] /(I'm) tired/
+祇園祭 [ぎおんまつり] /the Gion Festival, the most famous festival in Kyoto/
+香港 [ホンコン] /Hong Kong/
+シンガポール [シンガポール] /Singapore/
+#end

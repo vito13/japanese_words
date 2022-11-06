@@ -1,0 +1,41 @@
+# Minna no Nihongo II, Lesson 045
+# ISBN 4-88319-103-6
+# Version 1.0  
+# Paul Denisowski (pdenisowski@nc.rr.com)
+謝ります [あやまります] /apologize/
+あいます [あいます] /encounter/
+事故にあいます [じこにあいます] /encounter an accident/
+信じます [しんじます] /believe, trust/
+用意します [よういします] /prepare/
+キャンセルします [キャンセルします] /cancel/
+旨く行きます [うまくいきます] /go well/
+保証書 [ほしょうしょ] /guarantee/
+領収書 [りょうしゅうしょ] /receipt/
+贈物 [おくりもの] /gift, present/
+贈物をします [おくりものをします] /give a present/
+間違い電話 [まちがいでんわ] /wrong (telephone) number/
+キャンプ [キャンプ] /camp/
+係 [かかり] /person in charge/
+中止 [ちゅうし] /calling of, cancelling, suspension/
+点 [てん] /point, score/
+レバー [レバー] /lever/
+～円札 [～えんさつ] /~ yen note, bill/
+ちゃんと [ちゃんと] /regularly, properly/
+急に [きゅうに] /suddenly/
+楽しみにしています [たのしみにしています] /be looking forward to, be expecting/
+以上です [いじょうです] /That's all/
+係員 [かかりいん] /person in charge, attendant/
+コース [コース] /course/
+スタート [スタート] /start/
+～位 [～い] /~ th ranking/
+優勝します [ゆうしょうします] /win the championship/
+悩み [なやみ] /trouble, worry/
+目覚まし [めざまし] /alarm clock/
+眠ります [ねむります] /sleep/
+目が覚めます [めがさめます] /wake up/
+大学生 [だいがくせい] /university student/
+回答 [かいとう] /answer, reply/
+鳴ります [なります] /ring/
+セットします [セットします] /set/
+其れでも [それでも] /nevertheless, for all that/
+#end

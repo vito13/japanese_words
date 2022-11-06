@@ -1,0 +1,63 @@
+# Minna no Nihongo II, Lesson 037
+# ISBN 4-88319-103-6
+# Version 1.0  
+# Paul Denisowski (pdenisowski@nc.rr.com)
+褒めます [ほめます] /praise/
+しかります [しかります] /scold/
+誘います [さそいます] /invite, ask someone to join/
+起こします [おこします] /wake (someone) up/
+招待します [しょうたいします] /invite/
+頼みます [たのみます] /ask, request/
+注意します [ちゅういします] /warn, advise/
+とります [とります] /rob, steal/
+踏みます [ふみます] /step on (someone's foot)/
+壊します [こわします] /break, destroy/
+汚します [よごします] /make ~ dirty/
+行います [おこないます] /hold, carry out, practice/
+輸出します [ゆしゅつします] /export/
+輸入します [ゆにゅうします] /import/ 
+翻訳します [ほんやくします] /translate/
+発明します [はつめいします] /invent/
+発見します [はっけんします] /discover/
+設計します [せっけいします] /design, plan/
+米 [こめ] /rice/
+麦 [むぎ] /barley, wheat/
+石油 [せきゆ] /oil/
+原料 [げんりょう] /raw material/
+デート [デート] /date/
+泥棒 [どろぼう] /thief, robber/
+警官 [けいかん] /policeman/
+建築家 [けんちくか] /architect/
+科学者 [かがくしゃ] /scientist/
+漫画 [まんが] /cartoon/
+世界中 [せかいじゅう] /all over the world/
+～中 [～じゅう] /all over ~/
+～によって [～によって] /by/
+よかったですね [よかったですね] /Thats lucky, isn't it?/
+ドミニカ [ドミニカ] /Dominica /
+ライト兄弟 [ライトきょうだい] /Wright Brothers/
+源氏物語 [げんじものがたり] /"The Tale of Genji"/
+紫式部 [むらさきしきぶ] /Heian Period (9th Century) female novellist who wrote "The Tale of Genji"/
+グラハムーベル [グラハムーベル] /Alexander Graham Bell/
+東照宮 [とうしょうぐう] /Shrine dedicated to Tokugawa Ieyasu/
+江戸時代 [えどじだい] /Edo Period/
+サウジアラビア [サウジアラビア] /Saudia Arabia/
+埋め立てます [うめたてます] /reclaim/
+技術 [ぎじゅつ] /technology, technique/
+土地 [とち] /land/
+騒音 [そうおん] /noise/
+利用します [りようします] /use/
+アクセス [アクセス] /access/
+ー世紀 [ーせいき] /- century/
+豪華 [ごうか] /gorgeous/
+彫刻 [ちょうこく] /engraving, carving, sculpture/
+眠ります [ねむります] /sleep/
+彫ります [ほります] /engrave, carve/
+仲間 [なかま] /colleague, friend/
+そのあと [そのあと] /after that/
+一生懸命 [いっしょうけんめい] /with all one's effort/
+ねずみ [ねずみ] /mouse/
+一匹もいません [いっぴきもいません] /There is not a single (mouse)/
+眠り猫 [ねむりねこ] /The Sleeping Cat/
+左甚五郎 [ひだりじんごろう] /famous japanese sculptor of the Edo Period/
+#end

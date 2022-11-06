@@ -1,0 +1,55 @@
+﻿# Minna no Nihongo II, Lesson 039
+# ISBN 4-88319-103-6
+# Version 1.0  
+# Paul Denisowski (pdenisowski@nc.rr.com)
+答えます [こたえます] /answer/
+質問に答えます [しつもんにこたえます] /answer a question/
+倒れます [たおれます] /fall down/
+ビルが倒れます [ビルがたおれます] /a building falls down/
+焼けます [やけます] /burn, be baked, be roasted, be grilled/
+家が焼けます [うちがやけます] /the house burns/
+パンが焼けます [パンがやけます] /bake bread /
+肉が焼けます [にくがやけます ] /roast or grill meat/
+通ります [とおります] /pass/
+道を通ります [みちをとおります] /pass along a street/
+死にます [しにます] /die/
+びっくりします [びっくりします] /be surprised/
+がっかりします [がっかりします] /be disappointed/
+安心します [あんしんします] /be relieved/
+遅刻します [ちこくします] /be late, come late/
+早退します [そうたいします] /leave (work or school) earlier than usual/
+けんかします [けんかします] /quarrel, fight/
+離婚します [りこんします] /divorce/
+複雑 [ふくざつ] /complicated, complex/
+邪魔 [じゃま] /obstructive, in the way/
+汚い [きたない] /dirty/
+うれしい [うれしい] /happy/
+悲しい [かなしい] /sad/
+恥ずかしい [はずかしい] /embarrased, ashamed/
+地震 [じしん] /earthquake/
+台風 [たいふう] /typhoon/
+火事 [かじ] /fire/
+事後 [じご] /accident/
+お見合い [おみあい] /interview with a view to marriage/
+電話代 [でんわだい] /telephone bill/
+～代 [～だい] /charge, fare, fee/
+フロント [フロント] /front desk, reception desk/
+～号室 [～ごしつ] /room number ~/
+汗 [あせ] /perspiration/
+汗をかきます [あせをかきます] /perspire/
+タオル [タオル] /towel/
+せっけん [せっけん] /soap/
+大勢 [おおぜい] /a great number of people/
+お疲れ様でした [おつかれさまでした] /Thank you for your hard work/
+伺います [うかがいます] /I'm coming/
+途中で [とちゅうで] /on the way, in the midst of/
+トラック [トラック] /truck/
+ぶつかります [ぶつかります] /bump, collide/
+並びます [ならびます] /stand in a queue, line up/
+大人 [おとな] /adult/
+洋服 [ようふく] /western clothes/
+西洋化します [せいようかします] /be Westernized/
+合います [あいます] /fit, suit/
+今では [いまでは] /now/
+成人式 [せいじんしき] /coming-of-age celebration/
+#end

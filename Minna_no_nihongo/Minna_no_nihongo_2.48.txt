@@ -1,0 +1,38 @@
+﻿# Minna no Nihongo II, Lesson 048
+# ISBN 4-88319-103-6
+# Version 1.0  
+# Paul Denisowski (pdenisowski@nc.rr.com)
+下ろします [おろします] /lower/
+降ろします [おろします] /put down/
+届ける [とどけます] /deliver, report/
+世話をします [せわをします] /take care of ~/
+嫌 [いや] /unwilling, reluctant/
+厳しい [きびしい] /strict, hard/
+塾 [じゅく] /cram school/
+スケシュール [スケシュール] /schedule/
+生徒 [せいと] /pupil/
+者 [もの] /person (referring to one's relatives or subordinates)/
+入管 [にゅうかん] /Immigration Bureau/
+再入国ビザ [さいにゅうこくビザ] /re-entry visa/
+自由に [じゆうに] /freely/
+～間 [～かん] /for ~ (refering to duration)/
+いいことですね [いいことですね] /That's good/
+お忙しいですか [おいそがしいですか] /Are you busy? (used when talking to someone senior or older)/
+久しぶり [ひさしぶり] /after a long time/
+営業 [えいぎょう] /business sales/
+それまでに [それまでに] /by that time/
+かまいません [かまいません] /It's all right, It doesn't matter/
+楽しみます [たのしみます] /enjoy oneself/
+元々 [もともと] /originally/
+～世紀 [～せいき] /~ th century/
+代わりをします [かわりをします] /be a substitute, be a replacement/
+スピード [スピード] /speed/
+競走します [きょうそうします] /race/
+サーカス [サーカス] /circus/
+芸 [げい] /performance, trick/
+美しい [うつくしい] /beautiful/
+姿 [すがた] /figure, appearance/
+心 [こころ] /heart, mind/
+とらえます [とらえます] /catch/
+～によって [～によって] /for ~/
+#end

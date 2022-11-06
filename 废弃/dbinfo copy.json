@@ -1,0 +1,12 @@
+{
+    "xinbiaori_1.py": {
+        "bookid": "10",
+        "dict": "word.txt",
+        "description": ""
+    },
+    "dajiade_1.py": {
+        "bookid": "20",
+        "dict": "ninanno1.txt",
+        "description": ""
+    }
+}

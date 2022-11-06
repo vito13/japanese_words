@@ -1,0 +1,60 @@
+# Minna no Nihongo II, Lesson 041
+# ISBN 4-88319-103-6
+# Version 1.0  
+# Paul Denisowski (pdenisowski@nc.rr.com)
+いただきます [いただきます] /receive (humble equivalent of morau)/
+くださいます [くださいます] /give (respectful equivalent of kureru)/
+やります [やります] /give (to a younger person, animal, plant or subordinate)
+呼びます [よびます] /invite/
+取り替えます [とりかえます] /exchange/
+親切にします [しんせつにします] /be kind to/
+可愛い [かわいい] /lovely, cute/
+お祝い [おいわい] /celebration, gift/
+お祝いをします [おいわいをします] /celebrate/
+お年玉 [おとしだま] /money given as New Year's gift/
+お見舞い [おみまい] /expression of symphaty, consolatory gift to a sick person/
+興味 [きょうみ] /interest/
+情報 [じょうほう] /information/
+文法 [ぶんぽう] /grammar/
+発音 [はつおん] /pronunciation/
+猿 [さる] /ape, monkey/
+えさ [えさ] /feed, bait/
+おもちゃ [おもちゃ] /toy/
+絵本 [えほん] /picture book/
+絵はがき [えはがき] /picture postcard/
+ドライバー [ドライバー] /screwdriver/
+ハンカチ [ハンカチ] /handkerchief/
+靴下 [くつした] /socks, stockings/
+手袋 [てぶくろ] /gloves/
+指輪 [ゆびわ] /ring/
+バッグ [バッグ] /bag/
+祖父 [そふ] /(my) grandfather/
+祖母 [そぼ] /(my) grandmother/
+孫 [まご] /grandchild/
+おじ [おじ] /(my) uncle/
+おじさん [おじさん] /(someone else's) uncle/
+おば [おば] /(my) aunt/
+おばさん [おばさん] /(someone else's) aunt/
+おととし [おととし] /the year before the last/
+はあ [はあ] /yes, I see/
+申し訳ありません [もうしわけありません] /I'm sorry, Excuse me/
+預かります [あずかります] /keep, receive (a thing) in trust/
+先日 [せんじつ] /the other day/
+助かります [たすかります] /be of help/
+昔話 [むかしばなし] /old tale, folklore/
+ある～ [ある～] /a certain ~, one ~/
+男 [おとこ] /man/
+子どもたち [こどもたち] /children/
+いじめます [いじめます] /bully, abuse, tease, torment, ill-treat/
+かめ [かめ] /turtle/
+助けます [たすけます] /save, help/
+城 [しろ] /castle/
+お姫様 [おひめさま] /princess/
+楽しく [たのしく] /happily, merily/
+暮らします [くらします] /live, lead a life/
+陸 [りく] /land, shore/
+すると [すると] /and, then/
+煙 [けむり] /smoke/
+真っ白 [まっしろ] /pure white/
+中身 [なかみ] /content/
+#end

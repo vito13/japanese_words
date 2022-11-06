@@ -1,0 +1,24 @@
+﻿# Minna no Nihongo I, Lesson 025
+# ISBN 4-88319-102-8 
+# Version 1.0 
+# Paul Denisowski (pdenisowski@nc.rr.com)
+考えます [かんがえます] /think, consider/
+着きます [つきます] /arrive/
+駅に着きます [えきにつきます] /arrive at the station/
+留学します [りゅうがくします] /study abroad/
+年を取ります [としをとります] /grow old/
+田舎 [いなか] /countryside, hometown/
+大使館 [たいしかん] /embassy/
+グループ [グループ] /group/
+チャンス [チャンス] /chance/
+億 [おく] /hundred million/
+もし～たら [もし～たら] /if ~/
+いくら ～でも [いくら ～でも] /however ~, even if ~/
+転勤 [てんきん] /transfer/
+転勤します [てんきんします] /be transferred to another office/
+こと [こと] /thing, matter/
+一杯飲みましょう [いっぱいのみましょう] /Let's have a drink together/
+いろいろお世話になりました [いろいろおせわになりました] /Thank you for everything you have done for me/
+頑張ります [がんばります] /do one's best/
+どうぞお元気で [どうぞおげんきで] /Best of luck (said when expecting a long separation)/
+#end

@@ -1,0 +1,53 @@
+﻿# Minna no Nihongo II, Lesson 038
+# ISBN 4-88319-103-6
+# Version 1.0  
+# Paul Denisowski (pdenisowski@nc.rr.com)
+育てます [そだてます] /breed, bring up/
+運びます [はこびます] /carry, transport/
+亡くなります [なくなります] /pass away (euphemistic expression for shinimasu)/
+入院します [にゅういんします] /enter hospital/
+退院します[たいいんします] /leave hospital/
+入れます [いれます] /turn on/
+電源を入れます [でんげんをいれます] /turn on the power switch/
+切れます [きれます] /turn off/
+電源を切れます [でんげんをきれます] /turn off the power switch/
+掛けます [かけます] /lock/
+気持ちがいい [きもちがいい] /pleasant, agreeable/
+気持ちが悪い [きもちがわるい] /unpleasant, disgusting/
+大きな [おおきな] /large/
+小さな [ちいさな] /small/
+赤ちゃん [あかちゃん] /baby/
+小学校 [しょうがっこう] /elementary school/
+中学校 [ちゅうがっこう] /junior high scool/
+駅前 [えきまえ] /in front of the station/
+海岸 [かいがん] /seaside, seashore/
+うそ [うそ] /lie/
+書類 [しょるい] /documents, paper/
+電源 [でんげん] /power switch/
+～製 [～せい] /made in ~/
+いけない [いけない] /Ooops! Oh, no! (used when one has made a mistake)/
+お先に [おさきに] /Excuse me (for leaving before you)/
+原爆ドーム [げんばくドーム] /dome commemorating the atomic bombing of Hiroshima/
+回覧 [かいらん] /circular, sending round/
+研究室 [けんきゅうしつ] /study room, professor's office, laboratory/
+きちんと [きちんと] /neatly, tidily/
+整理します [せいりします] /put (things) in order, tidy up/
+～という本 [～というほん] /the book titled ~, the book named ~/
+～冊 [～さつ] /(counter for books, etc.)/
+はんこ [はんこ] /seal stamp/
+押します [おします] /affix/
+判子お押します [はんこをおします] /affix a seal/
+双子 [ふたご] /twins/
+姉妹 [しまい] /sisters/
+５年生 [５ねんせい] /fifth grade, fifth year/
+似ています [にています] /resemble, be like/
+性格 [せいかく] /character/
+おとなしい [おとなしい] /quiet/
+世話をします [せわをします] /take care/
+時間がたちます [じかんがたちます] /time pass by/
+大好き [だいすき] /like very much/
+点 [てん] /points/
+クラス [クラス] /class/
+けんかします [けんかします] /quarrel, fight/
+不思議 [ふしぎ] /mysterious, strange/
+#end

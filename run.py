@@ -87,7 +87,7 @@ def docorrect(wid):
     conn.close()
 
 def buildbody(tup, stridx):
-    wordid, kana, kanji, roma, chinese, wordtype, lesson, increase, decrease, correct, wrong = tup
+    wordid, kana, kanji, roma, chinese, english, wordtype, tone, booklesson, description, nlevel, increase, decrease, correct, wrong = tup
     newroma = roma
     newchn = re.sub(r'[），（ ]', ' ', chinese)
     newchn = "{}, {}".format(stridx, newchn)

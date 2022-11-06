@@ -1,0 +1,60 @@
+# Minna no Nihongo II, Lesson 042
+# ISBN 4-88319-103-6
+# Version 1.0  
+# Paul Denisowski (pdenisowski@nc.rr.com)
+包みます [つつみます] /wrap/
+沸かします [わかします] /boil/
+混ぜます [まぜます] /mix/
+計算します [けいさんします] /calculate/
+厚い [あつい] /thick/
+薄い [うすい] /thin/
+弁護士 [べんごし] /lawyer/
+音楽家 [おんがくか] /musician/
+子どもたち [こどもたち] /children/
+二人 [ふたり] /couple/
+教育 [きょういく] /education/
+歴史 [れきし] /history/
+文化 [ぶんか] /culture/
+社会 [しゃかい] /society/
+法律 [ほうりつ] /law/
+戦争 [せんそう] /war/
+平和 [へいわ] /peace/
+目的 [もくてき] /purpose/
+安全 [あんぜん] /safety/
+論文 [ろんぶん] /thesis, academic paper/
+関係 [かんけい] /relation, connection/
+ミキサー [ミキサー] /mixer/
+やかん [やかん] /kettle/
+栓抜き [せんぬき] /cap opener/
+缶切 [かんきり] /can opener/
+缶詰 [かんづめ] /canned food, tinned food/
+ふろしき [ふろしき] /wrapping cloth used to carry things/
+そろばん [そろばん] /abacus/
+体温計 [たいおんけい] /(clinical) thermometer/
+材料 [ざいりょう] /material, ingredients/
+石 [いし] /stone/
+ピラミッド [ピラミッド] /pyramid/
+データ [データ] /data/
+ファイル [ファイル] /file/
+ある～ [ある～] /a certain ~, one ~/
+一生懸命 [いっしょうけんめい] /with all one's effort/
+なぜ [なぜ] /why/
+国連 [こくれん] /United Nations/
+エリーゼのために [エリーゼのために] /Für Elize/
+ベートーベン [ベートーベン] /Ludwig van Beethoven/
+ポーランド [ポーランド] /Poland/
+ローン [ローン] /loan/
+セット [セット] /set/
+あと [あと] /the amount left unused, the rest/
+カップラーメン [カップラーメン] /instant Chinese noodles sold in a ready-to-use disposable container/
+インスタントラーメン [インスタントラーメン] /instant Chinese noodles/
+なべ [なべ] /pan, pot/
+どんぶり [どんぶり] /ceramic bowl/
+食品 [しょくひん] /food/
+調査 [ちょうさ] /investigation, survey/
+カップ [カップ] /cup/
+また [また] /and/
+～の代わりに [～のかわりに] /in place of ~, instead of ~/
+どこででも [どこででも] /in any place/
+今では [いまでは] /now, nowadays/
+#end

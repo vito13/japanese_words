@@ -1,0 +1,61 @@
+﻿# Minna no Nihongo I, Lesson 009
+# ISBN  4-88319-102-8 
+# Version 1.0  
+# Paul Denisowski (pdenisowski@nc.rr.com)
+わかります [わかります] /understand/
+あります [あります] /have/
+好き [すき] /like/
+嫌い [きらい] /dislike/
+上手 [じょうず] /good at/
+下手 [へた] /poor at/
+料理 [りょうり] /dish (cooked food), cooking/
+飲み物 [のみもの] /drinks/
+スポーツ [スポーツ] /sport/
+スポーツをします [スポーツをします] /play sports/
+野球 [やきゅう] /baseball/
+野球をします [やきゅうをします] /play baseball/
+ダンス [ダンス] /dance/
+ダンスをします [ダンスをします] /dance/
+音楽 [おんがく] /music/
+歌 [うた] /song/
+クラシック [クラシック] /classical music/
+ジャズ [ジャズ] /jazz/
+コンサート [コンサート] /concert/
+カラオケ [カラオケ] /karaoke/
+歌舞伎 [かぶき] /Kabuki (traditional Japanese musical drama)/
+絵 [え] /picture, drawing/
+字 [じ] /letter, character/
+漢字 [かんじ] /Chinese characters/
+ひらがな [ひらがな] /Hiragana script/
+かたかな [かたかな] /Katakana script/
+ローマ字 [ローマじ] /the Roman alpahabet/
+細かいお金 [こまかいおかね] /small change/
+チケット [チケット] /ticket/
+時間 [じかん] /time/
+用事 [ようじ] /something to do, errand/
+約束 [やくそく] /appointment, promise/
+ご主人 [ごしゅじん] /(someone else's) husband/
+夫 [おっと] /(my) husband/
+主人 [しゅじん] /(my) husband/
+奥さん [おくさん] /(someone else's) wife/
+妻 [つま] /(my) wife/
+家内 [かない] /(my) wife/
+子ども [こども]  /child/
+よく [よく] /well, much/
+だいたい [だいたい] /mostly, roughly/
+たくさん [たくさん] /many, much/
+少し [すこし] /a little, a few/
+全然 [ぜんぜん] /not at all (used with negatives)/
+早く [はやく] /early, quickly, fast/
+速く [はやく] /early, quickly, fast/
+～から [～から] /because ~/
+どうして [どうして] /why/
+残念です [ざんねんです] /I'm sorry (to hear that)/That's a pity/
+すみません [すみません] /I am sorry/
+もしもし [もしもし] /hello (used on phone)/
+ああ [ああ] /oh/
+いっしょうにいかがですか [いっしょうにいかがですか] /Won't you join me (us)?/
+～はちょっと [～はちょっと] /~ is a bit difficult (a euphemism used when declining an invitation)/
+だめですか [だめですか] /So you cannot (come)?/
+また今度お願いします [またこんどおねがいします] /Please ask me again some other time (used when refusing an invitation indirectly, considering someone's feelings/
+#end

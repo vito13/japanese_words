@@ -1,0 +1,74 @@
+﻿# Minna no Nihongo II, Lesson 032
+# ISBN 4-88319-103-6
+# Version 1.0 
+# Paul Denisowski (pdenisowski@nc.rr.com)
+運動します [うんどうします] /take exercise/
+成功します [せいこうします] /succeed/
+失敗する [しっぱいします] /fail/
+試験に失敗する [しけんにしっぱいします] /fail an examination/
+合格する [ごうかくします] /pass/
+試験に合格する [しけんにごうがくします] /pass an examination/
+戻ります [もどります] /return/
+やみます [やみます] /stop/
+雨がやみます [あめがやみます] /stop raining/
+晴れます [はれます] /clear up/
+曇ります [くもります] /get cloudy/
+吹きます  [ふきます] /blow/
+風が吹きます  [かぜがふきます] /wind blows/ 
+病気が治ります [びょうきがなおります] /recover from (sickness), get well/
+故障が直ります [こしょうがなおります] /be fixed, be repaired/
+続づきます [つづきます] /continue/
+熱が続づきます [ねつがつづきます] /high temperature continues/
+ひきます [ひきます] /catch/
+かぜをひきます [かぜをひきます] /catch a cold/
+冷やします [ ひやします] /cool/
+心配 [しんぱい] /worried, anxious/
+十分 [じゅうぶん] /enough, sufficient/
+おかしい [おかしい] /strange, funny/
+うるさい [うるさい] /noisy/
+やけど [やけど] /burning/
+やけどをします [やけどをします] /get burned/
+けが [けが] /injury/
+けがをします [けがをします] /get injured/
+せき [せき] /cough/
+せきがします [せきがします] /have a cough/
+インフルエンザ [インフルエンザ] /influenza /
+空 [そら] /sky/
+太陽 [たいよう] /sun/
+星  [ほし] /star/
+月  [つき] /moon/
+風 [かぜ] /wind/
+北  [きた] /north/
+南  [みなみ] /south/
+西  [にし] /west/
+東  [ひがし] /east/
+水道 [すいどう] /faucet, tap, water supply/
+エンジン [エンジン] /engine/
+チーム [チーム] /team/
+今夜 [こんや] /this evening/
+夕方 [ゆうがた] /late afternoon/
+前  [まえ] /a time in the past, before/
+遅く  [おそく] /late (time)/
+こんなに [こんなに] /like this/
+そんなに [そんなに] /like that (concerning a matter related to the listener)/
+あんなに [あんなに] /like that (concerning a matter related to the listener and the speaker), that much/
+もしかしたら [もしかしたら] /possibly, perhaps/
+それはいけません [それはいけません] /That's too bad/
+オリンピック [オリンピック] /Olympic Games/
+元気 [げんき] /vigor/
+胃 [い] /stomach/
+働きすぎ [はたらきすぎ] /working too much/
+ストレス [ストレス] /stress/
+無理をします [むりをします] /work more than one's capacity/
+ゆっくりします [ゆっくりします] /take one's time/
+星占い [ほしうらない] /horoscope/
+牡牛座 [おうしざ] /Taurus/
+困ります [こまります] /be in trouble, have a problem/
+宝くじ [たからくじ] /lottery/
+当たります [あたります] /win/
+宝くじが当たります [たからくじがあたります] /win a lottery/
+健康 [けんこう] /health/
+恋愛 [れんあい] /romantic love/
+恋人 [こいびと] /sweetheart, boyfriend, girlfriend/
+お金持ち [おかねもち] /rich person/
+#end

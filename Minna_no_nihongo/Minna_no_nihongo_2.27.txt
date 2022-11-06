@@ -1,0 +1,65 @@
+﻿# Minna no Nihongo II, Lesson 027
+# ISBN 4-88319-103-6
+# Version 1.0 
+# Paul Denisowski (pdenisowski@nc.rr.com)
+飼います [かいます] /keep (a pet), raise (an animal)/
+建てます [たてます] /build/
+走ります [はしります] /run, drive/
+道を走ります [みちをはしります] /run, drive along a road/
+取ります [とります] /take/
+休みを取ります [やすみをとります] /take a holiday/
+見えます [みえます] /can be seen/
+山が見えます [やまがみえます] /a mountain can be seen/
+聞こえます [きこえます] /can be heard/
+音が聞こます [おとがきこえます] /a sound can be heard/
+できます [できます] /can be made, be completed, come into existence/
+空港ができます [くうこうができます] /an airport can be made/
+開きます [ひらきます] /set up, open, hold/
+教室を開きます [きょうしつをひらきます] /set up a class/
+ペット [ペット] /pet/
+鳥 [とり] /bird/
+声 [こえ] /voice/
+波 [なみ] /wave/
+花火 [はなび] /fireworks/
+景色 [けしき] /scenery, view/
+昼間 [ひるま] /daytime/
+昔 [むかし] /old times, ancient times/
+道具 [どうぐ] /tool, instrument, equipment/
+自動販売機 [じどうはんばいき] /vending machine/
+通信販売 [つうしんはんばい] /mail order, mail-order sales/
+クリーニング [クリーニング] /(dry) cleaning, laundry/
+マンション [マンション] /condominium, apartment house/
+台所 [だいどころ] /kitchen/
+～教室 [～きょうしつ] /~class/
+パーティールーム [パーティールーム] /party room/
+～後 [～ご] /after ~ (duration of time)/
+～しか [～しか] /only ~ (used with negatives)/
+ほかの [ほかの] /other/
+はっきり [はっきり] /clearly/
+ほとんど [ほとんど] /almost all (in positive sentences), hardly, scarcely (in negative sentences)/
+関西空港 [かんさいくうこう] /Kansai Airport/
+秋葉原 [あきはばら] /name of a shopping district with many electrical and electronical stores/
+伊豆 [いず] /peninsula in Shizuoka Prefecture/
+日曜大工 [にちようだいく] /Sunday carpenter , do it yourself-er/
+本棚 [ほんだな] /bookshelf/
+夢 [ゆめ] /dream/
+夢をみます [ゆめをみます] /have a dream/
+いつか [いつか] /sometime, someday/
+家 [いえ] /house, home/
+すばらしい [すばらしい] /marvelous, wonderful/
+子どもたち [こどもたち] /children/
+大好き [だいすき] /like very much/
+漫画 [まんが] /cartoon, comic strip/
+主人公 [しゅじんこう] /hero, heroine/
+形 [かたち] /shape/
+ロボット [ロボット] /robot/
+不思議 [ふしぎ] /fantastic, mysterious/
+ポケット [ポケット] /pocket/
+例えば [たとえば] /for example/
+付けます  [つけます] /attach, put on/
+自由に [じゆうに] /freely/
+空 [そら] /sky/
+飛びます [とびます] /fly/
+自分 [じぶん] /oneself/
+将来 [しょうらい] /future/
+#end

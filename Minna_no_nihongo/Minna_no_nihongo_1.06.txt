@@ -1,0 +1,63 @@
+﻿# Minna no Nihongo I, Lesson 006
+# ISBN  4-88319-102-8 
+# Version 1.0  
+# Paul Denisowski (pdenisowski@nc.rr.com)
+食べます [たべます] /eat/
+飲みます [のみます] /drink/
+吸います [すいます] /smoke/
+たばこを吸います [たばこをすいます] /smoke a cigarette/
+見ます [みます] /see, look at, watch/
+聞きます [ききます] /hear, listen/
+読みます [よみます] /read/
+書きます [かきます] /write, draw, paint/
+買います [かいます] /buy/
+撮ります [とります] /take (a photograph)/
+写真を撮ります [しゃしんをとります] /take a picture/
+します [します] /do/
+会います [あいます] /meet/
+友達を会います [ともだちをあいます] /meet a friend/
+ごはん [ごはん] /a meal, cooked rice/
+朝ごはん [あさごはん] /breakfast/
+昼ごはん [ひるごはん] /lunch/
+晩ごはん [ばんごはん] /supper/
+パン [パン] /bread/
+卵 [たまご] /egg/
+肉 [にく] /meat/
+魚 [さかな] /fish/
+野菜 [やさい] /vegetable/
+果物 [くだもの] /fruit/
+水 [みず] /water/
+お茶 [おちゃ] /tea, green tea/
+紅茶 [こうちゃ] /black tea/
+牛乳 [ぎゅうにゅう] /milk/
+ミリク [ミリク] /milk/
+ジュース [ジュース] /juice/
+ビール [ビール] /beer/
+酒 [さけ] /alcohol, Japanese rice wine/
+ビデオ [ビデオ] /video/
+映画 [えいが] /movie/
+手紙 [てがみ] /letter/
+レポート [レポート] /report/
+写真 [しゃしん] /photograph/
+店 [みせ] /store, shop/
+レストラン [レストラン] /restaurant/
+庭 [にわ] /garden/
+宿題 [しゅくだい] /homework/
+宿題をします [しゅくだいをします] /do homework/
+テニス [テニス] /tennis/
+サッカー [サッカー] /soccer, football/
+サッカーをします [サッカーをします] / play soccer/
+花見 [はなみ] /cherry-blossom viewing/
+花見をします [はなみをします] /go cherry-blossom viewing/
+何 [なに] /what/
+いっしょに [いっしょに] /together/
+ちょっと [ちょっと] /a little while, a little bit/
+いつも [いつも] /always, usually/
+時々 [ときどき] /sometimes/
+それから [それから] /after that, and then/
+ええ [ええ] /yes/
+いいですね [いいですね] /That's good./
+わかりました [わかりました] /I see/
+何ですか [なんですか] /Yes?/
+じゃ、またあした [じゃ、またあした] /See you tomorrow/
+#end

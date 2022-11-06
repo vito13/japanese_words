@@ -1,0 +1,55 @@
+﻿# Minna no Nihongo II, Lesson 028
+# ISBN 4-88319-103-6
+# Version 1.0 
+# Paul Denisowski (pdenisowski@nc.rr.com)
+売れます [うれます] /sell, be sold/
+踊ります [おどります] /dance/
+かみます [かみます] /chew, bite/
+選びます [えらびます] /choose/
+違います [ちがいます] /be different/
+通います [かよいます] /go to and from/
+大学に通います [だいがくにかよいます] /to go to and from university/
+メモします [メモします] /take a memo/
+まじめ [まじめ] /serious/
+熱心 [ねっしん] /earnest/
+優しい [やさしい] /gentle, kind/
+偉い [えらい] /great, admirable/
+ちょうどいい [ちょうどいい] /proper, just right/
+習慣 [しゅうかん] /custom/
+経験 [けいけん] /experience/
+力 [ちから] /power/
+人気 [にんき] /popular/
+形 [かたち] /form, shape/
+色 [いろ] /color/
+味 [あじ] /taste/
+ガム [ガム] /chewing gum/
+品物 [しなもの] /goods/
+値段 [ねだん] /price/
+給料 [きゅうりょう] /salary/
+ボーナス [ボーナス] /bonus/
+番組 [ばんぐみ] /program/
+ドラマ [ドラマ] /drama/
+小説 [しょうせつ] /novel/
+小説家 [しょうせつか] /novelist/
+歌手 [かしゅ] /singer/
+管理人 [かんりにん] /janitor/
+息子 [むすこ] /(my) son/
+息子さん [むすこさん] /(someone else's) son/
+娘 [むすめ] /(my) daughter/
+娘さん [むすめさん] /(someone else's) daughter/
+自分 [じぶん] /oneself/
+将来 [しょうらい] /future/
+しばらく [しばらく] /a little while/
+たいてい [たいてい] /usually, mostly/
+それに[それに] /in addition/
+それで [それで] /and so/
+ちょっとを願いあるんですが [ちょっとを願いあるんですが] /I have a favor to ask /
+ホームステイ [ホームステイ] /homestay/
+会話 [かいわ] /conversation/
+おしゃべりします [おしゃべりします] /chat/
+お知らせ [おしらせ] /notice/
+日にち [ひにち] /date/
+土 [ど] /Saturday/
+体育館 [たいいくかん] /gymnasium/
+無料 [むりょう] /free of charge/
+#end

@@ -1,0 +1,47 @@
+﻿# Minna no Nihongo I, Lesson 021
+# ISBN 4-88319-102-8 
+# Version 1.0 
+# Paul Denisowski (pdenisowski@nc.rr.com)
+思う [おもいます] /think/
+言う [いいます] /say/
+足る [たります] /be enough, be sufficient/
+勝つ [かちます] /win/
+負ける [まけます] /lose, be beaten/
+あります [あります] /be held, take place/
+お祭があります [おまつりがあります] /a festival is held, takes place/
+役に立ちます [やくにたちます] /be useful/
+むだ [むだ] /wasteful/
+不便 [ふべん] /inconvenient/
+同じ [おなじ] /the same/
+すごい [すごい] /awful, great (expresses astonishment or admiration)/
+首相 [しゅしょう] /prime minister/
+大統領 [だいとうりょう] /president/
+政治 [せいじ] /politics/
+ニュース [ニュース] /news/
+スピーチ [スピーチ] /speech/
+スピーチをします [スピーチをします] /make a speech/
+試合 [しあい] /game, match/
+アルバイト [アルバイト] /side job/
+アルバイトをします [アルバイトをします] /work part time/
+意見 [いけん] /opinion/
+話 [はなし] /talk, speech, what one says, story/
+話をします [はなしをします] /talk, tell a story/
+ユーモア [ユーモア] /humor/
+むだ [むだ] /waste/
+デザイン [デザイン] /design/
+交通 [こうつう] /transportation, traffic/
+ラッシュ [ラッシュ] /rush hour/
+最近 [さいきん] /recently, these days/
+たぶん [たぶん] /probably, perhaps, maybe/
+きっと [きっと] /surely/
+ほんとうに [ほんとうに] /really/
+そんなに [そんなに] /not so much (used with negatives)/
+～について [～について] /about ~, concerning ~/
+しかたがありません [しかたがありません] /There is no other choice. It can't be helped/
+しばらくですね [しばらくですね] /It's been a long time (since I last saw you). Long time no see/
+～でも飲みませんか [～でものみませんか] /How about drinking ~ or something?/
+見ないと [みないと] /I've got to watch it/
+もちろん [もちろん] /of course/
+カンガルー [カンガルー] /kangaroo/
+キャプテンクック [キャプテンクック] /Captain Cook (1728-79)/
+#end

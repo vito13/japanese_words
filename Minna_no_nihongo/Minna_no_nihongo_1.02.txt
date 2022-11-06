@@ -1,0 +1,53 @@
+﻿# Minna no Nihongo I, Lesson 002
+# ISBN  4-88319-102-8 
+# Version 1.0  
+# Paul Denisowski (pdenisowski@nc.rr.com)
+これ [これ] /this (thing here)/
+それ [それ] /that (thing near you)/
+あれ [あれ] /that (thing over there)/
+この～ [この～] /this ~, this ~ here/
+その～ [その～] /that ~, that ~ there/
+あの～ [あの～] /that ~, that ~ over there/
+本 [ほん] /book/
+辞書 [じしょ] /dictionary/
+雑誌 [ざっし] /magazine/
+新聞 [しんぶん] /newspaper/
+ノート [ノート] /notebook/
+手帳 [てちょう] /pocket notebook/
+名刺 [めいし] /business card/
+カード [カード] /card/
+テレホンカード [テレホンカード] /telephone card/
+鉛筆 [えんぴつ] /pencil/
+ボールペン [ボールペン] /ballpoint pen/
+シャップペンシル [シャップペンシル] /mechanical pencil/
+かぎ [かぎ] /key/
+時計 [とけい] /watch, clock/
+傘 [かさ] /umbrella/
+かばん [かばん] /bag, briefcase/
+テープ [テープ] /(cassette) tape/
+テープレコーダー [テープレコーダー] /tape recorder/
+テレビ [テレビ] /television/
+ラジオ [ラジオ] /radio/
+カメラ [カメラ] /camera/
+コンピューター [コンピューター] /computer/
+自動車 [じどうしゃ] /automobile, car/
+机 [つくえ] /desk/
+いす [いす] /chair/
+チョコレート [チョコレート] /chocolate/
+コーヒー [コーヒー] /coffee/
+英語 [えいご] /the English language/
+日本語 [にほんご] /the Japanese language/
+～語 [～ご] /~ language/
+何 [なん] /what/
+そう [そう] /so/
+違います [ちがいます] /No it isn't, You are wrong/
+そうですか [そうですか] /I see, Is that so?/
+あのう [あのう] /well (used to show hesitation)/
+ほんの気持ちです [ほんのきもちです] /It's nothing, It's a token of my gratitude/
+どうぞ [どうぞ] /Please, Here you are (when offering someone something)/
+どうも [どうも] /Well, thanks/
+ありがとう [ありがとう] /Thank you/
+どうもありがとうございます [どうもありがとございます] /Thank you very much/
+これからお世話になります [これからおせわになります] /I hope for your kind assistance hereafter/
+こちらこそよろしく [こちらこそよろしく] /I am pleased to meet you/
+#end

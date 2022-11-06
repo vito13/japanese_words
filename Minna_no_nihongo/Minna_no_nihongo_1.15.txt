@@ -1,0 +1,35 @@
+﻿# Minna no Nihongo I, Lesson 015
+# ISBN 4-88319-102-8 
+# Version 1.0 
+# Paul Denisowski (pdenisowski@nc.rr.com)
+立ちます [たちます] /stand up/
+座ります [すわります] /sit down/
+使います [つかいます] /use/
+置きます [おきます] /put/
+作ります [つくります] /make, produce/
+造ります [つくります] /make, produce/
+売ります [うります] /sell /
+知ります [しります] /get to know/
+住ます [すみます] /be going to live/
+研究します [けんきゅうします] /do research/
+知っています [しっています] /know/
+知りません [しりません] /don't know/
+住んでいます [すんでいます] /live/
+大阪に住んでいます [おおさかにすんでいます] /live in Osaka/
+資料 [しりょう] /materials, data/
+カタログ [カタログ] /catalog/
+時刻表 [じこくひょう] /timetable/
+服 [ふく] /clothes/
+製品 [せいひん] /products/
+ソフト [ソフト] /software/
+専門 [せんもん] /speciality, field of study/
+歯医者 [はいしゃ] /dentist, dentist's/
+床屋 [とこや] /barber, barber's/
+プレイガイド [プレイガイド] /(theatre) ticket agency/
+独身 [どくしん] /single, unmarried/
+特に [とくに] /especially/
+思い出します [おもいだします] /remember, recollect /
+ご家族 [ごかぞく] /your family/
+いらっしゃいます [いらっしゃいます] /be (honorific equivalent of imasu)/
+高校 [こうこう] /senior high school/
+#end

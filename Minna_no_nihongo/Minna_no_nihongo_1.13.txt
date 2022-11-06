@@ -1,0 +1,53 @@
+﻿# Minna no Nihongo I, Lesson 013
+# ISBN  4-88319-102-8 
+# Version 1.0 
+# Paul Denisowski (pdenisowski@nc.rr.com)
+遊びます [あそびます] /enjoy oneself, play/
+泳ぎます [およぎます] /swim/
+迎えます [むかえます] /go to meet, welcome/
+疲れます [つかれます] /get tired/
+出します [だします] /send/
+手紙を出します [てがみをだします] /send a letter/
+入ります [はいります] /enter/
+喫茶店に入ります [きっさてんにはいります] /enter a coffee shop/
+出ます [でます] /go out/
+喫茶店を出ます [きっさてんをでます] /go out of a coffee shop/
+結婚します [けっこんします] /marry, get married/
+買い物します [かいものします] /do shopping/
+食事します [しょくじします] /have a meal, dine/
+散歩します [さんぽします] /take a walk/
+公園を散歩します [こうえんをさんぽします] /take a walk in a park/
+大変 [たいへん] /hard, tough, severe, awful/
+欲しい [ほしい] /want (something)/
+寂しい [さびしい] /lonely/
+広い [ひろい] /wide, spacious/
+狭い [せまい] /narrow, small (room, etc.)/
+市役所 [しやくしょ] /municipal office, city hall/
+プール [プール] / swimming pool/
+川 [かわ] /river/
+経済 [けいざい] /economy/
+美術 [びじゅつ] /fine arts/
+釣り [つり] /fishing/
+釣りをします [つりをします] /fish, angle/
+スキー [スキー] /skiing/
+スキーをします [スキーをします] /ski/
+会議 [かいぎ] /meeting, conference/
+会議をします [かいぎをします] /hold a conference/
+登録 [とうろく] /registration/
+登録をします [とうろくをします] /register/
+週末 [しゅうまつ] /weekend/
+～ごろ [～ごろ] /about (time)/
+何か [なにか] /something/
+どこか [どこか] /somewhere, some place/
+おなかがすきました [おなかがすきました] /(I'm) hungry/
+おなかがいっぱいです [おなかがいっぱいです] /(I'm) full/
+のどがかわきました [のどがかわきました] /(I'm) thirsty/
+そうですね [そうですね] /I agree with you/
+そうしましょう [そうしましょう] /Let's do that (used when agreeing to someone's suggestion)/
+ご注文は [ごちゅうもんは] /May I take your order?/
+定食 [ていしょく] /set meal/
+牛どん [ぎゅうどん] /bowl of rice topped with beef/
+少々お待ちください [しょうしょうおまちください] /Please wait a moment/
+別々に [べつべつに] /separately/
+ロシア [ロシア] /Russia/
+#end

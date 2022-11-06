@@ -1,0 +1,64 @@
+﻿# Minna no Nihongo II, Lesson 029
+# ISBN 4-88319-103-6
+# Version 1.0 
+# Paul Denisowski (pdenisowski@nc.rr.com)
+開きます [あきます] /open/
+ドアが開きます [ドアがあきます] /a door opens/
+閉まりる [しまります] /close, shut/
+ドアが閉まる [ドアがしまります] /a door closes, shuts/
+つきます [つきます] /come on/
+電気がつきます [でんきがつきます] /a light comes on/
+消えます [きえます] /go off, disappear/
+電気が消えます [でんきがきえます] /a light goes off, disappears/
+込みます [こみます] /get crowded/
+道が込みます [みちがこみます] /a street gets crowded/
+すきます [すきます] /get empty/
+道がすきます [みちががすきます] /a street gets empty/
+壊れます [こわれます] /break/
+椅子が壊れります [いすがこわれます] /a chair breaks/
+割れます [われます] /break, smash/
+コップが割れます [コップがわれます] /a glass breaks/
+折れます [おれます] /break, snap/
+木が折れます [きがおれます] /a tree breaks, snaps/
+破れます [やぶれます] /tear/
+紙が破れます [かみがやぶれます] /the paper tears/
+汚れます [よごれます] /get dirty/
+服が汚れます [ふくがよごれます] /the clothes get dirty/
+付きます [つきます] /be attached/
+ポケットが付きます [ポケットがつきます] /a pocket is attached/
+外れます [はずれます] /be undone/
+ボタンが外れます [ボタンがはずれます] /a button is undone/
+止まります [とまります] /stop/
+エレベーターが止まります [エレベーターがとまります] /an elevator stops/
+まちがえます [まちがえます] /make a mistake/
+落します [おとします] /drop, loose/
+掛かります [かかります] /be locked/
+お皿 [おさら] /plate, dish/
+おちゃわん [おちゃわん] /rice bowl/
+コップ [コップ] /glass (vessel)/
+ガラス [ガラス] /glass (material)/
+袋 [ふくろ] /bag/
+財布 [さいふ] /wallet, purse/
+枝 [えだ] /branch, twig/
+駅員 [えきいん] /station employee/
+この辺 [このへん] /this neighborhood/
+～辺 [～へん] /neighborhood/
+このくらい [このくらい] /about this size/
+お先にどうぞ [おさきにどうぞ] /After you, Go ahead please/
+ああよかった [ああよかった] /Thank goodness! (used to express a feeling of relief)/
+今の電車 [いまのでんしゃ] /the train which has just left/
+忘れ物 [わすれもの] /things left behind, lost things/
+～側 [～がわ] /side/
+ポケット [ポケット] /pocket/
+覚えていません [おぼえていません] /I don't remember /
+網棚 [あみだな] /rack/
+確か [たしか]  /I suppose, if I am correct /
+地震 [じしん] /earthquake/
+壁 [かべ] /wall/
+針 [はり] /hands (of a clock)/
+指します [さします] /point /
+駅前 [えきまえ] /the area in front of the station/
+倒れます [たおれます] /fall down/
+西 [にし] /west/
+方 [ほう] /direction/
+#end

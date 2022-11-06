@@ -1,0 +1,52 @@
+﻿# Minna no Nihongo II, Lesson 047
+# ISBN 4-88319-103-6
+# Version 1.0  
+# Paul Denisowski (pdenisowski@nc.rr.com)
+集まります [あつまります] /gather/
+人が集まります [ひとがあつまります] /people gather/
+別れます [わかれます] /part, separate/
+人が別れます [ひとがわかれます] /people part, separate/
+長生きします [ながいきします] /live long/
+音がします [おとがします] /a sound is heard/
+声がします [こえがします] /a voice is heard/
+味がします [あじがします] /(something) tastes/
+においがします [においがします] /(something) smells/
+さします [さします] /put up/
+傘をさします [かさをさします] /put up an umbrella/
+ひどい [ひどい] /terrible, severe/
+怖い [こわい] /frightening, horrible/
+天気予報 [てんきよほう] /weather forecast/
+発表 [はっぴょう] /announcement, presentation/
+実験 [じっけん] /experiment/
+人口 [じんこう] /population/
+におい [におい] /smell/
+科学 [かがく] /science/
+医学 [いがく] /medicine, medical science/
+文学 [ぶんがく] /literature/
+パトカー [パトカー] /patrol car/
+救急車 [きゅうきゅうしゃ] /ambulance/
+賛成 [さんせい] /approval, agreement/
+反対 [はんたい] /objection, opposition/
+男性 [だんせい] /male. man/
+女性 [じょせい] /female, woman/
+どうも [どうも] /it appears that (used when making a tentative judgement)/
+～によると [～によると] /according to ~ (indicates the source of information)/
+バリ [バリ] /Bali in Indonesia/
+イラン [イラン] /Iran/
+カリフォルニア [カリフォルニア] /California/
+グアム [グアム] /Guam/
+恋人 [こいびと] /sweatheart, boyfriend, girlfriend/
+婚約します [こんやくします] /get engaged/
+相手 [あいて] /the other person/
+知り合います [しりあいます] /get acquainted/
+平均寿命 [へいきんじゅみょう] /average life span/
+比べます [くらべます] /compare/
+男性と比べます [だんせいとくらべます] /compare (with man)/
+博士 [はかせ] /doctor/
+脳 [のう] /brain/
+ホルモン [ホルモン] /hormone/
+化粧品 [けしょうひん] /cosmetics/
+調べ [しらべ] /survey, research/
+化粧 [けしょう] /makeup/
+化粧をします [けしょうをします] /put on makeup/
+#end

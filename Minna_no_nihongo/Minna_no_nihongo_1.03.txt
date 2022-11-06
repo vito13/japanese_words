@@ -1,0 +1,47 @@
+﻿# Minna no Nihongo I, Lesson 003
+# ISBN  4-88319-102-8 
+# Version 1.0  
+# Paul Denisowski (pdenisowski@nc.rr.com)
+ここ [ここ] /here, this place/
+そこ [そこ] /there, that place near you/
+あそこ [あそこ] /that place over there/
+どこ [どこ] /where, what place?/
+こちら [こちら] /this way, this place (polite)/
+そちら [そちら] /that way, that place near you (polite)/
+あちら [あちら] /that way, that place over there (polite)/
+どちら [どちら] /which way, where (polite)/
+教室 [きょうしつ] /classroom/
+食堂 [しょくどう] /dining hall, canteen/
+事務所 [じむしょ] /office/
+会議室 [かいぎしつ] /conference room, assembly room/
+受付 [うけつけ] /reception desk/
+ロビー [ロビー] /lobby/
+部屋 [へや] /room/
+トイレ [トイレ] /toilet, restroom/
+お手洗い [おてあらい] /toilet, restroom/
+階段 [かいだん] /staircase/
+エレベーター [エレベーター] /elevator, lift/
+エスカレーター [エスカレーター] /escalator/
+国 [くに]  /country/
+会社 [かいしゃ] /company/
+うち [うち] /house, home/
+電話 [でんわ] /telephone, telephone call/
+靴 [くつ] /shoes/
+ネクタイ [ネクタイ] /necktie/
+ワイン [ワイン] /wine/
+たばこ [たばこ] /tobacco, cigarette/
+売り場 [うりば] /department, counter (in a department store)/
+地下 [ちか] /basement/
+～階 [～かい] / ~th floor/
+何階 [なんがい] /what floor/
+～円 [～えん] /yen/
+いくら [いくら] /how much/
+百 [ひゃく] /hundred/
+千 [せん] /thousand/
+万 [まん] /ten thousand/
+すみません [すみません] /Excuse me/
+～でございます [～でございます] /(polite form of "desu")/
+～を見せてください [～をみせてください] /Please show me ~/
+じゃ [じゃ] /well, then, in that case	/
+～をください [～をください] /Give me ~, please.	/
+#end

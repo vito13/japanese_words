@@ -1,0 +1,35 @@
+﻿# Minna no Nihongo I, Lesson 020
+# ISBN 4-88319-102-8 
+# Version 1.0 
+# Paul Denisowski (pdenisowski@nc.rr.com)
+要ります [いります] /need, require/
+ビザが要ります [ビザがいります] /need, require a visa/
+調べます [しらべます] /check, investigate/
+直します [なおします] /repair, correct/
+修理します [しゅうりします] /repair/
+電話します [でんわします] /to phone/
+僕 [ぼく] /I (an infomal equivalent of watshi used by men)/
+君 [きみ] /you (an informal equivalent of anata used by men)/
+～君 [～くん] /Mr. (an informal equivalent of ~san used by men)/
+うん [うん] /yes (an informal equivalent of hai)/
+ううん [ううん] /no (an informal equivalent of iie)/
+サラレーマン [サラレーマン] /salaried worker, office worker/
+ことば [ことば] /word, language/
+物価 [ぶっか] /commodity prices/
+着物 [きもの] /kimono (traditional Japanese attire)/
+ビサ [ビザ] /visa/
+初め [はじめ] /the beginning/
+終わり [おわり] /the end/
+こっち [こっち] /this way, this place (an informal equivalent of kochira)/
+そっち [そっち] /this way, that place (an informal equivalent of sochira)/
+あっち [あっち] /this way, that place over there (an informal equivalent of achira)/
+どっち [どっち] /which one (between two things), which way, where (an informal equivalent of dochira)/
+あの間 [あのあいだ] /the other day/
+みんなで [みんなで] /all together/
+～けど [～けど ~] /but (an infomal equivalent of ga)/
+国へ帰るの [くにへかえるの] /Are you going back to your country?/
+どうするの [どうするの] /What will you do?/
+どうしようかな [どうしようかな] /What shall I do?/
+よかったら [よかったら] /if you like/
+いろいろ [いろいろ] /various/
+#end

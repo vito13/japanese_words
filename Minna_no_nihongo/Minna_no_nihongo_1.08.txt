@@ -1,0 +1,64 @@
+﻿# Minna no Nihongo I, Lesson 008
+# ISBN  4-88319-102-8 
+# Version 1.0  
+# Paul Denisowski (pdenisowski@nc.rr.com)
+ハンサム [ハンサム] /handsome/
+きれい [きれい] /beautiful, clean/
+静か [しずか] /quiet/
+にぎやか [にぎやか] /lively/
+有名 [ゆうめい] /famous/
+親切 [しんせつ] /kind/
+元気 [げんき] /healthy, sound, cheerful/
+暇 [ひま] /free (time)/
+便利 [べんり] /convenient/
+すてき [すてき] /fine, nice, wonderful/
+大きい [おおきい] /big, large/
+小さい [ちいさい] /small, little/
+新しい [あたらしい] /new/
+古い [ふるい] /old (not of age)/
+いい [いい] /good/
+悪い [わるい] /bad/
+厚い [あつい] /hot/
+熱い [あつい] /hot/
+寒い [さむい] /cold (referring to temperature)/
+冷たい [つめたい] /cold (referring to touch, as a drink)/
+難しい [むずかしい] /difficult/
+易しい [やさしい] /easy/
+高い [たかい] /expensive, tall, high/
+安い [やすい] /inexpensive/
+低い [ひくい] /low/
+おもしろい [おもしろい] /interesting/
+おいしい [おいしい] /delicious, tasty/
+忙しい [いそがしい] /busy/
+楽しい [たのしい] /enjoyable/
+白い [しろい] /white/
+黒い [くろい] /black/
+赤い [あかい] /red/
+青い [あおい] /blue/
+桜 [さくら] /cherry (blossom)/
+山 [やま] /mountain/
+町 [まち] /town, city/
+食べ物 [たべもの] /food/
+車 [くるま] /car, vehicle/
+所 [ところ] /place/
+寮 [りょう] /dormitory/
+勉強 [べんきょう] /study/
+生活 [せいかつ] /life/
+仕事 [しごと] /work, business/
+仕事をおしさす [しごとをします] /do one's job, work/
+どう [どう] /how/
+どんな～ [どんな～] /what kind of ~/
+どれ [どれ] /which one (of three or more)/
+とても [とても] /very/
+あまり [あまり] /not so (used with negatives)/
+そして [そして] /and (used to connect sentences)/
+～が、～ [～が、～] /~, but ~/
+お元気ですか [おげんきですか] /How are you?/
+そうですね [そうですね] /Well, let me see (pausing)/
+日本の生活に慣れましたか [にほんのせいかつになれましたか] /Have you got used to the life in Japan?/
+～も一杯いかがですか [～もいっぱいいかがですか] /Won't you have another cup of ~?/
+いいえ、けっこうです [いいえ、けっこうです] /No, thank you/
+もう～ですね [もう～ですね] /It's already ~ (isn't it)/
+そろそろ失礼します [そろそろしつれいします] /It's almost time to leave now/
+またいらっしゃってください [またいらっしゃってください] /Please come again/
+#end

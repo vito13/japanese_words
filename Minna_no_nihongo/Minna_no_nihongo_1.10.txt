@@ -1,0 +1,54 @@
+﻿# Minna no Nihongo I, Lesson 010
+# ISBN  4-88319-102-8 
+# Version 1.0  
+# Paul Denisowski (pdenisowski@nc.rr.com)
+います [います] /exist, be (referring to animate things)/
+ありま [ありま] /exist, be (referring to inanimate things)/
+いろいろ [いろいろ] /various/
+男の人 [おとこのひと] /man/
+女の人 [おんなのひと] /woman/
+男の子 [おとこのこ] /boy/
+女の子 [おんなのこ] /girl/
+犬 [いぬ] /dog/
+猫 [ねこ] /cat/
+木 [き] /tree/
+物 [もの] /thing/
+フィルム [フィルム] /film/
+電池 [でんち] /battery/
+箱 [はこ] /box/
+スイッチ [スイッチ] /switch/
+冷蔵庫 [れいぞうこ] /refrigerator/
+テーブル [テーブル] /table/
+ベッド [ベッド] /bed/
+棚 [たな] /shelf/
+ドア [ドア] /door/
+窓 [まど] /window/
+ポスト [ポスト] /mailbox, postbox/
+ビル [ビル] /building/
+公園 [こうえん] /park/
+喫茶店 [きっさてん] /coffee shop/
+本屋 [ほんや] /bookstore/
+～屋 [～や] /~ store/
+乗り場 [のりば] /a fixed place to catch taxis, trains, etc./
+県 [けん] /prefecture/
+上 [うえ] /on, above, over/
+下 [した] /under, below, beneath/
+前 [まえ] /front, before/
+うしろ [うしろ] /back, behind/
+右 [みぎ] /right (side)/
+左 [ひだり] /left (side)/
+中 [なか] /in, inside/
+外 [そと] /outside/
+隣 [となり] /next, next door/
+近く [ちかく] /near, vicinity/
+間 [あいだ] /between, among/
+～や～ など [～や～ など] / ~, ~, and so on/
+いちばん～ [いちばん～] /the most ~ /
+いちばんうえ [いちばんうえ] /the top/
+～段目 [～だんめ] / the ~th shelf/
+だん [だん] /the counter for shelves/
+どうもすみません [どうもすみません] /Thank you/
+チリソース [チリソース] /chilli sauce/
+奥 [おく] /the back/
+スパイスコーナー [スパイスコーナー] /spice corner/
+#end

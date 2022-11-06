@@ -1,0 +1,64 @@
+﻿# Minna no Nihongo I, Lesson 016
+# ISBN 4-88319-102-8 
+# Version 1.0 
+# Paul Denisowski (pdenisowski@nc.rr.com)
+乗ります [のります] /ride, get on/
+電車に乗ります [でんしゃにのります] /ride, get on a train/
+降ります [おります] /get off/
+電車を降ります [でんしゃをおります] /get off a train/
+乗り換えます [のりかえます] /change (trains, etc.)/
+シャワーを浴びます [シャワーをあびます] /take a shower/
+入れます [いれます] /put in, insert/
+出します [だします] /take out, withdraw/
+入ります [はいります] /enter/
+大学に入ります [だいがくにはいります] /enter a university/
+出ます [でます] /graduate/
+大学を出ます [だいがくをでます] /graduate from a university/
+やめます [やめます] /quit or retire from, stop, give up/
+会社をやめます [かいしゃをやめます] /quit or retire from a company/
+押します [おします] /press, push/
+若い [わかい] /young/
+長い [ながい] /long/
+短い [みじかい] /short/
+明るい [あかるい] /bright, light/
+暗い [くらい] /dark/
+背が高い [せがたかい] /tall (referring to person)/
+頭がいい [あたまがいい] /clever, smart/
+体 [からだ] /body/
+頭 [あたま] /head/
+髪 [かみ] /hair/
+顔 [かお] /face/
+目 [め] /eye/
+耳 [みみ] /ear/
+口 [くち] /mouth/
+歯 [は] /tooth/
+ おなか [おなか] /stomach/
+足 [あし] /leg, foot/
+サービス [サービス] /service/
+ジョギング [ジョギング] /jogging/
+ジョギングをします [ジョギングをします] /jog/
+シャワー [シャワー] /shower/
+緑 [みどり] /green, greenery/
+寺  [てら] /Buddhist temple/
+神社 [じんじゃ] /Shinto shrine/
+留学生 [りゅうがくせい] /foreign student/
+～番 [～ばん] /number ~/
+どうやって [どうやって] /in what way, how/
+どの～ [どの～] /which ~ (used for three or more)/
+いいえまだまだです [いいえまだまだです] /No, I still have a long way to go/
+お引き出しですか [おひきだしですか] /Are you making a withdrawl?/
+まず [まず] /first of all/
+キャッシュカード [キャッシュカード] /cash dispensing card/
+暗証番号 [あんしょうばんごう] /personal identification number, PIN/
+次に [つぎに] /next, as a next step/
+金額 [きんがく] /amount of money/
+確認 [かくにん] /confirmation/
+確認します [かくにんします] /confirm/
+ボタン [ボタン] /button/
+アジア [アジア] /Asia/
+バンドン [バンドン] /Bandung (in Indonesia)/
+ベラクルス [ベラクルス] /Veracruz (in Mexico)/
+フランケン [フランケン] /Franken (in Germany)/
+ベトナム [ベトナム] /Vietnam/
+フエ [フエ] /Hue (in Vietnam)/
+#end

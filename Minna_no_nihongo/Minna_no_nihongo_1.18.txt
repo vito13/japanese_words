@@ -1,0 +1,34 @@
+﻿# Minna no Nihongo I, Lesson 018
+# ISBN 4-88319-102-8 
+# Version 1.0 
+# Paul Denisowski (pdenisowski@nc.rr.com)
+できます [できます] /be able to, can/
+洗います [あらいます] /wash/
+弾きます [ひきます] /play (stringed instrument or piano, etc.)/
+歌います [うたいます] /sing/
+集めます [あつめます] /collect, gather/
+捨てます [すてます] /throw away/
+換えます [かえます] /exchange, change/
+運転します [うんてんします] /drive/
+予約します [よやくします] /reserve, book/
+見学します [けんがくします] /visit some place for study/
+ピアノ [ピアノ] /piano/
+～メートル [～メートル] /~ meter/
+国際～ [こくさい～] /international ~/
+現金 [げんきん] /cash/
+趣味 [しゅみ] /hobby/
+日記 [にっき] /diary/
+お祈り [おいのり] /prayer/
+お祈りをします [おいのりをします] /pray/
+課長 [かちょう] /section chief/
+部長 [ぶちょう] /department chief/
+社長 [しゃちょう] /president of a company/
+動物 [どうぶつ] /animal/
+馬 [うま] /horse/
+へえ [へえ] /Really! (used when expressing surprise)/
+それはおもしろいですね [それはおもしろいですね] /That must be interesting/
+なかなか [なかなか] /not easily (used with negatives)/
+牧場 [ぼくじょう] /ranch, stock farm/
+ほんとうですか [ほんとうですか] /Really?/
+ぜひ [ぜひ] /by all means/
+#end

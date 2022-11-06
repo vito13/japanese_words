@@ -1,0 +1,44 @@
+﻿# Minna no Nihongo II, Lesson 043
+# ISBN 4-88319-103-6
+# Version 1.0  
+# Paul Denisowski (pdenisowski@nc.rr.com)
+増えます [ふえます] /increase/
+輸出が増えます [ゆしゅつがふえます] /exports increase/
+減ります [へります] /decrease/
+輸出が減ります [ゆしゅつがへります] /exports decrease/
+上がります [あがります] /raise/
+値段が上がります [ねだんがあがります] /the price raises/
+下がります [さがります] /fall/
+値段が下がります [ねだんがさがります] /the price falls/
+切れます [きれます] /break, snap/
+紐が切れます [ひもがきれます] /a string breaks, snaps/
+とれます [とれます] /come off/
+ボタンがとれます [ボタンがとれます] /a button comes off/
+落ちます [おちます] /fall down/
+荷物が落ちます [にもつがおちます] /bagage falls down/
+なくなります [なくなります] /run out, be lost/
+ガソリンがなくなります [ガソリンがなくなります] /petrol, gasoline run out, be lost/
+丈夫 [じょうぶ] /strong, healthy/
+変 [へん] /strange, peculiar/
+幸せ [しあわせ] /happy/
+うまい [うまい] /tasty, good at/
+まずい [まずい] /not tasty/
+つまらない [つまらない] /boring, uninteresting/
+ガソリン [ガソリン] /gasoline, petrol/
+火 [ひ] /fire/
+暖房 [だんぼう] /heating/
+冷房 [れいぼう] /air-conditioning/
+センス [センス] /taste, sense/
+ふくのセンスがあります [ふくのセンスがあります] /have good taste in clothing/
+今にも [いまにも] /at any moment (used to describe a situation just before it changes)/
+わあ [わあ] /Oh!, Wow!/
+会員 [かいいん] /member/
+適当 [てきとう] /suitable, proper/
+年齢 [ねんれい] /age/
+収入 [しゅうにゅう] /income/
+ぴったり [ぴったり] /exactly, just right/
+そのうえ [そのうえ] /in addition to that, moreover/
+～といいます [～といいます] /(one's name) is ~/
+ばら [ばら] /rose/
+ドライブ [ドライブ] /driving/
+#end

@@ -1,0 +1,27 @@
+﻿# Minna no Nihongo I, Lesson 024
+# ISBN 4-88319-102-8 
+# Version 1.0 
+# Paul Denisowski (pdenisowski@nc.rr.com)
+くれます [くれます] /give(me)/
+連れて行きます [つれていきます] /take (someone)/
+連れて来ます [つれてきます] /bring (someone)/
+送ります [おくります] /escort, go with/
+人を送ります [ひとをおくります] /escort, go with someone/
+紹介します [しょうかいします] /introduce/
+案内します [あんないします] /show around, show the way/
+説明します [せつめいします] /explain/
+コーヒーをいれます [コーヒーをいれます] /make coffee/
+おじいさん [おじいさん] /grandfather, old man/
+おじいちゃん [おじいちゃん] /grandfather, old man/
+おばあさん [おばあさん] /grandmother, old woman/
+おばあちゃん [おばあちゃん] /grandmother, old woman/
+準備 [じゅんび] /preparation/
+準備します [じゅんびします] /prepare/
+意味 [いみ] /meaning/
+お菓子 [おかし] /sweets, snacks/
+全部 [ぜんぶ] /all/
+自分で [じぶんで] /by oneself/
+ほかに [ほかに] /besides/
+ワゴン車 [ワゴンしゃ] /station wagon/
+弁当 [べんとう] /box lunch/
+#end

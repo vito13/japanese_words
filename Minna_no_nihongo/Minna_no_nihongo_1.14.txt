@@ -1,0 +1,48 @@
+﻿# Minna no Nihongo I, Lesson 014
+# ISBN  4-88319-102-8 
+# Version 1.0 
+# Paul Denisowski (pdenisowski@nc.rr.com)
+つけます [つけます] /turn on/
+消します [けします] /turn off/
+開けます [あけます] /open/
+閉めます [しめます] /close, shut/
+急ぎます [いそぎます] /hurry/
+待ちます [まちます] /wait/
+止めます [とめます] /stop, park/
+曲がります [まがります] /turn/
+右へ曲がります み [ぎへまがります] /turn to the right/
+持ちます [もちます] /hold/
+取ります [とります] /take, pass/
+手伝います [てつだいます] /help (with a task)/
+呼びます [よびます] /call/
+話します [はなします] /speak, talk/
+見せます [みせます] /show/
+教えます [おしえます] /tell/
+住所を教えます [じゅうしょをおしえます] /tell an address/
+始めます [はじめます] /start, begin/
+降ります [ふります] /rain/
+雨が降ります [あめがふります] /rain/
+コピーします [コピーします] /copy/
+エアコン [エアコン] /air conditioner/
+パスポート [パスポート] /passport/
+名前 [なまえ] /name/
+住所 [じゅうしょ] /address/
+地図 [ちず] /map/
+塩 [しお] /salt/
+砂糖 [さとう] /sugar/
+読み方 [よみかた] /how to read, way of reading/
+～方 [～かた] /how to ~, way of ~ing/
+ゆっくり [ゆっくり] /slowly, leisurely/
+すぐ [すぐ] /immediately/
+また [また] /again/
+あとで [あとで] /later/
+もう少し [もうすこし] /a little more/
+もう～ [もう～] /~ more, another ~/
+いいですよ [いいですよ] /Sure, Certainly/
+さあ [さあ] /right (used when encouraging some course of action)/
+あれ [あれ] /Oh! (in surprise or in wonder)/
+信号を右へ曲がってください [しんごうをみぎへまがってください] /Turn right at the signal/
+まっすぐ [まっすぐ] /straight/
+これでお願いします [これでおねがいします] /I'd like to pay with this/
+お釣り [おつり] /change/
+#end

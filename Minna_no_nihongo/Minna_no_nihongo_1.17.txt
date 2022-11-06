@@ -1,0 +1,42 @@
+﻿# Minna no Nihongo I, Lesson 017
+# ISBN 4-88319-102-8 
+# Version 1.0 
+# Paul Denisowski (pdenisowski@nc.rr.com)
+覚えます [おぼえます] /memorize/
+忘れます [わすれます] /forget/
+なくします [なくします] /lose/
+出します [だします] /hand in/
+レポートを出します [レポートをだします] /hand in a report/
+払います [はらいます] /pay/
+返します [かえします] /give back, return/
+出かけます [でかけます] /go out/
+脱ぎます [ぬぎます] /take off (clothes, shoes, etc.)/
+持って行ます [もっていきます] /take (something)/
+持って来ます [もってきます] /bring (something)/
+心配します [しんぱいします] /worry/
+残業します [ざんぎょうします] /work overtime/
+出張します [しゅっちょうします] /go on a business trip/
+薬を飲みます [くすりのみます] /take medicine/
+おふろに入ります [おふろにはいります] /take a bath/
+大切 [たいせつ] /important, precious/
+大丈夫 [だいじょうぶ] /all right/
+危ない [あぶない] /dangerous/
+問題 [もんだい] /question, problem, trouble/
+答え [こたえ] /answer/
+禁煙 [きんえん] /no smoking/
+健康保険証 [けんこうほけんしょう] /health insurance card/
+かぜ [かぜ] /cold/
+熱 [ねつ] /fever/
+病気 [びょうき] /illness, disease/
+薬 [くすり] /medicine/
+おふろ [おふろ] /bath/
+上着 [うわぎ] /jacket, outerwear/
+下着 [したぎ] /underwear/
+先生 [せんせい] /doctor (used when addressing a medical doctor)/
+～までに [～までに] /before ~, by ~ (indicating time limit)/
+ですから [ですから] /therefore, so/
+ どうしましたか [どうしましたか] /What's the matter?/
+～が痛いです [～がいたいです] /have a pain in my ~/
+のど [のど] /throat/
+お大事に [おだいじに] /Take care of yourself (said to people who are ill)/
+#end

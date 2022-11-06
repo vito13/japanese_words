@@ -1,0 +1,29 @@
+﻿# Minna no Nihongo I, Lesson 022
+# ISBN 4-88319-102-8 
+# Version 1.0 
+# Paul Denisowski (pdenisowski@nc.rr.com)
+着ます [きます] /put on (a shirt, etc.)/
+シャツを着ます [シャツをきます] /put on a shirt/
+はきます [はきます] /put on (shoes, trousers, etc.)/
+靴をはきます [くつをはきます] /put on shoes/
+かぶります [かぶります] /put on (a hat, etc)/
+帽子をかぶります [ぼうしをかぶります] /put on a hat/
+眼鏡をかけます [めがねをかけます] /put on glasses/
+生まれます [うまれます] /be born/
+コート [コート] /coat/
+スーツ [スーツ] /suit/
+セーター [セーター] /sweater/
+帽子 [ぼうし] /hat, cap/
+眼鏡 [めがね] /glasses/
+よく [よく] /often/
+おめでとうございます [おめでとうございます] /Congratulations (used on birthdays, at weddings, New Year's Day, etc.)/
+こちら [こちら] /this (polite equivalent of kore)/
+家賃 [やちん] /house rent/
+うーん [うーん] /Let me see/
+ダイニングキチン [ダイニングキチン] /kitchen with a dining area/
+和室 [わしつ] /Japanese-style room/
+押し入れ [おしいれ] /Japanese-style closet/
+布団 [ふとん] /Japanese-style matress and quilt/
+アパート [アパート] /apartment/
+パリ [パリ] /Paris/
+#end

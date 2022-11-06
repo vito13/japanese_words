@@ -1,0 +1,68 @@
+﻿# Minna no Nihongo I, Lesson 011
+# ISBN  4-88319-102-8 
+# Version 1.0  
+# Paul Denisowski (pdenisowski@nc.rr.com)
+子供がいます [こどもがいます] /have a child/
+日本にいます [にほんにいます] /stay, be in Japan/
+かかります [かかります] /take (referring to time or money)/
+会社を休みます [かいしゃをやすみます] /take a day off work/
+一つ [ひとつ] /one (used when counting things)/
+二つ [ふたつ] /two (used when counting things)/
+三つ [みっつ] /three (used when counting things)/
+四つ [よっつ] /four (used when counting things)/
+五つ [いつつ] /five (used when counting things)/
+六つ [むっつ] /six (used when counting things)/
+七つ [ななつ] /seven (used when counting things)/
+八つ [やっつ] /eight (used when counting things)/
+九つ [ここのつ] /nine (used when counting things)/
+十 [とお] /ten (used when counting things)/.
+いくつ [いくつ] /how many/
+一人 [ひとり] /one person/
+二人 [ふたり] /two people/
+～人 [～にん] /~ people/
+～台 [～だい] /(counter for machines, cars, etc.)/
+～枚 [～まい] /(counter for paper, stamps, etc.)/
+～回 [～かい] /~ times/
+りんご [りんご] /apple/
+みかん [みかん] /mandarin orange/
+サンドイッチ [サンドイッチ] /sandwich/
+カレー [カレー] /curry/
+カレーライス [カレーライス] /curry and rice/
+アイスクリーム [アイスクリーム] /ice cream/
+切手 [きって] /postage stamp/
+はがき [はがき] /post card/
+封筒 [ふうとう] /envelope/
+速達 [そくたつ] /special delivery/
+書留 [かきとめ] /registered mail/
+航空便 [こうくうびん] /airmail/
+エヤメール [エヤメール] /airmail/
+船便 [ふなびん] /sea mail/
+両親 [りょうしん] /parents/
+兄弟 [きょうだい ] /brothers and sisters/
+兄 [あに] /(my) elder brother/
+お兄さん [おにいさん] /(someone else's) elder brother/
+姉 [あね] /(my) elder sister/
+お姉さん [おねえさん] /(someone else's) elder sister/
+弟 [おとうと] /(my) younger brother/
+弟さん [おとうとさん] /(someone else's) younger brother/
+妹 [いもうと] /(my) younger sister/
+妹さん [いもうとさん] /(someone else's) younger sister/
+外国 [がいこく] /foreign country/
+～時間 [～じかん] /~ hours/
+～週間 [～しゅうかん] /~ weeks/
+～か月 [～かげつ] /~ months/
+～年 [～ねん] /~ years/
+～ぐらい [～ぐらい] /about ~/
+どのくらい [どのくらい] /how long/
+全部で [ぜんぶで] /in total/
+みんな [みんな] /all, everything/
+～だけ [～だけ] /only ~/
+いらしゃいませ [いらしゃいませ] /Welcome, May I help you? (a greeting to a customer or a guest entering a shop, etc.)/
+いい天気ですね [いいてんきですね] /Nice weather, isn't it?/
+お出かけですか [おでかけですか] /Are you going out?/
+ちょっと～まで [ちょっと～まで] /I'm just going to ~/
+行っていらっしゃい [いっていらっしゃい] /So long. (lit. Go and come back.)/
+行ってまいります [いってまいります] /So long. (lit. I'm going and coming back.)/
+それから [それから] /and, furthermore/
+オーストラリア [オーストラリア] /Australia/
+#end

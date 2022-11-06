@@ -1,0 +1,53 @@
+﻿# Minna no Nihongo II, Lesson 049
+# ISBN 4-88319-103-6
+# Version 1.0  
+# Paul Denisowski (pdenisowski@nc.rr.com)
+勤めます [つとめます] /work/
+会社に勤めます [かいしゃにつとめます] /work for a company/
+休みます [やすみます] /go to bed, sleep/
+掛けます [かけます] /sit on/
+いすに掛けます [いすにかけます] /sit on a chair/
+過ごします [すごします] /spend (time), pass (time)/
+寄ります [よります] /drop into/
+銀行に寄ります [ぎんこうによります] /drop into a bank/
+いらっしゃいます [いらっしゃいます] /be, go, come (respectful)/
+召し上がります [めしあがります] /eat, drink (respectful)/
+おっしゃいます [おっしゃいます] /say (respectful)/
+なさいます [なさいます] /do (respectful)/
+ご覧になります [ごらんになります] /see, look at (respectful)/
+ご存じです [ごぞんじです] /know (respectful)/
+あいさつ [あいさつ] /greeting, address/
+あいさつをします [あいさつをします] /to greet, give an address/
+灰皿 [はいざら] /ashtray/
+旅館 [りょかん] /Japanese-style hotel or inn/
+会場 [かいじょう] /meeting place, hall/
+バス停 [バスてい] /bus stop/
+貿易 [ぼうえき] /trade/
+～様 [～さま] /(respectful equivalent of san)/
+帰りに [かえりに] /on the way back/
+たまに [たまに] /once in a while/
+ちっとも [ちっとも] /not at all (used with negatives)/
+遠慮なく [えんりょなく] /without reserve, without hesitation/
+～年～組 [～ねん～くみ] /class ~ of ~ th grade/
+では [では] /well, then (polite equivalent of ja)/
+出します [だします] /run/
+熱を出します [ねつをだします] /run a fever/
+よろしくお伝えください [よろしくおつたえください] /Give my best regards, Please say hello/
+失礼いたします [しつれいいたします] /Good bye (humble)/
+講師 [こうし] /lecturer/
+多くの～ [おおくの～] /many ~, much~/
+作品 [さくひん] /work (of art, etc.)/
+授賞します [じゅしょうします] /be awarded a prize/
+世界的に [せかいてきに] /world-wide/
+作家 [さっか] /novelist, writer/
+～でいらっしゃいます [～でいらっしゃいます] /be (respectful)/
+長男 [ちょうなん] /one's eldest son/
+障害 [しょうがい] /handicap, defect/
+お持ちです [おもちです] /have (respectful)/
+作曲 [さっきょく] /composition (music)/
+活動 [かつどう] /activity/
+それでは [それでは] /well, so (indicating an end or beginning)/
+大江健三郎 [おおえけんざぶろう] /Japanese novelist  (1935-)/
+東京大学 [とうきょうだいがく] /Tokyo University/
+ノーベル文学賞 [ノーベルぶんがくしょう] /Nobel Prize for literature/
+#end

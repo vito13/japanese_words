@@ -1,0 +1,47 @@
+# Minna no Nihongo II, Lesson 044
+# ISBN 4-88319-103-6
+# Version 1.0  
+# Paul Denisowski (pdenisowski@nc.rr.com)
+泣きます [なきます] /cry/
+笑います [わらいます] /laugh, smile/
+乾きます [かわきます] /dry/
+濡れる [ぬれます] /get wet/
+滑べります [すべります] /slip/
+起きます [おきます] /happen/
+事故が起きる [じこがおきます] /an accident happens/
+調節します [ちょうせつします] /adjust/
+安全 [あんぜん] /safe/
+丁寧 [ていねい] /polite, courteous, careful/
+細かい [こまかい] /small, fine/
+濃い [こい] /strong (taste), dark (color)/
+薄い [うすい] /weak (taste), light (color)/
+空気 [くうき] /air/
+涙 [なみだ] /tear/
+和食 [わしょく] /Japanese dish/
+洋食 [ようしょく] /Western dish/
+御数 [おかず] /side dish/
+量 [りょう] /quantity/
+～倍 [～ばい] /~ times/
+半分 [はんぶん] /half/
+シングル [シングル] /single room/
+ツイン [ツイン] /twin-bedded room/
+箪笥 [たんす] /chest of drawers/
+洗濯物 [せんたくもの] /washing laundry/
+理由 [りゆう] /reason/
+どうなさいます [どうなさいます] /What can I do for you?/
+カット [カット] /haircut/
+シャンプー [シャンプー] /shampoo/
+どう言う風になさいます [どういうふうになさいます] /How would you like it done?/
+ショート [ショート] /short/
+～みたいにしてくだい [～みたいにしてください] /Do it like ~/
+これでよろしいでしょうか [これでよろしいでしょうか] /Would this be all right?/
+どうもおつかれさまでした [どうもおつかれさまでした] /Thank you for being patient/
+嫌がります [いやがります] /dislike/
+また [また] /and/
+順序 [じゅんじょ] /order, sequence/
+表現 [ひょうげん] /expression/
+例えば [たとえば] /for example/
+別れます [わかれます] /part, separate/
+これら [これら] /these things/
+縁起が悪い [えんぎがわるい] /unlucky, ill-omened/
+#end
