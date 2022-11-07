@@ -14,7 +14,8 @@ from hyperparameters import global_var
 
 dbfile = global_var.get_value('dbfile')
 wordtable = global_var.get_value('wordtable')
-runlog = global_var.get_value('runlog')
+logger = None
+
 
 class WORDRESULTTYPE(Enum):
     CORRECT_NEXT = auto()       # 正确next
@@ -45,59 +46,18 @@ with open(c2, encoding = 'utf-8') as file_object:
 with open(c3, encoding = 'utf-8') as file_object:
     contents3 = file_object.read()
 
-def doincrease(wid):
+def executesql(sql):
     conn = sqlite3.connect(dbfile)
     cs = conn.cursor()
-    sql = "update {} set increase = increase + 1 where id = \"{}\"".format(wordtable, wid)
-    logging.debug(sql)
-    cs.execute(sql)
-    cs.close()
-    conn.commit()
-    conn.close()
-
-
-def dodecrease(wid):
-    conn = sqlite3.connect(dbfile)
-    cs = conn.cursor()
-    sql = "update {} set decrease = decrease + 1 where id = \"{}\" and decrease + 1 <= increase".format(wordtable, wid)
-    logging.debug(sql)
-    cs.execute(sql)
-    cs.close()
-    conn.commit()
-    conn.close()
-
-def dowrong(wid):
-    conn = sqlite3.connect(dbfile)
-    cs = conn.cursor()
-    sql = "update {} set wrong = wrong + 1 where id = \"{}\"".format(wordtable, wid)
-    logging.debug(sql)
+    logger.debug(sql)
     cs.execute(sql)
     cs.close()
     conn.commit()
     conn.close()
     
-def docorrect(wid):
-    conn = sqlite3.connect(dbfile)
-    cs = conn.cursor()
-    sql = "update {} set correct = correct + 1 where id = \"{}\"".format(wordtable, wid)
-    logging.debug(sql)
-    cs.execute(sql)
-    cs.close()
-    conn.commit()
-    conn.close()
-
 def buildbody(tup, stridx):
-    wordid, kana, kanji, roma, chinese, english, wordtype, tone, booklesson, description, nlevel, increase, decrease, correct, wrong = tup
-    newroma = roma
-    newchn = re.sub(r'[），（ ]', ' ', chinese)
-    newchn = "{}, {}".format(stridx, newchn)
-
-    # tidy：
-    # body = "{} {} {} {} {} {}    {} {}".format(kana, ',', kanji, ',', newroma, ',', newchn, ',')
-    # confuse：
-    body = "{} {} {} {} {} {}    {} {}".format(contents0,kana,contents1,newchn,contents2,newroma,kanji,contents3)
-    
-    # body = "{} {} {} {} {} {}    {} {}".format(kana, ',', kanji, ',', newroma, ',', newchn, ',')
+    wordid, kana, kanji, roma, chinese, english, wordtype, tone, lesson, description, nlevel, increase, decrease, correct, wrong = tup
+    body = "{} {} {} {} {} {} {},   {},   {} {}".format(contents0,kana,contents1,chinese,stridx,contents2,roma,kanji,english,contents3)
     return (wordid, body, roma, kana, kanji)
 
 def testone(tup, stridx):
@@ -118,20 +78,19 @@ def testone(tup, stridx):
             break
         elif response in [*ret]:
             result = WORDRESULTTYPE.CORRECT_NEXT
-            docorrect(wordid)
+            executesql("update {} set correct = correct + 1 where id = \"{}\"".format(wordtable, wordid))
             break
         elif response in ['9', '９']:
             result = WORDRESULTTYPE.INCREASE_NEXT
-            doincrease(wordid)
+            executesql("update {} set increase = increase + 1 where id = \"{}\"".format(wordtable, wordid))
             break
         elif response in ['0', '０']:
             result = WORDRESULTTYPE.DECREASE_NEXT
-            dodecrease(wordid)
+            executesql("update {} set decrease = decrease + 1 where id = \"{}\" and decrease + 1 <= increase".format(wordtable, wordid))
             break
         else:
-            dowrong(wordid)
+            executesql("update {} set wrong = wrong + 1 where id = \"{}\"".format(wordtable, wordid))
             pass
-
     return result
 
 def run(data):
@@ -156,38 +115,26 @@ def run(data):
         if testindex < 0:
             testindex = 0
 
-def show(data):
+def showdata(data):
     for tup in data:
         print(tup)
-            
-def getwords(sql):
+
+def getdata(sql):
     conn = sqlite3.connect(dbfile)
     cs = conn.cursor()
     cs.execute(sql)
-    logging.debug(sql)
-    words = cs.fetchall()
-    for word in words:
-        logging.debug(word)
+    data = cs.fetchall()
+    logger.debug("total: {}".format(len(data)))
     cs.close()
     conn.close()
-    return words
+    return data
 
-def getparam(key):
-    with open('run.json', 'r',encoding='utf-8') as f:
-        params = json.load(f)
-        sql = ''
-        if key in params:
-            sql = params[key]
-        else:
-            assert 0, 'Invalid parameter'
-        return sql
-
-def main(argv):
+def getparam(argv):
     key = ""
     try:
         opts, args = getopt.getopt(argv,'-h-k:-v',['help', 'key=', 'version'])
     except getopt.GetoptError:
-        print ('python3 run.py')
+        print('python3 {}'.format(sys.argv[0]))
         sys.exit(2)
     for opt, arg in opts:
         if opt in ('-h','--help'):
@@ -199,28 +146,43 @@ def main(argv):
         elif opt in ("-k", "--key"):
             key = arg
         else:
-            assert 0, 'Invalid parameter'
+            assert 0, 'Invalid arg'
 
-    logging.debug("key: {}".format(key))
-    sqlkey = key
+    assert key != '', 'Invalid key'
+    logger.debug("key: {}".format(key))
     showing = False
     vals = re.findall(r'show(\w+)', key)
     if len(vals) == 1:
-        sqlkey = vals[0]
+        key = vals[0]
         showing = True
-    v = getparam(sqlkey)
-    if v:
-        data = getwords(v)
-        if showing:
-            show(data)
-        else:
-            run(data)
-    else:
-        assert 0, 'Invalid parameter'
 
+    logger.debug("showing: {}".format(showing))
+    sql = ''
+    with open('run.json', 'r',encoding='utf-8') as f:
+        params = json.load(f)
+        if key in params:
+            sql = params[key]
+        else:
+            assert 0, 'No sql found'
+
+    logger.debug("sql: {}".format(sql))
+    return (sql, showing)
 
 if __name__ == '__main__':
-    if os.path.exists(runlog):
-        os.unlink(runlog)
-    logging.basicConfig(filename = runlog, level = logging.DEBUG, format = '%(asctime)s - %(levelname)s - %(message)s')
-    main(sys.argv[1:])
+    # init log
+    logfile = sys.argv[0] + '.log'
+    if os.path.exists(logfile):
+        os.unlink(logfile)
+    logging.basicConfig(filename = logfile, level = logging.DEBUG, format = '%(asctime)s - %(levelname)s - %(message)s')
+    logger = logging
+
+    # get data
+    sql, showing = getparam(sys.argv[1:])
+    data = getdata(sql)
+    
+    # run
+    if showing:
+        showdata(data)
+    else:
+        run(data)
+

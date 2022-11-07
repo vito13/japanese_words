@@ -14,3 +14,6 @@ global_var.set_value('dbinfo', 'dbinfo.json')
 global_var.set_value('dboplog', 'dbop.log')
 global_var.set_value('setuplog', 'setup.log')
 global_var.set_value('runlog', 'run.log')
+
+
+

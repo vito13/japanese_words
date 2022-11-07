@@ -8,12 +8,12 @@ import sqlite3
 import logging
 import json
 from hyperparameters import global_var
-import subprocess
+import Minnano
 
 dbfile = global_var.get_value('dbfile')
 wordtable = global_var.get_value('wordtable')
-log = sys.argv[0] + '.log'
-dbinfo = global_var.get_value('dbinfo')
+words = {}
+logger = None
 
 def createdb():
     conn = sqlite3.connect(dbfile)
@@ -29,7 +29,7 @@ def createdb():
         
         wordtype TEXT DEFAULT "",
         tone TEXT DEFAULT "",
-        booklesson TEXT DEFAULT "",
+        lesson TEXT DEFAULT "",
         description TEXT DEFAULT "",
         nlevel INTEGER DEFAULT 0,
         
@@ -39,24 +39,42 @@ def createdb():
         wrong INTEGER NOT NULL DEFAULT 0
         );
     '''.format(wordtable)
-    logging.debug(sql)
+    logger.debug(sql)
     cs.execute(sql)
+    
+    vals = []
+    for kana, value in words.items():
+        vals.append([
+            kana,
+            value['kanji'],
+            value.get('tone', ''),
+            value.get('wordtype', ''),
+            value.get('chinese', ''), 
+            ';'.join(value['lesson']),
+            value['roma'],
+            value.get('english', '')
+        ])
+    
+    cs.executemany('''
+        INSERT INTO jpwords(kana, kanji, tone, wordtype, chinese, lesson, roma, english) VALUES(?,?,?,?,?,?,?,?)
+        ''', vals)
+    
+    logger.debug('add {} words'.format(len(words)))
     cs.close()
     conn.commit()
     conn.close()
 
 if __name__ == '__main__':
-    if os.path.exists(log):
-        os.unlink(log)
-    logging.basicConfig(filename = log, level = logging.DEBUG, format = '%(asctime)s - %(levelname)s - %(message)s')
+    # init log
+    logfile = sys.argv[0] + '.log'
+    if os.path.exists(logfile):
+        os.unlink(logfile)
+    logging.basicConfig(filename = logfile, level = logging.DEBUG, format = '%(asctime)s - %(levelname)s - %(message)s')
+    logger = logging
     
+    # init db
     if os.path.exists(dbfile):
         os.unlink(dbfile)
+    Minnano.load(words, logger)
     createdb()
 
-    with open(dbinfo, 'r',encoding='utf-8') as f:
-        info = json.load(f)
-        for key, value in info.items():
-            cmd = 'python3 {}'.format(key)
-            ret = subprocess.getoutput(cmd)
-            print(ret)
