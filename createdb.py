@@ -10,13 +10,14 @@ import json
 from hyperparameters import global_var
 import Minnano
 import Newstandard
+from Jpdict import Jpdict
 
 dbfile = global_var.get_value('dbfile')
 wordtable = global_var.get_value('wordtable')
 words = {}
 logger = None
 
-def createdb():
+def createdb(items):
     conn = sqlite3.connect(dbfile)
     cs = conn.cursor()
     sql = '''
@@ -44,23 +45,25 @@ def createdb():
     cs.execute(sql)
     
     vals = []
-    for kana, value in words.items():
-        vals.append([
-            kana,
-            value['kanji'],
-            value.get('tone', ''),
-            value.get('wordtype', ''),
-            value.get('chinese', ''), 
-            ';'.join(value['lesson']),
-            value['roma'],
-            value.get('english', '')
-        ])
+    for kana, value in items:
+        v = [
+            value.kana,
+            value.kanji,
+            value.tone,
+            value.wordtype,
+            value.chinese,
+            ';'.join(value.lesson),
+            value.roma,
+            value.english
+        ]
+        print(v)
+        vals.append(v)
     
     cs.executemany('''
         INSERT INTO jpwords(kana, kanji, tone, wordtype, chinese, lesson, roma, english) VALUES(?,?,?,?,?,?,?,?)
         ''', vals)
     
-    logger.debug('add {} words'.format(len(words)))
+    logger.debug('add {} words'.format(len(items)))
     cs.close()
     conn.commit()
     conn.close()
@@ -73,10 +76,13 @@ if __name__ == '__main__':
     logging.basicConfig(filename = logfile, level = logging.DEBUG, format = '%(asctime)s - %(levelname)s - %(message)s')
     logger = logging
     
+    # load data
+    jpdict = Jpdict()
+    Minnano.load(jpdict, logger)
+    Newstandard.load(words, logger)
+
     # init db
     if os.path.exists(dbfile):
         os.unlink(dbfile)
-    # Minnano.load(words, logger)
-    Newstandard.load(words, logger)
-    createdb()
+    createdb(jpdict.getitems())
 
