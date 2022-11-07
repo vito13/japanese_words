@@ -9,6 +9,7 @@ import logging
 import json
 from hyperparameters import global_var
 import Minnano
+import Newstandard
 
 dbfile = global_var.get_value('dbfile')
 wordtable = global_var.get_value('wordtable')
@@ -75,6 +76,7 @@ if __name__ == '__main__':
     # init db
     if os.path.exists(dbfile):
         os.unlink(dbfile)
-    Minnano.load(words, logger)
+    # Minnano.load(words, logger)
+    Newstandard.load(words, logger)
     createdb()
 
