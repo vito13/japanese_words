@@ -66,6 +66,9 @@ def testone(tup, stridx):
     result = WORDRESULTTYPE.UNKNOWN
     wordid, body, *ret = buildbody(tup, stridx)
     
+    # 答案里会自动去掉"[]~'"的检测
+    answer = [re.sub('\[|\]|~|\'','', word) for word in ret]
+    
     while True:
         response = input(body)
         if response in ['q', 'Q', 'ｑ', 'ℚ']:
@@ -76,7 +79,7 @@ def testone(tup, stridx):
         elif response in ['`', '‘']:
             result = WORDRESULTTYPE.GIVEUP_NEXT
             break
-        elif response in [*ret]:
+        elif response in answer:
             result = WORDRESULTTYPE.CORRECT_NEXT
             executesql("update {} set correct = correct + 1 where id = \"{}\"".format(wordtable, wordid))
             break
