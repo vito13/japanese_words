@@ -56,7 +56,7 @@ def createdb(items):
             value.roma,
             value.english
         ]
-        print(v)
+
         vals.append(v)
     
     cs.executemany('''
@@ -79,10 +79,12 @@ if __name__ == '__main__':
     # load data
     jpdict = Jpdict()
     Minnano.load(jpdict, logger)
-    Newstandard.load(words, logger)
+    Newstandard.load(jpdict, logger)
 
     # init db
     if os.path.exists(dbfile):
         os.unlink(dbfile)
     createdb(jpdict.getitems())
-
+    
+    print("add: ", jpdict.totaladd)
+    print("merge: ", jpdict.totalmerge)

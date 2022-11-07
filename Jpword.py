@@ -31,6 +31,7 @@ class Jpword:
             self.wordtype = extendproperty(self.wordtype, newword.wordtype)
         if newword.lesson[0] not in self.lesson:
             self.lesson.append(newword.lesson[0])
+
         pass
 
     def show(self):

@@ -2,9 +2,7 @@
 import os
 import re
 import sys
-import romkan
 import logging
-from hyperparameters import global_var
 import csv
 from os import path
 from Jpword import Jpword
@@ -72,7 +70,3 @@ def load_minnano_lev2(jpdict, logger):
 def load(jpdict, logger):
     load_minnano_lev2(jpdict, logger)
     load_minnano_lev1(jpdict, logger)
-    # addwords(words, logger)
-    # updateen(words, logger)
-    
-    
