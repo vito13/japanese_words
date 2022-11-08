@@ -48,5 +48,5 @@ $ perl -i.bak -pe 's/contents0, kana, contents1, newchn, contents2, newroma, kan
 - 【ok】6 添加加、减生词与失败次数的记录功能
 - 【ok】7 添加记录正确的次数
 - 【ok】8 加入“大家的日本语”，“新标准日本语”
-
+- 【ok】9 每次练习后可以再选择是否again一次错误的单词
 
