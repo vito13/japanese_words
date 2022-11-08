@@ -36,6 +36,9 @@ $ perl -i.bak -pe 's/contents0, kana, contents1, newchn, contents2, newroma, kan
 |q|exit|
 |1|prev|
 |`|next|
+|9|手动标记+1|
+|0|手动标记-1|
+|6|查词典|
 
 
 ## 功能列表
@@ -49,4 +52,8 @@ $ perl -i.bak -pe 's/contents0, kana, contents1, newchn, contents2, newroma, kan
 - 【ok】7 添加记录正确的次数
 - 【ok】8 加入“大家的日本语”，“新标准日本语”
 - 【ok】9 每次练习后可以再选择是否again一次错误的单词
-
+- 【ok】10 查词典
+- 【ok】11 添加手动录入的词库
+- 12 数据库属性值去重
+- 【ok】13 自动保存最末次练习的错误单词列表
+- 【ok】14 启动时候可通过参数控制对“功能13”保存的单词列表进行练习

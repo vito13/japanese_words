@@ -12,11 +12,13 @@ from enum import Enum, auto, unique
 import logging
 from hyperparameters import global_var
 from jamdict import Jamdict
+import pickle
 
 dbfile = global_var.get_value('dbfile')
 wordtable = global_var.get_value('wordtable')
 logger = None
 jam = Jamdict()
+lastfname = 'last.bin'
 
 class WORDRESULTTYPE(Enum):
     CORRECT_NEXT = auto()       # 正确next
@@ -135,20 +137,28 @@ def run(data):
         
         if testindex < 0:
             testindex = 0
+    
     return wrongwords
 
 def showdata(data):
     for tup in data:
         print(tup)
 
-def getdata(sql):
-    conn = sqlite3.connect(dbfile)
-    cs = conn.cursor()
-    cs.execute(sql)
-    data = cs.fetchall()
-    logger.debug("total: {}".format(len(data)))
-    cs.close()
-    conn.close()
+def getdata(value):
+    data = []
+    if os.path.isfile(value):
+        with open(value, 'rb') as f:
+            data = pickle.load(f)
+            logger.debug("load data from: {}".format(value))
+    else:
+        conn = sqlite3.connect(dbfile)
+        cs = conn.cursor()
+        cs.execute(value)
+        data = cs.fetchall()
+        logger.debug("total: {}".format(len(data)))
+        cs.close()
+        conn.close()
+
     return data
 
 def getparam(argv):
@@ -179,16 +189,18 @@ def getparam(argv):
         showing = True
 
     logger.debug("showing: {}".format(showing))
-    sql = ''
+    value = ''
     with open('run.json', 'r',encoding='utf-8') as f:
         params = json.load(f)
         if key in params:
-            sql = params[key]
+            value = params[key]
+        elif key in lastfname:
+            value = lastfname
         else:
-            assert 0, 'No sql found'
+            assert 0, 'No value found'
 
-    logger.debug("sql: {}".format(sql))
-    return (sql, showing)
+    logger.debug("value: {}".format(value))
+    return (value, showing)
 
 if __name__ == '__main__':
     # init log
@@ -199,8 +211,8 @@ if __name__ == '__main__':
     logger = logging
 
     # get data
-    sql, showing = getparam(sys.argv[1:])
-    data = getdata(sql)
+    value, showing = getparam(sys.argv[1:])
+    data = getdata(value)
     
     # run
     if showing:
@@ -210,6 +222,8 @@ if __name__ == '__main__':
             data = run(data)
             datasize = len(data)
             if (datasize > 0):
+                with open(lastfname, 'wb') as f:
+                    pickle.dump(data, f)
                 response = input("-------training again {} wrong words?(yes/no)".format(datasize))
                 if 'yes' in response:
                     continue
