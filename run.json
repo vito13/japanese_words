@@ -6,7 +6,7 @@
     "fuxi": "SELECT * FROM jpwords WHERE id IN (SELECT id FROM jpwords where lesson like '%m2-1-02%' limit 100 offset 0) ORDER BY RANDOM()",
     "fuxiwrong": "SELECT * FROM jpwords WHERE id IN(select id from jpwords where lesson like '%m2-1-23%' and wrong > 0 order by wrong desc limit 100) ORDER BY RANDOM()",
     "xuexi": "SELECT * FROM jpwords where lesson like '%m2-1-12%' limit 100 offset 0",
-    "new": "SELECT * FROM jpwords where increase > decrease and wordtype like '%c_%' order by increase desc",
+    "new": "SELECT * FROM jpwords where increase > decrease and lesson like '%%m2-1-12%' order by increase desc",
     "find": "SELECT * FROM jpwords where kana like '%一%'",
     "type": "SELECT * FROM jpwords where wordtype like '%c_%' ORDER BY RANDOM()",
 

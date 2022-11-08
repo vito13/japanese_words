@@ -16,6 +16,7 @@ def load(jpdict, logger):
             reader = csv.reader(csvfile, delimiter=',')
             for row in reader:
                 w = Jpword(row[0])
-                w.chinese = row[1]
+                w.kanji = row[1]
+                w.chinese = row[2]
                 w.wordtype = wordtype
                 jpdict.merge(w)

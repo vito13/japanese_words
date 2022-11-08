@@ -11,11 +11,12 @@ import json
 from enum import Enum, auto, unique
 import logging
 from hyperparameters import global_var
+from jamdict import Jamdict
 
 dbfile = global_var.get_value('dbfile')
 wordtable = global_var.get_value('wordtable')
 logger = None
-
+jam = Jamdict()
 
 class WORDRESULTTYPE(Enum):
     CORRECT_NEXT = auto()       # 正确next
@@ -46,6 +47,12 @@ with open(c2, encoding = 'utf-8') as file_object:
 with open(c3, encoding = 'utf-8') as file_object:
     contents3 = file_object.read()
 
+def lookupdictionary(text):
+    print("---look up----------", text)
+    result = jam.lookup(text)
+    for entry in result.entries:
+        print(entry)
+
 def executesql(sql):
     conn = sqlite3.connect(dbfile)
     cs = conn.cursor()
@@ -65,7 +72,8 @@ def testone(tup, stridx):
     clear()
     result = WORDRESULTTYPE.UNKNOWN
     wordid, body, *ret = buildbody(tup, stridx)
-    
+    kana = ret[1]
+
     # 答案里会自动去掉"[]~'"的检测
     answer = [re.sub('\[|\]|~|\'|、','', word) for word in ret]
     
@@ -91,6 +99,10 @@ def testone(tup, stridx):
             result = WORDRESULTTYPE.DECREASE_NEXT
             executesql("update {} set decrease = decrease + 1 where id = \"{}\" and decrease + 1 <= increase".format(wordtable, wordid))
             break
+        elif response in ['6', '６']:
+            lookupdictionary(kana)
+            input("please enter any key")
+            pass
         else:
             executesql("update {} set wrong = wrong + 1 where id = \"{}\"".format(wordtable, wordid))
             pass
