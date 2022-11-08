@@ -56,4 +56,4 @@ $ perl -i.bak -pe 's/contents0, kana, contents1, newchn, contents2, newroma, kan
 - 【ok】11 添加手动录入的词库
 - 12 数据库属性值去重
 - 【ok】13 自动保存最末次练习的错误单词列表
-- 【ok】14 启动时候可通过参数-klist练习上一次的错误单词列表
+- 【ok】14 启动时候可通过参数-klast练习上一次的错误单词列表
