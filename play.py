@@ -67,7 +67,7 @@ def testone(tup, stridx):
     wordid, body, *ret = buildbody(tup, stridx)
     
     # 答案里会自动去掉"[]~'"的检测
-    answer = [re.sub('\[|\]|~|\'','', word) for word in ret]
+    answer = [re.sub('\[|\]|~|\'|、','', word) for word in ret]
     
     while True:
         response = input(body)

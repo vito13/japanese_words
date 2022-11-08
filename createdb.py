@@ -7,6 +7,7 @@ import json
 from hyperparameters import global_var
 import Minnano
 import Newstandard
+import Custom
 from Jpdict import Jpdict
 
 dbfile = global_var.get_value('dbfile')
@@ -77,6 +78,7 @@ if __name__ == '__main__':
     jpdict = Jpdict()
     Minnano.load(jpdict, logger)
     Newstandard.load(jpdict, logger)
+    Custom.load(jpdict, logger)
 
     # init db
     if os.path.exists(dbfile):

@@ -54,7 +54,7 @@ def load_minnano_lev2(jpdict, logger):
 
         filename = path.join(filepath, f)
         vals = []
-        with open(filename, newline='') as csvfile:
+        with open(filename, newline='', encoding="utf-8") as csvfile:
             reader = csv.reader(csvfile, delimiter=' ')
             for row in reader:
                 arr = row[0].split(',')

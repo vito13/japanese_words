@@ -29,7 +29,7 @@ class Jpword:
             self.tone = extendproperty(self.tone, newword.tone)
         if self.wordtype != newword.wordtype:
             self.wordtype = extendproperty(self.wordtype, newword.wordtype)
-        if newword.lesson[0] not in self.lesson:
+        if (len(newword.lesson) > 0) and (newword.lesson[0] not in self.lesson):
             self.lesson.append(newword.lesson[0])
 
         pass
