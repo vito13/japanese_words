@@ -48,7 +48,7 @@ with open(c3, encoding = 'utf-8') as file_object:
     contents3 = file_object.read()
 
 def lookupdictionary(text):
-    print("---look up----------", text)
+    print("-------look up: ", text)
     result = jam.lookup(text)
     for entry in result.entries:
         print(entry)
@@ -67,12 +67,13 @@ def buildbody(tup, stridx):
     body = "{} {} {} {} {} {} {},   {},   {} {}".format(contents0,kana,contents1,chinese,stridx,contents2,roma,kanji,english,contents3)
     return (wordid, body, roma, kana, kanji)
 
-def testone(tup, stridx):
+def testone(tup, stridx, wrongwords):
     clear = lambda: os.system('clear')
     clear()
     result = WORDRESULTTYPE.UNKNOWN
     wordid, body, *ret = buildbody(tup, stridx)
     kana = ret[1]
+    wronged = False
 
     # 答案里会自动去掉"[]~'"的检测
     answer = [re.sub('\[|\]|~|\'|、','', word) for word in ret]
@@ -101,19 +102,24 @@ def testone(tup, stridx):
             break
         elif response in ['6', '６']:
             lookupdictionary(kana)
-            input("please enter any key")
+            input("-------please enter any key")
             pass
         else:
             executesql("update {} set wrong = wrong + 1 where id = \"{}\"".format(wordtable, wordid))
+            wronged = True
             pass
+    
+    if wronged == True:
+        wrongwords.append(tup)
     return result
 
 def run(data):
     count = len(data)
     testindex = 0
+    wrongwords = []
     while testindex < count: 
         stridx = '({}-{})'.format(testindex + 1, count)
-        ret = testone(data[testindex], stridx)
+        ret = testone(data[testindex], stridx, wrongwords)
         if WORDRESULTTYPE.GIVEUP_NEXT == ret:
             testindex += 1
         elif WORDRESULTTYPE.CORRECT_NEXT == ret:
@@ -129,6 +135,7 @@ def run(data):
         
         if testindex < 0:
             testindex = 0
+    return wrongwords
 
 def showdata(data):
     for tup in data:
@@ -199,5 +206,12 @@ if __name__ == '__main__':
     if showing:
         showdata(data)
     else:
-        run(data)
-
+        while(len(data)):
+            data = run(data)
+            datasize = len(data)
+            if (datasize > 0):
+                response = input("-------Train again {} wrong words?(yes/no)".format(datasize))
+                if 'yes' in response:
+                    continue
+            break
+    print('-------bye')
