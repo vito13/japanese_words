@@ -100,7 +100,7 @@ def run(data):
     count = len(data)
     testindex = 0
     while testindex < count: 
-        stridx = '-{}-{}-'.format(testindex + 1, count)
+        stridx = '({}-{})'.format(testindex + 1, count)
         ret = testone(data[testindex], stridx)
         if WORDRESULTTYPE.GIVEUP_NEXT == ret:
             testindex += 1

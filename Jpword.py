@@ -1,9 +1,14 @@
 import romkan
 
+def mergeproperty(a, b):
+    if a in b: return b
+    elif b in a: return a
+    else: return extendproperty(a, b)
+
 def extendproperty(a, b):
     if a == '': return b
-    if b == '': return a
-    return '{};{}'.format(a, b)
+    elif b == '': return a
+    else: return '{}; {}'.format(a, b)
 
 class Jpword:
     def __init__(self, kana):
@@ -19,16 +24,11 @@ class Jpword:
         self.nlevel = ''
     
     def merge(self, newword):
-        if self.kanji != newword.kanji:
-            self.kanji = extendproperty(self.kanji, newword.kanji)
-        if self.chinese != newword.chinese:
-            self.chinese = extendproperty(self.chinese, newword.chinese)
-        if self.english != newword.english:
-            self.english = extendproperty(self.english, newword.english)
-        if self.tone != newword.tone:
-            self.tone = extendproperty(self.tone, newword.tone)
-        if self.wordtype != newword.wordtype:
-            self.wordtype = extendproperty(self.wordtype, newword.wordtype)
+        self.kanji = mergeproperty(self.kanji, newword.kanji)
+        self.chinese = mergeproperty(self.chinese, newword.chinese)
+        self.english = mergeproperty(self.english, newword.english)
+        self.tone = mergeproperty(self.tone, newword.tone)
+        self.wordtype = mergeproperty(self.wordtype, newword.wordtype)
         if (len(newword.lesson) > 0) and (newword.lesson[0] not in self.lesson):
             self.lesson.append(newword.lesson[0])
 
