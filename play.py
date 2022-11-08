@@ -50,7 +50,7 @@ with open(c3, encoding = 'utf-8') as file_object:
     contents3 = file_object.read()
 
 def lookupdictionary(text):
-    print("-------look up: ", text)
+    # print("-------look up: ", text)
     result = jam.lookup(text)
     for entry in result.entries:
         print(entry)
