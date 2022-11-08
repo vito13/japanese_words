@@ -10,7 +10,7 @@ def load(jpdict, logger):
         real_url = os.path.join(filepath , f)
         h = re.compile(r"(.*)\.csv")
         m = h.match(f)
-        wordtype = m.group(1)
+        wordtype = 'c_' + m.group(1)
         
         with open(real_url, newline='', encoding="utf-8") as csvfile:
             reader = csv.reader(csvfile, delimiter=',')

@@ -1,4 +1,5 @@
 import romkan
+import re
 
 def mergeproperty(a, b):
     if a in b: return b
@@ -8,7 +9,11 @@ def mergeproperty(a, b):
 def extendproperty(a, b):
     if a == '': return b
     elif b == '': return a
-    else: return '{}; {}'.format(a, b)
+    seta = set(re.split(r'[、\、\;;,，\，\；]', a))
+    setb = set(re.split(r'[、\、\;;,，\，\；]', b))
+    setall = seta.union(setb)
+    ret = "；".join(setall)
+    return ret
 
 class Jpword:
     def __init__(self, kana):
