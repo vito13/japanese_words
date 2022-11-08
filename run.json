@@ -8,7 +8,7 @@
     "xuexi": "SELECT * FROM jpwords where lesson like '%m2-1-12%' limit 100 offset 0",
     "new": "SELECT * FROM jpwords where increase > decrease and wordtype like '%c_星期%' order by increase desc",
     "find": "SELECT * FROM jpwords where kana like '%一%'",
-    "type": "SELECT * FROM jpwords where wordtype like '%c_星期%'",
+    "type": "SELECT * FROM jpwords where wordtype like '%c_小时%'",
 
     "wrong":"select * from jpwords where wordtype like '%c_%' and wrong > 0 order by wrong desc limit 100",
     "correct":"select chinese, correct from jpwords where lesson like '%m2-1-23%' and correct > 0 order by correct desc limit 100",

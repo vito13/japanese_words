@@ -222,10 +222,10 @@ if __name__ == '__main__':
             data = run(data)
             datasize = len(data)
             if (datasize > 0):
-                with open(lastfname, 'wb') as f:
-                    pickle.dump(data, f)
                 response = input("-------training again {} wrong words?(yes/no)".format(datasize))
                 if 'yes' in response:
+                    with open(lastfname, 'wb') as f:
+                        pickle.dump(data, f)
                     continue
             break
     print('-------bye')
