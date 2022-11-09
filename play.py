@@ -143,6 +143,7 @@ def run(data):
 def showdata(data):
     for tup in data:
         print(tup)
+    print(len(data))
 
 def getdata(value):
     data = []
@@ -223,9 +224,10 @@ if __name__ == '__main__':
             datasize = len(data)
             if (datasize > 0):
                 response = input("-------training again {} wrong words?(yes/no)".format(datasize))
-                if 'yes' in response:
+                if 'y' in response:
                     with open(lastfname, 'wb') as f:
                         pickle.dump(data, f)
+                    random.shuffle(data)
                     continue
             break
     print('-------bye')

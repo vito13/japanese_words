@@ -76,9 +76,9 @@ if __name__ == '__main__':
     
     # load data
     jpdict = Jpdict()
+    Custom.load(jpdict, logger)
     Minnano.load(jpdict, logger)
     Newstandard.load(jpdict, logger)
-    Custom.load(jpdict, logger)
 
     # init db
     if os.path.exists(dbfile):
