@@ -57,3 +57,4 @@ $ perl -i.bak -pe 's/contents0, kana, contents1, newchn, contents2, newroma, kan
 - 12 数据库属性值去重
 - 【ok】13 自动保存最末次练习的错误单词列表
 - 【ok】14 启动时候可通过参数-klast练习上一次的错误单词列表
+- 【ok】15 添加字段记录单词最后一次测试时间，并提供基于此时间进行计算的取词方式。如key：“1day”就是取一天前练习过的单词，并还可以配合其他字段进行再次过滤

@@ -13,6 +13,7 @@ import logging
 from hyperparameters import global_var
 from jamdict import Jamdict
 import pickle
+from datetime import timedelta, datetime
 
 dbfile = global_var.get_value('dbfile')
 wordtable = global_var.get_value('wordtable')
@@ -55,17 +56,21 @@ def lookupdictionary(text):
     for entry in result.entries:
         print(entry)
 
-def executesql(sql):
+def updatelasttime(wordid):
+    return "update {} set lasttime = {} where id = \"{}\"".format(wordtable, datetime.today().timestamp(), wordid)
+
+def executesql(sqls):
     conn = sqlite3.connect(dbfile)
     cs = conn.cursor()
-    logger.debug(sql)
-    cs.execute(sql)
+    for sql in sqls:
+        logger.debug(sql)
+        cs.execute(sql)
     cs.close()
     conn.commit()
     conn.close()
     
 def buildbody(tup, stridx):
-    wordid, kana, kanji, roma, chinese, english, wordtype, tone, lesson, description, nlevel, increase, decrease, correct, wrong = tup
+    wordid, kana, kanji, roma, chinese, english, wordtype, tone, lesson, description, nlevel, increase, decrease, correct, wrong, lasttime = tup
     body = "{} {} {} {} {} {} {},   {},   {} {}".format(contents0,kana,contents1,chinese,stridx,contents2,roma,kanji,english,contents3)
     return (wordid, body, roma, kana, kanji)
 
@@ -92,22 +97,31 @@ def testone(tup, stridx, wrongwords):
             break
         elif response in answer:
             result = WORDRESULTTYPE.CORRECT_NEXT
-            executesql("update {} set correct = correct + 1 where id = \"{}\"".format(wordtable, wordid))
+            executesql([
+                "update {} set correct = correct + 1 where id = \"{}\"".format(wordtable, wordid),
+                updatelasttime(wordid)
+                ])
             break
         elif response in ['9', '９']:
             result = WORDRESULTTYPE.INCREASE_NEXT
-            executesql("update {} set increase = increase + 1 where id = \"{}\"".format(wordtable, wordid))
+            executesql([
+                "update {} set increase = increase + 1 where id = \"{}\"".format(wordtable, wordid),
+                updatelasttime(wordid)
+                ])
             break
         elif response in ['0', '０']:
             result = WORDRESULTTYPE.DECREASE_NEXT
-            executesql("update {} set decrease = decrease + 1 where id = \"{}\" and decrease + 1 <= increase".format(wordtable, wordid))
+            executesql(["update {} set decrease = decrease + 1 where id = \"{}\" and decrease + 1 <= increase".format(wordtable, wordid)])
             break
         elif response in ['6', '６']:
             lookupdictionary(kana)
             input("-------please enter any key")
             pass
         else:
-            executesql("update {} set wrong = wrong + 1 where id = \"{}\"".format(wordtable, wordid))
+            executesql([
+                "update {} set wrong = wrong + 1 where id = \"{}\"".format(wordtable, wordid),
+                updatelasttime(wordid)
+                ])
             wronged = True
             pass
     

@@ -1,5 +1,25 @@
-from anki_export import ApkgReader
-import pyexcel_xlsxwx
+import time
+import datetime
+from datetime import timedelta
 
-with ApkgReader('minnano.apkg') as apkg:
-    pyexcel_xlsxwx.save_data('minnano.xlsx', apkg.export(), config={'format': None})
+#日期增加和减少
+# now = datetime.datetime.now()
+# print(type(now))
+# datetime.datetime
+
+
+# time.sleep(1)
+# newdate = datetime.datetime.now() - now
+
+
+# print(type(newdate))
+# print(newdate.total_seconds())
+from datetime import datetime
+dt = datetime.today()  # Get timezone naive now
+seconds = dt.timestamp()
+print(dt)
+
+# time.sleep(1)
+# dt2 = datetime.today()  # Get timezone naive now
+
+# print(seconds - seconds2)

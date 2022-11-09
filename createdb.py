@@ -9,6 +9,7 @@ import Minnano
 import Newstandard
 import Custom
 from Jpdict import Jpdict
+from datetime import timedelta, datetime
 
 dbfile = global_var.get_value('dbfile')
 wordtable = global_var.get_value('wordtable')
@@ -36,13 +37,15 @@ def createdb(items):
         increase INTEGER NOT NULL DEFAULT 0,
         decrease INTEGER NOT NULL DEFAULT 0,
         correct INTEGER NOT NULL DEFAULT 0,
-        wrong INTEGER NOT NULL DEFAULT 0
+        wrong INTEGER NOT NULL DEFAULT 0,
+        lasttime REAL NOT NULL DEFAULT 0
         );
     '''.format(wordtable)
     logger.debug(sql)
     cs.execute(sql)
     
     vals = []
+    ts = datetime.today().timestamp()
     for kana, value in items:
         v = [
             value.kana,
@@ -52,13 +55,14 @@ def createdb(items):
             value.chinese,
             ';'.join(value.lesson),
             value.roma,
-            value.english
+            value.english,
+            ts
         ]
 
         vals.append(v)
     
     cs.executemany('''
-        INSERT INTO jpwords(kana, kanji, tone, wordtype, chinese, lesson, roma, english) VALUES(?,?,?,?,?,?,?,?)
+        INSERT INTO jpwords(kana, kanji, tone, wordtype, chinese, lesson, roma, english, lasttime) VALUES(?,?,?,?,?,?,?,?,?)
         ''', vals)
     
     logger.debug('add {} words'.format(len(items)))
