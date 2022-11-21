@@ -1,25 +1,17 @@
-import time
-import datetime
-from datetime import timedelta
 
-#日期增加和减少
-# now = datetime.datetime.now()
-# print(type(now))
-# datetime.datetime
+import re
+import xlrd
+data = xlrd.open_workbook('dajiaxue/dajiaxue.xlsx')
 
 
-# time.sleep(1)
-# newdate = datetime.datetime.now() - now
+for sheetname in data.sheet_names():
+    table = data.sheet_by_name(sheetname)
+    # 获取表格行数
+    nrows = table.nrows
+    print("表格",sheetname,"一共有",nrows,"行")
 
-
-# print(type(newdate))
-# print(newdate.total_seconds())
-from datetime import datetime
-dt = datetime.today()  # Get timezone naive now
-seconds = dt.timestamp()
-print(dt)
-
-# time.sleep(1)
-# dt2 = datetime.today()  # Get timezone naive now
-
-# print(seconds - seconds2)
+    for r in range(1, nrows):
+        tone, *rowvalue = table.row_values(r)
+        if type(tone) == float:
+            tone = str(int(tone))
+        print(tone, rowvalue)

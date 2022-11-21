@@ -57,6 +57,7 @@ def load_minnano_lev2(jpdict, logger):
         with open(filename, newline='', encoding="utf-8") as csvfile:
             reader = csv.reader(csvfile, delimiter=' ')
             for row in reader:
+                logger.debug(row[0])
                 arr = row[0].split(',')
                 kana = arr[1]
                 w = Jpword(kana)
@@ -69,4 +70,4 @@ def load_minnano_lev2(jpdict, logger):
 
 def load(jpdict, logger):
     load_minnano_lev2(jpdict, logger)
-    load_minnano_lev1(jpdict, logger)
+    # load_minnano_lev1(jpdict, logger)

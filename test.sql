@@ -8,3 +8,5 @@ update jpwords set lasttime = strftime('%s','now') - 86400  where id = 2
 
 
 SELECT * FROM jpwords where strftime('%s','now') - lasttime > 86400
+
+SELECT * FROM jpwords where lesson like '%m2-1-14%'

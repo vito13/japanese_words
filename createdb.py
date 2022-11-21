@@ -7,6 +7,7 @@ import json
 from hyperparameters import global_var
 import Minnano
 import Newstandard
+import Welearn
 import Custom
 from Jpdict import Jpdict
 from datetime import timedelta, datetime
@@ -15,6 +16,9 @@ dbfile = global_var.get_value('dbfile')
 wordtable = global_var.get_value('wordtable')
 words = {}
 logger = None
+
+
+
 
 def createdb(items):
     conn = sqlite3.connect(dbfile)
@@ -80,10 +84,12 @@ if __name__ == '__main__':
     
     # load data
     jpdict = Jpdict()
-    Custom.load(jpdict, logger)
-    Minnano.load(jpdict, logger)
-    Newstandard.load(jpdict, logger)
-
+    
+    # Minnano.load(jpdict, logger)
+    # Newstandard.load(jpdict, logger)
+    # Custom.load(jpdict, logger)
+    Welearn.load(jpdict, logger)
+    
     # init db
     if os.path.exists(dbfile):
         os.unlink(dbfile)

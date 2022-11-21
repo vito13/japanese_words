@@ -1,17 +1,19 @@
 {
     "random": "SELECT * FROM jpwords ORDER BY RANDOM() LIMIT 10",
-    "13": "SELECT * FROM jpwords where lesson like '%m2-1-13%'",
+    "1": "SELECT * FROM jpwords where lesson like '%w-1-01%'",
+    "14": "SELECT * FROM jpwords where lesson like '%m2-1-14%'",
     "23": "SELECT * FROM jpwords where lesson like '%m2-1-23%' ORDER BY RANDOM()",
     
     "fuxi": "SELECT * FROM jpwords WHERE id IN (SELECT id FROM jpwords where lesson like '%m2-1-13%' limit 100 offset 0) ORDER BY RANDOM()",
     "fuxiwrong": "SELECT * FROM jpwords WHERE id IN(select id from jpwords where lesson like '%m2-1-23%' and wrong > 0 order by wrong desc limit 100) ORDER BY RANDOM()",
-    "xuexi": "SELECT * FROM jpwords where lesson like '%m2-1-13%' limit 0 offset 0",
-    "new": "SELECT * FROM jpwords where increase > decrease and lesson like '%m2-1-13%' order by increase desc",
+    "xuexi": "SELECT * FROM jpwords where lesson like '%m2-1-14%' limit 10 offset 10",
+    "new": "SELECT * FROM jpwords where increase > decrease and lesson like '%w%' order by increase desc",
+    "sentence": "SELECT * FROM jpwords where tone = ''",
     "find": "SELECT * FROM jpwords where kana like '%一%'",
     "type": "SELECT * FROM jpwords where wordtype like '%c_31天%'",
-    "1day": "SELECT * FROM jpwords where strftime('%s','now') - lasttime > 86400",
+    "1day": "SELECT * FROM jpwords where strftime('%s','now') - lasttime < 86400",
 
-    "wrong":"select * from jpwords where wordtype like '%c_%' and wrong > 0 order by wrong desc limit 100",
+    "wrong":"select * from jpwords where lesson like '%w-1-01%' and wrong > 0 order by wrong desc limit 100",
     "correct":"select chinese, correct from jpwords where lesson like '%m2-1-23%' and correct > 0 order by correct desc limit 100",
     "clearnew": ""
 }
