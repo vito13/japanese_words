@@ -1,4 +1,5 @@
 from Jpword import Jpword
+import logging
 
 class Jpdict:
     def __init__(self):
@@ -23,4 +24,11 @@ class Jpdict:
 
     def getitems(self):
         return self.dict.items()
+
+    def total(self, logger):
+        logger.debug("dict count: {}".format(len(self.dict)))
+        logger.debug("dict add: {}".format(self.totaladd))
+        logger.debug("dict merge: {}".format(self.totalmerge))
+        
+
 

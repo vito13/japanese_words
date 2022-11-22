@@ -1,7 +1,4 @@
 #!/usr/bin/python3
-
-
-
 import os, getopt
 import re
 import sys
@@ -17,6 +14,7 @@ from datetime import timedelta, datetime
 
 dbfile = global_var.get_value('dbfile')
 wordtable = global_var.get_value('wordtable')
+stats = global_var.get_value('stats')
 logger = None
 jam = Jamdict()
 lastfname = 'last.bin'
@@ -56,8 +54,8 @@ def lookupdictionary(text):
     for entry in result.entries:
         print(entry)
 
-def updatelasttime(wordid):
-    return "update {} set lasttime = {} where id = \"{}\"".format(wordtable, datetime.today().timestamp(), wordid)
+def updatelasttime(kana):
+    return "update {} set lasttime = {} where kana = \"{}\"".format(stats, datetime.today().timestamp(), kana)
 
 def executesql(sqls):
     conn = sqlite3.connect(dbfile)
@@ -70,7 +68,7 @@ def executesql(sqls):
     conn.close()
     
 def buildbody(tup, stridx):
-    wordid, kana, kanji, roma, chinese, english, wordtype, tone, lesson, description, nlevel, increase, decrease, correct, wrong, lasttime = tup
+    wordid, kana, kanji, roma, chinese, english, wordtype, tone, lesson, description, nlevel = tup
     body = "{} {} {} {} {} {} {},   {},   {} {}".format(contents0,kana,contents1,chinese,stridx,contents2,roma,kanji,english,contents3)
     return (wordid, body, roma, kana, kanji)
 
@@ -81,12 +79,19 @@ def testone(tup, stridx, wrongwords):
     wordid, body, *ret = buildbody(tup, stridx)
     kana = ret[1]
     wronged = False
+    
+    # 确保stats内有词
+    executesql([
+        "REPLACE INTO {} (kana) VALUES ('{}')".format(stats, kana)
+        ])
 
     # 答案里会自动去掉"[]~'"的检测
     answer = [re.sub('\[|\]|~|～|\'|、','', word) for word in ret]
     
     while True:
         response = input(body)
+        if response == '':
+            continue
         if response in ['q', 'Q', 'ｑ', 'ℚ']:
             sys.exit()
         elif response in ['1', '１']:
@@ -98,20 +103,20 @@ def testone(tup, stridx, wrongwords):
         elif response in answer:
             result = WORDRESULTTYPE.CORRECT_NEXT
             executesql([
-                "update {} set correct = correct + 1 where id = \"{}\"".format(wordtable, wordid),
-                updatelasttime(wordid)
+                "update {} set correct = correct + 1 where kana = \"{}\"".format(stats, kana),
+                updatelasttime(kana)
                 ])
             break
         elif response in ['9', '９']:
             result = WORDRESULTTYPE.INCREASE_NEXT
             executesql([
-                "update {} set increase = increase + 1 where id = \"{}\"".format(wordtable, wordid),
-                updatelasttime(wordid)
+                "update {} set increase = increase + 1 where kana = \"{}\"".format(stats, kana),
+                updatelasttime(kana)
                 ])
             break
         elif response in ['0', '０']:
             result = WORDRESULTTYPE.DECREASE_NEXT
-            executesql(["update {} set decrease = decrease + 1 where id = \"{}\" and decrease + 1 <= increase".format(wordtable, wordid)])
+            executesql(["update {} set decrease = decrease + 1 where kana = \"{}\" and decrease + 1 <= increase".format(stats, kana)])
             break
         elif response in ['6', '６']:
             lookupdictionary(kana)
@@ -119,8 +124,8 @@ def testone(tup, stridx, wrongwords):
             pass
         else:
             executesql([
-                "update {} set wrong = wrong + 1 where id = \"{}\"".format(wordtable, wordid),
-                updatelasttime(wordid)
+                "update {} set wrong = wrong + 1 where kana = \"{}\"".format(stats, kana),
+                updatelasttime(kana)
                 ])
             wronged = True
             pass

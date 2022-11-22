@@ -16,17 +16,29 @@ def extendproperty(a, b):
     return ret
 
 class Jpword:
-    def __init__(self, kana):
-        self.kana = kana
-        self.kanji = ''
-        self.roma = romkan.to_roma(kana)
-        self.chinese = ''
-        self.english = ''
-        self.wordtype = ''
-        self.tone = ''
-        self.lesson = []
-        self.description = ''
-        self.nlevel = ''
+    def __init__(self, *kwargs):
+        if len(kwargs) == 1:
+            self.kana = kwargs[0]
+            self.kanji = ''
+            self.roma = romkan.to_roma(self.kana)
+            self.chinese = ''
+            self.english = ''
+            self.wordtype = ''
+            self.tone = ''
+            self.lesson = []
+            self.description = ''
+            self.nlevel = ''
+        else:
+            self.kana = kwargs[0]
+            self.kanji = kwargs[1]
+            self.roma = kwargs[2]
+            self.chinese = kwargs[3]
+            self.english = kwargs[4]
+            self.wordtype = kwargs[5]
+            self.tone = kwargs[6]
+            self.lesson = kwargs[7]
+            self.description = kwargs[8]
+            self.nlevel = kwargs[9]
     
     def merge(self, newword):
         self.kanji = mergeproperty(self.kanji, newword.kanji)
@@ -36,7 +48,6 @@ class Jpword:
         self.wordtype = mergeproperty(self.wordtype, newword.wordtype)
         if (len(newword.lesson) > 0) and (newword.lesson[0] not in self.lesson):
             self.lesson.append(newword.lesson[0])
-
         pass
 
     def show(self):
