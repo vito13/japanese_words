@@ -172,8 +172,9 @@ def getdata(value):
 
 def getparam(argv):
     key = ""
+    randomword = False
     try:
-        opts, args = getopt.getopt(argv,'-h-k:-v',['help', 'key=', 'version'])
+        opts, args = getopt.getopt(argv,'-h-k:-v-r',['help', 'key=', 'version', 'random'])
     except getopt.GetoptError:
         print('python3 {}'.format(sys.argv[0]))
         sys.exit(2)
@@ -184,13 +185,15 @@ def getparam(argv):
         elif opt in ('-v','--version'):
             print("[*] Version is 0.01 ")
             sys.exit()
+        elif opt in ('-r','--random'):
+            randomword = True
         elif opt in ("-k", "--key"):
             key = arg
         else:
             assert 0, 'Invalid arg'
 
     assert key != '', 'Invalid key'
-    logger.debug("key: {}".format(key))
+    logger.debug("key: {}, random: {}".format(key, randomword))
     showing = False
     vals = re.findall(r'show(\w+)', key)
     if len(vals) == 1:
@@ -207,7 +210,7 @@ def getparam(argv):
         assert 0, 'No value found'
 
     logger.debug("value: {}".format(value))
-    return (value, showing)
+    return (value, showing, randomword)
 
 if __name__ == '__main__':
     # init log
@@ -218,9 +221,11 @@ if __name__ == '__main__':
     logger = logging
 
     # get data
-    value, showing = getparam(sys.argv[1:])
+    value, showing, randomword = getparam(sys.argv[1:])
     data = getdata(value)
-    
+    if randomword:
+        random.shuffle(data)
+
     # run
     if showing:
         showdata(data)

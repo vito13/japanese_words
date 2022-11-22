@@ -102,8 +102,8 @@ def resetwordtable(jpdict):
             ]
             vals.append(v)
         cs.executemany('''
-            INSERT INTO jpwords(kana, kanji, tone, wordtype, chinese, lesson, roma, english) VALUES(?,?,?,?,?,?,?,?)
-            ''', vals)
+            INSERT INTO {} (kana, kanji, tone, wordtype, chinese, lesson, roma, english) VALUES(?,?,?,?,?,?,?,?)
+            '''.format(wordtable), vals)
         logger.debug('Total Add {} words to db'.format(len(vals)))
     cs.close()
     conn.commit()
