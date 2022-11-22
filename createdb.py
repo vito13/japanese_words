@@ -127,17 +127,17 @@ if __name__ == '__main__':
         sys.exit(2)
     for opt, arg in opts:
         if opt in ('-i','--init'):
-            # remove db file
+            logger.debug("=== remove db file, create all table ===")
             if os.path.exists(dbfile):
                 os.unlink(dbfile)
             createtables()
         elif opt in ('-r','--reset'):
-            # clear word table, Reserve stats table
+            logger.debug("=== clear word table, reserve stats table ===")
             resetwordtable(jpdict)
             
     # load word from db
     getdbwords(jpdict)
-    logger.debug("--- After reading database ---")
+    logger.debug("=== After reading database ===")
     jpdict.total(logger)
 
     
@@ -146,9 +146,10 @@ if __name__ == '__main__':
     # Newstandard.load(jpdict, logger)
     # Custom.load(jpdict, logger)
     Welearn.load(jpdict, logger)
-    logger.debug("--- After reading file ---")
+    logger.debug("=== After reading file ===")
     jpdict.total(logger)
 
     # reset table
+    logger.debug("=== reset word table ===")
     resetwordtable(jpdict)
    

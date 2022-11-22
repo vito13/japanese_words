@@ -1,6 +1,9 @@
 {
-    "random": "SELECT * FROM jpwords ORDER BY RANDOM() LIMIT 10",
-    "2": "SELECT * FROM jpwords where lesson like '%w-1-02%'",
+    "random": "SELECT * FROM jpwords where lesson like '%w-1%' ORDER BY RANDOM()",
+
+    "w3": "SELECT * FROM jpwords where lesson like '%w-1-03%' and tone != ''",
+    "s3": "SELECT * FROM jpwords where lesson like '%w-1-03%' and tone == ''",
+
     "14": "SELECT * FROM jpwords where lesson like '%m2-1-14%'",
     "23": "SELECT * FROM jpwords where lesson like '%m2-1-23%' ORDER BY RANDOM()",
     
@@ -9,7 +12,7 @@
     "xuexi": "SELECT * FROM jpwords where lesson like '%w-1-02%' limit 10 offset 10",
     "--------------new": "SELECT * FROM jpwords where kana in > decrease and lesson like '%w%' order by increase desc     ",
     "new": "select * from jpwords where kana in (select kana from jpstats where increase > decrease)",
-    "sentence": "SELECT * FROM jpwords where tone = ''",
+    "sentence": "SELECT * FROM jpwords where tone = '' and kana in (select kana from jpstats where increase > decrease)",
     "find": "SELECT * FROM jpwords where kana like '%一%'",
     "type": "SELECT * FROM jpwords where wordtype like '%c_31天%'",
     "----------------1day": "SELECT * FROM jpwords where strftime('%s','now') - lasttime < 86400",
