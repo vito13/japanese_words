@@ -30,23 +30,9 @@ class WORDRESULTTYPE(Enum):
     UNKNOWN = auto()
 
 
-c0 = "confuse0.txt"
-c1 = "confuse1.txt"
-c2 = "confuse2.txt"
-c3 = "confuse3.txt"
 contents0 = ""
-contents1 = ""
-contents2 = ""
-contents3 = ""
-
-with open(c0, encoding = 'utf-8') as file_object:
+with open("confuse.txt", encoding = 'utf-8') as file_object:
     contents0 = file_object.read()
-with open(c1, encoding = 'utf-8') as file_object:
-    contents1 = file_object.read()
-with open(c2, encoding = 'utf-8') as file_object:
-    contents2 = file_object.read()
-with open(c3, encoding = 'utf-8') as file_object:
-    contents3 = file_object.read()
 
 def lookupdictionary(text):
     # print("-------look up: ", text)
@@ -69,7 +55,7 @@ def executesql(sqls):
     
 def buildbody(tup, stridx):
     wordid, kana, kanji, roma, chinese, english, wordtype, tone, lesson, description, nlevel = tup
-    body = "{} {} {} {} {} {} {} {},   {},   {} {}".format(contents0,kana,tone,contents1,chinese,stridx,contents2,roma,kanji,english,contents3)
+    body = contents0.format(kana, tone, stridx, chinese ,roma, kanji, english)
     return (wordid, body, roma, kana, kanji)
 
 def testone(tup, stridx, wrongwords):
@@ -139,7 +125,7 @@ def run(data):
     testindex = 0
     wrongwords = []
     while testindex < count: 
-        stridx = '({}-{})'.format(testindex + 1, count)
+        stridx = '{}，{}'.format(testindex + 1, count)
         ret = testone(data[testindex], stridx, wrongwords)
         if WORDRESULTTYPE.GIVEUP_NEXT == ret:
             testindex += 1
@@ -170,6 +156,8 @@ def getdata(value):
         with open(value, 'rb') as f:
             data = pickle.load(f)
             logger.debug("load data from: {}".format(value))
+            # Refresh data
+            
     else:
         conn = sqlite3.connect(dbfile)
         cs = conn.cursor()

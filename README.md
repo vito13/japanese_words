@@ -52,7 +52,7 @@ $ perl -i.bak -pe 's/contents0, kana, contents1, newchn, contents2, newroma, kan
 - 【ok】7 添加记录正确的次数
 - 【ok】8 加入“大家的日本语”，“新标准日本语”
 - 【ok】9 每次练习后可以再选择是否again一次错误的单词
-- 【ok】10 查词典
+- 【ok】10 查词典，快捷键‘6’
 - 【ok】11 添加手动录入的词库
 - 12 数据库属性值去重
 - 【ok】13 自动保存最末次练习的错误单词列表
@@ -61,3 +61,4 @@ $ perl -i.bak -pe 's/contents0, kana, contents1, newchn, contents2, newroma, kan
 - 【ok】 16 拆分单词表与统计表
 - 【ok】 17 可以通过参数选择重置数据库所有表（-i），以及仅更新单词表，保留统计表（-r），默认无参数则是合并文件词库到db中
 - 【ok】 18 添加“大家学标准日本语初级”单词表
+- 【】 19 每次保存last.bin时候要将db文件的修改日期记录下来，每次加载last.bin时候核对db文件是否有改动，如果有改变则需要对last.bin中的每个单词进行内容更新，避免不一致（比如保存last.bin后修改词库内容了，再次运行last.bin则会可能导致不一致）

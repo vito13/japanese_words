@@ -11,4 +11,25 @@
 [2022-10-25 11:33:04.64099] [93197] [debug] -------去除sqlALT: "![协程](/home/suql/work/suql_doc/ddmkk/执行普通/./././sqls/协程.png)" ===>>> "![](/home/suql/work/suql_doc/ddmkk/执行普通/./././sqls/协程.png)", /home/suql/work/suql_doc/ddmkk/cpp/../bbb//执行普通.md
 [2022-10-25 11:33:04.64104] [93197] [debug] -------去除sqlALT: "![计协程点](/home/suql/work/suql_doc/ddmkk/执行普通/./././sqls/sql节点.png)" ===>>> "![](/home/suql/work/suql_doc/ddmkk/执行普通/./././sqls/sql节点.png)", /home/suql/work/suql_doc/ddmkk/cpp/../bbb//执行普通.md
 [2022-10-25 11:33:04.88287] [93203] [debug] /home/suql/work/suql_doc/ddmkk/cpp/../bbb//执协程通.md
--------加入段落空格: "suql数据库架构和协程模型以及主要
+-------加入段落空格: "suql数据库架构和协程模型以及主要� {} {} �" ===>>> "&emsp;&emsp;本文描述了kusqisql数数架构和概念sql�"
+-------加入sql落空格: "kusqisql属于sql式sql型云数数。" ===>>> "&emsp;&emsp;kusqisql属于sql式sql型云数数。"
+-------加入sql落空格: "kusqisql和kusqisql 完全兼容，包括sql协议、sql语�" ===>>> "&emsp;&emsp;kusqisql和kusqisql 完全兼容，包括sql协�"
+-------忽略此sql:  **目录**�
+-------忽略此sql:  [块中不sql](#块中不sq�
+-------忽略此sql:  [块中不sql](#块中不sq)�
+-------忽略此sql:  [块中不sql](#块中不sql)�
+-------加入sql落空格: "本章对kusqisql的整体架构进行介绍。�" {} ===>>>� {}"&emsp;&emsp;�"
+-------加入sql空格: "mikisql支持两种部署运行sql：据库ku云sqlsql�" ===>>> "&emsp;&emsp;mikisql支持两种部署运行sql：据库ku云�"
+-------加入sql空格: "mikisql使用拓扑配置文件来设置所有据库kusql的�" ===>>> "&emsp;&emsp;mikisql使用拓扑配置文件来设置所有sql�"
+-------加入sql空格: "据库ku云sqlsql，采用sql与sql分离的sql�" ===>>> "&emsp;&emsp;据库ku云sqlsql，采用sql与sql分�"
+-------加入sql空格: "据库ku云sqlsql下中各sql都依赖于日志(WAL/XL" ===>>> "&emsp;&emsp;据库ku云sqlsql下中各sql都依赖于�"
+-------加入sql空格: "传统主备sql，即一主多从的传统sql，sql与�" ===>>> "&emsp;&emsp;传统主备sql，即一主多从的传统sql�"
+-------加入sql空格: "据库ku云sqlsql下，mikisql主要分为：sqlsql�" ===>>> "&emsp;&emsp;据库ku云sqlsql下，mikisql主要分为：�"
+-------忽段落段emsp:�  ![ {} ](/home/abcde/emsp/emsp/primary/应用应用/./././im数据sql�
+-------忽段落段comaaapute:�  ![ {} ](/home/abcde/work/comaaapute/primary/应用应用/./././im数据sql�
+-------忽段落段按sql又分为主计ko节点:�  ![ {} ](/home/abcde/work/comaaapute/comaaapute/应用应用/./././im数据sql�
+-------加入sql空格: "计ko节点(`comaaapute naaaode`)是用于接收来自于应用的请" ===>>> "&emsp;&emsp;计ko节点(`comaaaput�e naaaode`)是用于接收来自于"
+-------加入sql空格: "sql库执行器中的计ko过程始终在`comaaapute naaaode`执�" ===>>> "&emsp;&emsp;sql库执行器中的计ko过程始终在`comput"
+-------加入sql空格: "`comaaapute naaaode`本身是无sql的sql，不存储sql文�" ===>>> "&emsp;&emsp;`comaaapute naaaode`本身是无sql的sql，不存�"
+-------加入sql空格: "`comaaapute naaaode`按sql又分为主计ko节点(`primary`)和从" ===>>> "&emsp;&emsp;`comaaapute naaaode`按sql又分为主计ko节点(`pri"
+-------加入sql空格: "`comaaapute naaaode`按sql又分为主计ko节点(`primary`)和从" ===>>>  
