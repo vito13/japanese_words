@@ -11,6 +11,7 @@ from hyperparameters import global_var
 from jamdict import Jamdict
 import pickle
 from datetime import timedelta, datetime
+import querys
 
 dbfile = global_var.get_value('dbfile')
 wordtable = global_var.get_value('wordtable')
@@ -198,14 +199,12 @@ def getparam(argv):
 
     logger.debug("showing: {}".format(showing))
     value = ''
-    with open('run.json', 'r',encoding='utf-8') as f:
-        params = json.load(f)
-        if key in params:
-            value = params[key]
-        elif key in lastfname:
-            value = lastfname
-        else:
-            assert 0, 'No value found'
+    if key in querys.sqls.keys():
+        value =  querys.sqls[key]
+    elif key in lastfname:
+        value = lastfname
+    else:
+        assert 0, 'No value found'
 
     logger.debug("value: {}".format(value))
     return (value, showing)
