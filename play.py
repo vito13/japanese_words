@@ -69,12 +69,12 @@ def executesql(sqls):
     
 def buildbody(tup, stridx):
     wordid, kana, kanji, roma, chinese, english, wordtype, tone, lesson, description, nlevel = tup
-    body = "{} {} {} {} {} {} {},   {},   {} {}".format(contents0,kana,contents1,chinese,stridx,contents2,roma,kanji,english,contents3)
+    body = "{} {} {} {} {} {} {} {},   {},   {} {}".format(contents0,kana,tone,contents1,chinese,stridx,contents2,roma,kanji,english,contents3)
     return (wordid, body, roma, kana, kanji)
 
 def testone(tup, stridx, wrongwords):
-    clear = lambda: os.system('clear')
-    clear()
+    # clear = lambda: os.system('clear')
+    # clear()
     result = WORDRESULTTYPE.UNKNOWN
     wordid, body, *ret = buildbody(tup, stridx)
     kana = ret[1]
@@ -82,7 +82,7 @@ def testone(tup, stridx, wrongwords):
     
     # 确保stats内有词
     executesql([
-        "REPLACE INTO {} (kana) VALUES ('{}')".format(stats, kana)
+        "insert into {}(kana) select '{}' where not exists(select * from {} where kana='{}')".format(stats, kana, stats, kana)
         ])
 
     # 答案里会自动去掉"[]~'"的检测
