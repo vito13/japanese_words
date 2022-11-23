@@ -56,7 +56,9 @@ def executesql(sqls):
     
 def buildbody(tup, stridx):
     wordid, kana, kanji, roma, chinese, english, wordtype, tone, lesson, description, nlevel = tup
-    body = contents0.format(kana, tone, stridx, chinese ,roma, kanji, english)
+    # body = contents0.format(kana, tone, stridx, chinese ,roma, kanji, english)
+    
+    body = "{} {} :".format(stridx, chinese)
     return (wordid, body, roma, kana, kanji)
 
 def testone(tup, stridx, wrongwords):
@@ -65,6 +67,7 @@ def testone(tup, stridx, wrongwords):
     result = WORDRESULTTYPE.UNKNOWN
     wordid, body, *ret = buildbody(tup, stridx)
     kana = ret[1]
+    kanji = ret[2]
     wronged = False
     
     # 确保stats内有词
@@ -107,6 +110,12 @@ def testone(tup, stridx, wrongwords):
             break
         elif response in ['6', '６']:
             lookupdictionary(kana)
+            input("-------please enter any key")
+            pass
+        elif response in ['5', '５']:
+            print("kana:{}".format(kana))
+            if len(kanji):
+                print("kanji:{}".format(kanji))
             input("-------please enter any key")
             pass
         else:
@@ -163,11 +172,13 @@ def getdata(value):
         conn = sqlite3.connect(dbfile)
         cs = conn.cursor()
         cs.execute(value)
-        data = cs.fetchall()
-        logger.debug("total: {}".format(len(data)))
+        if re.match(r'select', value, re.I) != None:
+            data = cs.fetchall()
+        else:
+            conn.commit()
         cs.close()
         conn.close()
-
+        logger.debug("total: {}".format(len(data)))
     return data
 
 def getparam(argv):
@@ -195,7 +206,7 @@ def getparam(argv):
     assert key != '', 'Invalid key'
     logger.debug("key: {}, random: {}".format(key, randomword))
     showing = False
-    vals = re.findall(r'show(\w+)', key)
+    vals = re.findall(r'(.*?)show$', key)
     if len(vals) == 1:
         key = vals[0]
         showing = True

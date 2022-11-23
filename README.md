@@ -62,3 +62,4 @@ $ perl -i.bak -pe 's/contents0, kana, contents1, newchn, contents2, newroma, kan
 - 【ok】 17 可以通过参数选择重置数据库所有表（-i），以及仅更新单词表，保留统计表（-r），默认无参数则是合并文件词库到db中
 - 【ok】 18 添加“大家学标准日本语初级”单词表
 - 【】 19 每次保存last.bin时候要将db文件的修改日期记录下来，每次加载last.bin时候核对db文件是否有改动，如果有改变则需要对last.bin中的每个单词进行内容更新，避免不一致（比如保存last.bin后修改词库内容了，再次运行last.bin则会可能导致不一致）
+- 【】 20 完善可以清理指定lesson中new标记的sql
