@@ -11,7 +11,7 @@ def load(jpdict, logger):
         nrows = table.nrows
         logger.debug("lesson {}, words: {}".format(sheetname, nrows))
 
-        for r in range(1, nrows):
+        for r in range(0, nrows):
             tone, kana, kanji, chinese = table.row_values(r)
             if type(tone) == float:
                 tone = str(int(tone))
