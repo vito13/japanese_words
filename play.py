@@ -56,9 +56,9 @@ def executesql(sqls):
     
 def buildbody(tup, stridx):
     wordid, kana, kanji, roma, chinese, english, wordtype, tone, lesson, description, nlevel = tup
-    # body = contents0.format(kana, tone, stridx, chinese ,roma, kanji, english)
-    
-    body = "{} {} :".format(stridx, chinese)
+    body = contents0.format(kana, tone, stridx, chinese ,roma, kanji, english)
+    body = "{}, {}, {}, {} :".format(stridx, kana, kanji, chinese)
+    # body = "{}, {} :".format(stridx, chinese)
     return (wordid, body, roma, kana, kanji)
 
 def testone(tup, stridx, wrongwords):
@@ -76,7 +76,7 @@ def testone(tup, stridx, wrongwords):
         ])
 
     # 答案里会自动去掉"[]~'"的检测
-    answer = [re.sub('\[|\]|~|～|\'|、','', word) for word in ret]
+    answer = [re.sub('\[|\]|~|～|\'|、|…','', word) for word in ret]
     
     while True:
         response = input(body)
@@ -110,13 +110,13 @@ def testone(tup, stridx, wrongwords):
             break
         elif response in ['6', '６']:
             lookupdictionary(kana)
-            input("-------please enter any key")
+            input("-------please enter any key...")
             pass
         elif response in ['5', '５']:
             print("kana:{}".format(kana))
             if len(kanji):
                 print("kanji:{}".format(kanji))
-            input("-------please enter any key")
+            input("-------please try again...")
             pass
         else:
             executesql([
@@ -157,7 +157,8 @@ def run(data):
 
 def showdata(data):
     for tup in data:
-        print(tup)
+        wordid, kana, kanji, roma, chinese, english, wordtype, tone, lesson, description, nlevel = tup
+        print("{}:\t{} [{}]".format(chinese, kana, kanji))
     print(len(data))
 
 def getdata(value):
@@ -246,7 +247,7 @@ if __name__ == '__main__':
             datasize = len(data)
             if (datasize > 0):
                 response = input("-------training again {} wrong words?(yes/no)".format(datasize))
-                if 'y' in response:
+                if 'y' in response or 'ｙ' in response:
                     with open(lastfname, 'wb') as f:
                         pickle.dump(data, f)
                     random.shuffle(data)
