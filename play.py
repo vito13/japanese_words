@@ -22,7 +22,7 @@ logger = None
 jam = Jamdict()
 lastfname = 'last.bin'
 mixer.init()
-
+mute = False
 
 class WORDRESULTTYPE(Enum):
     CORRECT_NEXT = auto()       # 正确next
@@ -65,9 +65,14 @@ def buildbody(tup, stridx):
     # body = "{}, {} :".format(stridx, chinese)
     return (wordid, body, roma, kana, kanji)
 
-def playaudio(kana):
+def stopaudio():
+    if mute == True: return
     if mixer.music.get_busy():
         mixer.music.stop()
+
+def playaudio(kana):
+    if mute == True: return
+    stopaudio()
     audiofile = wordaudio.get(kana, '')
     if len(audiofile):
         mixer.music.load(audiofile)
@@ -201,24 +206,21 @@ def getdata(value):
 def getparam(argv):
     key = ""
     randomword = False
-    try:
-        opts, args = getopt.getopt(argv,'-h-k:-v-r',['help', 'key=', 'version', 'random'])
-    except getopt.GetoptError:
-        print('python3 {}'.format(sys.argv[0]))
-        sys.exit(2)
+    muteaudio = False
+    opts, args = getopt.getopt(argv,'-h-k:-v-r-m',['help', 'key=', 'version', 'random', 'mute'])
     for opt, arg in opts:
         if opt in ('-h','--help'):
             print("[*] Help info")
             sys.exit()
-        elif opt in ('-v','--version'):
+        if opt in ('-v','--version'):
             print("[*] Version is 0.01 ")
             sys.exit()
-        elif opt in ('-r','--random'):
+        if opt in ('-m', '--mute'):
+            muteaudio = True
+        if opt in ('-r', '--random'):
             randomword = True
-        elif opt in ("-k", "--key"):
+        if opt in ("-k", "--key"):
             key = arg
-        else:
-            assert 0, 'Invalid arg'
 
     assert key != '', 'Invalid key'
     logger.debug("key: {}, random: {}".format(key, randomword))
@@ -238,7 +240,7 @@ def getparam(argv):
         assert 0, 'No value found'
 
     logger.debug("value: {}".format(value))
-    return (value, showing, randomword)
+    return (value, showing, randomword, muteaudio)
 
 if __name__ == '__main__':
     # init log
@@ -249,7 +251,7 @@ if __name__ == '__main__':
     logger = logging
 
     # get data
-    value, showing, randomword = getparam(sys.argv[1:])
+    value, showing, randomword, mute = getparam(sys.argv[1:])
     data = getdata(value)
     if randomword:
         random.shuffle(data)
@@ -270,6 +272,5 @@ if __name__ == '__main__':
                     continue
             break
     
-    if mixer.music.get_busy():
-        mixer.music.stop()
+    stopaudio()
     print('-------bye')
