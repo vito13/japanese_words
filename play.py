@@ -66,14 +66,14 @@ def buildbody(tup, stridx):
     body = "{}, {} :".format(stridx, chinese)
     return (wordid, body, roma, kana, kanji)
 
-def stopaudio():
-    if mute == True: return
+def stopaudio(onmute):
+    if onmute == True: return
     if mixer.music.get_busy():
         mixer.music.stop()
 
-def playaudio(kana):
-    if mute == True: return
-    stopaudio()
+def playaudio(kana, onmute):
+    if onmute == True: return
+    stopaudio(onmute)
     audiofile = wordaudio.get(kana, '')
     if len(audiofile):
         mixer.music.load(audiofile)
@@ -96,7 +96,7 @@ def testone(tup, stridx, wrongwords):
     # 答案里会自动去掉"[]~'"的检测
     answer = [re.sub('\[|\]|~|～|\'|、|…','', word) for word in ret]
     
-    playaudio(kana)
+    playaudio(kana, mute)
     while True:
         response = input(body)
         if response == '':
@@ -128,7 +128,7 @@ def testone(tup, stridx, wrongwords):
             executesql(["update {} set decrease = decrease + 1 where kana = \"{}\" and decrease + 1 <= increase".format(stats, kana)])
             break
         elif response in ['4', '４']:
-            playaudio(kana)
+            playaudio(kana, False)
             pass
         elif response in ['6', '６']:
             lookupdictionary(kana)
@@ -197,7 +197,7 @@ def showdata(data):
     t1.start()
     for kana in kanas:
         if event.isSet(): return
-        playaudio(kana)
+        playaudio(kana, mute)
         while mixer.music.get_busy():
             time.sleep(1)
 
@@ -291,5 +291,5 @@ if __name__ == '__main__':
                     continue
             break
     
-    stopaudio()
+    stopaudio(mute)
     print('-------bye')
