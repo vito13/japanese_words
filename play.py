@@ -12,6 +12,8 @@ from jamdict import Jamdict
 import pickle
 from datetime import timedelta, datetime
 import querys
+from pygame import mixer
+from wordaudio import wordaudio
 
 dbfile = global_var.get_value('dbfile')
 wordtable = global_var.get_value('wordtable')
@@ -19,6 +21,8 @@ stats = global_var.get_value('stats')
 logger = None
 jam = Jamdict()
 lastfname = 'last.bin'
+mixer.init()
+
 
 class WORDRESULTTYPE(Enum):
     CORRECT_NEXT = auto()       # 正确next
@@ -57,9 +61,17 @@ def executesql(sqls):
 def buildbody(tup, stridx):
     wordid, kana, kanji, roma, chinese, english, wordtype, tone, lesson, description, nlevel = tup
     body = contents0.format(kana, tone, stridx, chinese ,roma, kanji, english)
-    body = "{}, {}, {}, {} :".format(stridx, kana, kanji, chinese)
+    body = "({}) {}, {} [{}] {} :".format(stridx, roma, kana, kanji, chinese)
     # body = "{}, {} :".format(stridx, chinese)
     return (wordid, body, roma, kana, kanji)
+
+def playaudio(kana):
+    if mixer.music.get_busy():
+        mixer.music.stop()
+    audiofile = wordaudio.get(kana, '')
+    if len(audiofile):
+        mixer.music.load(audiofile)
+        mixer.music.play()
 
 def testone(tup, stridx, wrongwords):
     # clear = lambda: os.system('clear')
@@ -78,6 +90,7 @@ def testone(tup, stridx, wrongwords):
     # 答案里会自动去掉"[]~'"的检测
     answer = [re.sub('\[|\]|~|～|\'|、|…','', word) for word in ret]
     
+    playaudio(kana)
     while True:
         response = input(body)
         if response == '':
@@ -108,6 +121,9 @@ def testone(tup, stridx, wrongwords):
             result = WORDRESULTTYPE.DECREASE_NEXT
             executesql(["update {} set decrease = decrease + 1 where kana = \"{}\" and decrease + 1 <= increase".format(stats, kana)])
             break
+        elif response in ['4', '４']:
+            playaudio(kana)
+            pass
         elif response in ['6', '６']:
             lookupdictionary(kana)
             input("-------please enter any key...")
@@ -253,4 +269,7 @@ if __name__ == '__main__':
                     random.shuffle(data)
                     continue
             break
+    
+    if mixer.music.get_busy():
+        mixer.music.stop()
     print('-------bye')

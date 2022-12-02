@@ -12,6 +12,7 @@ import Custom
 from Jpdict import Jpdict
 from Jpword import Jpword
 from datetime import timedelta, datetime
+import pprint
 
 dbfile = global_var.get_value('dbfile')
 wordtable = global_var.get_value('wordtable')
@@ -142,14 +143,20 @@ if __name__ == '__main__':
 
     
     # load word from file
+    audiomap = {}
     # Minnano.load(jpdict, logger)
     # Newstandard.load(jpdict, logger)
     # Custom.load(jpdict, logger)
-    Welearn.load(jpdict, logger)
+    Welearn.load(jpdict, logger, audiomap)
     logger.debug("=== After reading file ===")
     jpdict.total(logger)
 
     # reset table
     logger.debug("=== reset word table ===")
     resetwordtable(jpdict)
-   
+    
+    # write audio map
+    fileObj = open("wordaudio.py", 'w')
+    fileObj.write('wordaudio = ' + pprint.pformat(audiomap) + '\n')
+    fileObj.close()
+
