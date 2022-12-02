@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-import os, getopt
+import os, getopt, time
+from threading import Thread, Event
 import re
 import sys
 import sqlite3
@@ -61,8 +62,8 @@ def executesql(sqls):
 def buildbody(tup, stridx):
     wordid, kana, kanji, roma, chinese, english, wordtype, tone, lesson, description, nlevel = tup
     body = contents0.format(kana, tone, stridx, chinese ,roma, kanji, english)
-    body = "({}) {}, {} [{}] {} :".format(stridx, roma, kana, kanji, chinese)
-    # body = "{}, {} :".format(stridx, chinese)
+    # body = "({}) {}, {} [{}] {} :".format(stridx, roma, kana, kanji, chinese)
+    body = "{}, {} :".format(stridx, chinese)
     return (wordid, body, roma, kana, kanji)
 
 def stopaudio():
@@ -176,11 +177,29 @@ def run(data):
     
     return wrongwords
 
+
+def waitkey(event):
+    k = input("enter anykey stop play audio")
+    event.set()
+    
 def showdata(data):
+    inx = 0
+    kanas = []
     for tup in data:
+        inx += 1
         wordid, kana, kanji, roma, chinese, english, wordtype, tone, lesson, description, nlevel = tup
-        print("{}:\t{} [{}]".format(chinese, kana, kanji))
-    print(len(data))
+        kanas.append(kana)
+        print("{} {}:\t{} [{}]".format(inx, chinese, kana, kanji))
+
+    if mute == True: return
+    event = Event()
+    t1 = Thread(target = waitkey, args = (event, ))
+    t1.start()
+    for kana in kanas:
+        if event.isSet(): return
+        playaudio(kana)
+        while mixer.music.get_busy():
+            time.sleep(1)
 
 def getdata(value):
     data = []
