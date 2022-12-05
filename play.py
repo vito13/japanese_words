@@ -24,6 +24,7 @@ jam = Jamdict()
 lastfname = 'last.bin'
 mixer.init()
 mute = False
+bodynum = 0
 
 class WORDRESULTTYPE(Enum):
     CORRECT_NEXT = auto()       # 正确next
@@ -61,9 +62,12 @@ def executesql(sqls):
     
 def buildbody(tup, stridx):
     wordid, kana, kanji, roma, chinese, english, wordtype, tone, lesson, description, nlevel = tup
-    body = contents0.format(kana, tone, stridx, chinese ,roma, kanji, english)
-    # body = "({}) {}, {} [{}] {} :".format(stridx, roma, kana, kanji, chinese)
-    body = "{}, {} :".format(stridx, chinese)
+    if bodynum == '2':
+        body = "({}) {}, {} [{}] {} :".format(stridx, roma, kana, kanji, chinese)
+    elif bodynum == '1':
+        body = "{}, {} :".format(stridx, chinese)
+    else:
+        body = contents0.format(kana, tone, stridx, chinese ,roma, kanji, english)
     return (wordid, body, roma, kana, kanji)
 
 def stopaudio(onmute):
@@ -94,7 +98,7 @@ def testone(tup, stridx, wrongwords):
         ])
 
     # 答案里会自动去掉"[]~'"的检测
-    answer = [re.sub('\[|\]|~|～|\'|、|…','', word) for word in ret]
+    answer = [re.sub('\[|\]|~|～|\？|\?|\'|、|…','', word) for word in ret]
     
     playaudio(kana, mute)
     while True:
@@ -224,9 +228,10 @@ def getdata(value):
 
 def getparam(argv):
     key = ""
+    bodynum = 0
     randomword = False
     muteaudio = False
-    opts, args = getopt.getopt(argv,'-h-k:-v-r-m',['help', 'key=', 'version', 'random', 'mute'])
+    opts, args = getopt.getopt(argv,'-h-k:-v-r-m-b:',['help', 'key=', 'version', 'random', 'mute', 'body='])
     for opt, arg in opts:
         if opt in ('-h','--help'):
             print("[*] Help info")
@@ -240,6 +245,8 @@ def getparam(argv):
             randomword = True
         if opt in ("-k", "--key"):
             key = arg
+        if opt in ("-b", "--body"):
+            bodynum = arg
 
     assert key != '', 'Invalid key'
     logger.debug("key: {}, random: {}".format(key, randomword))
@@ -259,7 +266,7 @@ def getparam(argv):
         assert 0, 'No value found'
 
     logger.debug("value: {}".format(value))
-    return (value, showing, randomword, muteaudio)
+    return (value, showing, randomword, muteaudio, bodynum)
 
 if __name__ == '__main__':
     # init log
@@ -270,7 +277,7 @@ if __name__ == '__main__':
     logger = logging
 
     # get data
-    value, showing, randomword, mute = getparam(sys.argv[1:])
+    value, showing, randomword, mute, bodynum = getparam(sys.argv[1:])
     data = getdata(value)
     if randomword:
         random.shuffle(data)
