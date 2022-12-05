@@ -63,9 +63,12 @@ def executesql(sqls):
 def buildbody(tup, stridx):
     wordid, kana, kanji, roma, chinese, english, wordtype, tone, lesson, description, nlevel = tup
     if bodynum == '2':
-        body = "({}) {}, {} [{}] {} :".format(stridx, roma, kana, kanji, chinese)
+        if len(kanji) > 0:
+            body = "({}) {}, {} 【{}】, {}:".format(stridx, roma, kana, kanji, chinese)
+        else:
+            body = "({}) {}, {}, {}:".format(stridx, roma, kana, chinese)
     elif bodynum == '1':
-        body = "{}, {} :".format(stridx, chinese)
+        body = "{}, {}:".format(stridx, chinese)
     else:
         body = contents0.format(kana, tone, stridx, chinese ,roma, kanji, english)
     return (wordid, body, roma, kana, kanji)
@@ -139,9 +142,10 @@ def testone(tup, stridx, wrongwords):
             input("-------please enter any key...")
             pass
         elif response in ['5', '５']:
-            print("kana:{}".format(kana))
             if len(kanji):
-                print("kanji:{}".format(kanji))
+                print("{}【{}】".format(kana, kanji))
+            else:
+                print("{}".format(kana))
             input("-------please try again...")
             pass
         else:
@@ -193,7 +197,10 @@ def showdata(data):
         inx += 1
         wordid, kana, kanji, roma, chinese, english, wordtype, tone, lesson, description, nlevel = tup
         kanas.append(kana)
-        print("{} {}:\t{} [{}]".format(inx, chinese, kana, kanji))
+        if len(kanji) > 0:
+            print("{} {}: {} [{}]".format(inx, chinese, kana, kanji))
+        else:
+            print("{} {}: {}".format(inx, chinese, kana))
 
     if mute == True: return
     event = Event()
