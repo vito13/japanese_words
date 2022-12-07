@@ -42,7 +42,7 @@ with open("confuse.txt", encoding = 'utf-8') as file_object:
     contents0 = file_object.read()
 
 def lookupdictionary(text):
-    # print("-------look up: ", text)
+    text = re.sub('～','', text)
     result = jam.lookup(text)
     for entry in result.entries:
         print(entry)

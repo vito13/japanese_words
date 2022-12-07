@@ -3,7 +3,7 @@ statstablename = global_var.get_value('stats')
 wordtablename = global_var.get_value('wordtable')
 wordtable = "SELECT * FROM {} ".format(wordtablename)
 statstable = "SELECT kana FROM {} ".format(statstablename)
-lessonre = '%w-1-09%'
+lessonre = '%w-1-11%'
 def limit_offset(limit, offset = 0): return " limit {} offset {} ".format(limit, offset)
 lessondata = wordtable + "where lesson like '{}'".format(lessonre)
 word = lessondata + " and tone != ''"
@@ -20,6 +20,7 @@ sqls = {
     'w': word,
     's': sentence,
     'new': new,
+    
     'anew': allnew,
     'rnew': resetnew,
     'newlim': new + limit_offset(4, 4),
