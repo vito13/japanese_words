@@ -125,6 +125,7 @@ def testone(tup, stridx, wrongwords):
                 "update {} set correct = correct + 1 where kana = \"{}\"".format(stats, kana),
                 updatelasttime(kana)
                 ])
+            playaudio(kana, False)
             break
         elif response in ['9', '９']:
             result = WORDRESULTTYPE.INCREASE_NEXT
@@ -174,7 +175,7 @@ def run(data):
             testindex += 1
         elif WORDRESULTTYPE.CORRECT_NEXT == ret:
             testindex += 1
-            playaudio('right.mp3', False)
+            # playaudio('right.mp3', False)
         elif WORDRESULTTYPE.GIVEUP_PREV == ret:
             testindex -= 1
         elif WORDRESULTTYPE.INCREASE_NEXT == ret:
@@ -243,7 +244,7 @@ def getparam(argv):
     bodynum = 0
     randomword = False
     muteaudio = False
-    lessonnum = '01'
+    lessonre = ''
     opts, args = getopt.getopt(argv,'-h-k:-v-r-m-b:-l:',['help', 'key=', 'version', 'random', 'mute', 'body=', 'lesson='])
     for opt, arg in opts:
         if opt in ('-h','--help'):
@@ -261,7 +262,7 @@ def getparam(argv):
         if opt in ("-b", "--body"):
             bodynum = arg
         if opt in ("-l", "--lesson"):
-            lessonnum = arg
+            lessonre = querys.getlessonre(arg)
 
     assert key != '', 'Invalid key'
     logger.debug("key: {}, random: {}".format(key, randomword))
@@ -274,7 +275,7 @@ def getparam(argv):
     logger.debug("showing: {}".format(showing))
     value = ''
     if key in querys.sqls.keys():
-        value =  querys.sqls[key].format(lessonnum)
+        value =  querys.sqls[key].format(lessonre)
     elif key in lastfname:
         value = lastfname
     else:

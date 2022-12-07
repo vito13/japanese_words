@@ -9,6 +9,9 @@ def load(jpdict, logger, audiomap):
     data = xlrd.open_workbook(fname)
     logger.debug("load file {}".format(fname))
     for sheetname in data.sheet_names():
+        print(sheetname)
+        print(type(sheetname))
+        lessonisnumber = sheetname.isdigit()
         table = data.sheet_by_name(sheetname)
         # 获取表格行数
         nrows = table.nrows
@@ -24,10 +27,15 @@ def load(jpdict, logger, audiomap):
             w.kanji = kanji
             w.chinese = chinese
             w.tone = tone
-            w.lesson.append('w-1-%02d' % int(sheetname))
+            if lessonisnumber == True:
+                w.lesson.append('w-1-%02d' % int(sheetname))
+            else:
+                w.lesson.append('w-1-%s' % sheetname)
             jpdict.merge(w)
-        handleaudio(sheetname, kanaarr)
-        audiotool.writeaudioinfo(".", audiomap)
+        
+        if lessonisnumber == True:
+            handleaudio(sheetname, kanaarr)
+            audiotool.writeaudioinfo(".", audiomap)
     os.chdir('..')
     
 def handleaudio(sheetname, kanaarr):

@@ -23,3 +23,5 @@ select kana,increase,decrease from jpstats where increase > decrease
 SELECT kana, increase FROM jpstats where increase > decrease
 
 SELECT chinese FROM jpwords where lesson like '%w-1-03%'
+
+select kana from jpwords where lesson like '%数量%'
