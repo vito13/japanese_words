@@ -78,10 +78,13 @@ def stopaudio(onmute):
     if mixer.music.get_busy():
         mixer.music.stop()
 
-def playaudio(kana, onmute):
+def playaudio(key, onmute):
     if onmute == True: return
     stopaudio(onmute)
-    audiofile = wordaudio.get(kana, '')
+    if os.path.isfile(key):
+        audiofile = key
+    else:
+        audiofile = wordaudio.get(key, '')
     if len(audiofile):
         mixer.music.load(audiofile)
         mixer.music.play()
@@ -171,6 +174,7 @@ def run(data):
             testindex += 1
         elif WORDRESULTTYPE.CORRECT_NEXT == ret:
             testindex += 1
+            playaudio('right.mp3', False)
         elif WORDRESULTTYPE.GIVEUP_PREV == ret:
             testindex -= 1
         elif WORDRESULTTYPE.INCREASE_NEXT == ret:
