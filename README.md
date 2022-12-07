@@ -1,35 +1,32 @@
 # japanese_words
 
-此项目仅用于本人背单词与练习键盘输入使用
-
+- 此项目用于本人背单词与练习键盘输入
 
 ## 操作指南
 
-### 初始化数据
-
-```
-$ python3 createdb.py
-```
-
-此方法仅运行一次即可，作用是初始化数据库
-
-### 启动程序
-
-```
-$ python3 play.py -k19
-
-参数"19"的作用可以参考run.json中的配置
+``` shell
+python3 createdb.py -i                // 重新建库
+python3 createdb.py -r                // 更新库内容
+python3 play.py -b1 -ks -r -m -l10    // 游玩
 ```
 
-启动后如果想去除杂乱的字符可以运行下面的替换后再次启动即可
+启动参数说明
+- -h、--help
+    help
+- -v、--version
+    version
+- -b、--body
+    单词排版风格，可选1、2、3
+- -k、--key
+    练习的类型，可选w、s、new，分别对应单词、短语、手动标记
+- -r、--random
+    练习内容顺序随机
+- -m、--mute
+    静音模式，默认非静音，会播放音频
+- -l、--lesson
+    进行练习的课号，暂支持01~12
 
-```
-$ perl -i.bak -pe 's/contents0, kana, contents1, newchn, contents2, newroma, kanji, contents3/"", "", "", newchn, "", "", "", ""/g' play.py
-```
-
-### 其余操作
-
-启动后可有下列操作
+游玩中可有下列操作
 
 |按键|说明|
 |-|-|
@@ -38,10 +35,11 @@ $ perl -i.bak -pe 's/contents0, kana, contents1, newchn, contents2, newroma, kan
 |`|next|
 |9|手动标记+1|
 |0|手动标记-1|
+|4|播放音频|
+|5|查看答案|
 |6|查词典|
 
-
-## 功能列表
+## 开发功能列表
 
 - 【ok】1 运行中可以手动调整next与prev进行重复练习
 - 2 加入计时器
@@ -67,3 +65,4 @@ $ perl -i.bak -pe 's/contents0, kana, contents1, newchn, contents2, newroma, kan
 - 【】 22 添加退出时候记录当前练习的词数组与第几个，可以在下次有参数控制进行快速复原继续进行（用于在练习时刻发现词库错误进行快速修正后再次进行）
 - 【ok】 23 添加播放单词音频，按键4重复收听，暂仅添加了“大家学标准日本语”的部分音频
 - 【】 24 每次测试后应该有个测试结果的数据统计
+- 【ok】 25 启动时可以根据参数选择要练习的lesson
