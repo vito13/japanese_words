@@ -187,10 +187,11 @@ def run(data):
 
 
 def waitkey(event):
-    k = input("enter anykey stop play audio")
+    k = input("enter anykey for exit")
     event.set()
     
 def showdata(data):
+    if len(data) == 0: return
     inx = 0
     kanas = []
     for tup in data:
@@ -238,7 +239,8 @@ def getparam(argv):
     bodynum = 0
     randomword = False
     muteaudio = False
-    opts, args = getopt.getopt(argv,'-h-k:-v-r-m-b:',['help', 'key=', 'version', 'random', 'mute', 'body='])
+    lessonnum = '01'
+    opts, args = getopt.getopt(argv,'-h-k:-v-r-m-b:-l:',['help', 'key=', 'version', 'random', 'mute', 'body=', 'lesson='])
     for opt, arg in opts:
         if opt in ('-h','--help'):
             print("[*] Help info")
@@ -254,6 +256,8 @@ def getparam(argv):
             key = arg
         if opt in ("-b", "--body"):
             bodynum = arg
+        if opt in ("-l", "--lesson"):
+            lessonnum = arg
 
     assert key != '', 'Invalid key'
     logger.debug("key: {}, random: {}".format(key, randomword))
@@ -266,7 +270,7 @@ def getparam(argv):
     logger.debug("showing: {}".format(showing))
     value = ''
     if key in querys.sqls.keys():
-        value =  querys.sqls[key]
+        value =  querys.sqls[key].format(lessonnum)
     elif key in lastfname:
         value = lastfname
     else:
@@ -286,6 +290,9 @@ if __name__ == '__main__':
     # get data
     value, showing, randomword, mute, bodynum = getparam(sys.argv[1:])
     data = getdata(value)
+    if len(data) == 0:
+        print('-------no data, please check your sql')
+        print("-------{}".format(value))
     if randomword:
         random.shuffle(data)
 
