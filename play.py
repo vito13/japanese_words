@@ -68,7 +68,7 @@ def buildbody(tup, stridx):
         else:
             body = "({}) {}, {}, {}:".format(stridx, roma, kana, chinese)
     elif bodynum == '1':
-        body = "{}, {}:".format(stridx, chinese)
+        body = "{} ＜{}＞  {}:".format(stridx, tone, chinese)
     else:
         body = contents0.format(kana, tone, stridx, chinese ,roma, kanji, english)
     return (wordid, body, roma, kana, kanji)
@@ -103,9 +103,20 @@ def testone(tup, stridx, wrongwords):
         "insert into {}(kana) select '{}' where not exists(select * from {} where kana='{}')".format(stats, kana, stats, kana)
         ])
 
+    result = []
+    # 对“なな｜しち”都是7此类单词的额外处理
+    if "｜" in kana:
+        for item in ret:
+            if "｜" in item:
+                result.extend(item.split("｜"))
+            else:
+                result.append(item)
+    else:
+        result = ret
+
     # 答案里会自动去掉"[]~'"的检测
-    answer = [re.sub('\[|\]|~|～|\？|\?|\'|、|…','', word) for word in ret]
-    
+    answer = [re.sub('\[|\]|~|～|\？|\?|\'|、|…','', word) for word in result]
+  
     playaudio(kana, mute)
     while True:
         response = input(body)
@@ -169,7 +180,7 @@ def run(data):
     testindex = 0
     wrongwords = []
     while testindex < count: 
-        stridx = '{}，{}'.format(testindex + 1, count)
+        stridx = '[{}/{}]'.format(testindex + 1, count)
         ret = testone(data[testindex], stridx, wrongwords)
         if WORDRESULTTYPE.GIVEUP_NEXT == ret:
             testindex += 1
