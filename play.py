@@ -96,6 +96,9 @@ def testone(tup, stridx, wrongwords):
     wordid, body, *ret = buildbody(tup, stridx)
     kana = ret[1]
     kanji = ret[2]
+    # 对kanji有多个需要先分割的处理，如 ['kimasu', 'きます', '着ます；来ます']
+    if '；' in kanji:
+        ret[2:3] = kanji.split("；")
     wronged = False
     
     # 确保stats内有词
@@ -113,10 +116,10 @@ def testone(tup, stridx, wrongwords):
                 result.append(item)
     else:
         result = ret
-
+        
     # 答案里会自动去掉"[]~'"的检测
     answer = [re.sub('\[|\]|~|～|\？|\?|\'|、|…','', word) for word in result]
-  
+    
     playaudio(kana, mute)
     while True:
         response = input(body)
