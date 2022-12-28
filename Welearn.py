@@ -53,4 +53,6 @@ def handleaudio(sheetname, kanaarr):
         audiotool.split_to_chunks_by_slience(wav, subdir, kanaarr)
         os.unlink(wav)
     else:
-        assert(0)
+        # assert(0)
+        print("not found {} ".format(mp3))
+        pass
