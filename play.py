@@ -256,7 +256,9 @@ def getparam(argv):
     randomword = False
     muteaudio = False
     lessonre = ''
-    opts, args = getopt.getopt(argv,'-h-k:-v-r-m-b:-l:',['help', 'key=', 'version', 'random', 'mute', 'body=', 'lesson='])
+    startidx = 0
+    totalwords = 0
+    opts, args = getopt.getopt(argv,'-h-k:-v-r-m-b:-l:-s:-t:',['help', 'key=', 'version', 'random', 'mute', 'body=', 'lesson=', 'start=', 'total='])
     for opt, arg in opts:
         if opt in ('-h','--help'):
             print("[*] Help info")
@@ -274,6 +276,12 @@ def getparam(argv):
             bodynum = arg
         if opt in ("-l", "--lesson"):
             lessonre = querys.getlessonre(arg)
+        if opt in ("-s", "--start"):
+            startidx = int(arg)
+            assert startidx >= 0, 'Invalid startidx'
+        if opt in ("-t", "--total"):
+            totalwords = int(arg)
+            assert totalwords >= 0, 'Invalid totalwords'
 
     assert key != '', 'Invalid key'
     logger.debug("key: {}, random: {}".format(key, randomword))
@@ -293,7 +301,7 @@ def getparam(argv):
         assert 0, 'No value found'
 
     logger.debug("value: {}".format(value))
-    return (value, showing, randomword, muteaudio, bodynum)
+    return (value, showing, randomword, muteaudio, bodynum, startidx, totalwords)
 
 if __name__ == '__main__':
     # init log
@@ -304,11 +312,21 @@ if __name__ == '__main__':
     logger = logging
 
     # get data
-    value, showing, randomword, mute, bodynum = getparam(sys.argv[1:])
+    value, showing, randomword, mute, bodynum, startidx, totalwords = getparam(sys.argv[1:])
     data = getdata(value)
     if len(data) == 0:
         print('-------no data, please check your sql')
         print("-------{}".format(value))
+    if startidx < len(data):
+        data = data[startidx:]
+        print('-------start index: {}'.format(startidx))
+    else:
+        print('-------start index > total, start = 0')
+    
+    if totalwords > 0 and totalwords < len(data):
+        data = data[:totalwords]
+        print('-------totalwords: {}'.format(totalwords))
+
     if randomword:
         random.shuffle(data)
 
